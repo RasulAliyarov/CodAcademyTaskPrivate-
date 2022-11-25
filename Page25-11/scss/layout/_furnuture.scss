@@ -1,0 +1,71 @@
+.app_furnuture {
+  background: url(/image/Maskgroup.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 584px;
+  margin-top: 464px;
+  &_top {
+    &_title {
+      display: flex;
+      align-items: center;
+      .line {
+        margin-left: 17px;
+        width: 320px;
+        height: 2px;
+        background-color: black;
+        border-radius: 10px;
+      }
+    }
+
+    &_block {
+      padding: 41px 0;
+      background-color: white;
+      transform: translate(-10%, -50%);
+      width: 883px;
+      h2 {
+        font-size: 2.1rem;
+        font-weight: 600;
+        color: #333333;
+        padding: 20px 0 24px 0;
+      }
+      span {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #9c9c9c;
+        line-height: 29px;
+        width: 471px;
+        padding-bottom: 40px;
+      }
+
+      &_line {
+        cursor: pointer;
+        padding: 16px;
+        span {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #333333;
+          &:first-child {
+            padding-right: 40px;
+          }
+        }
+        i {
+          float: right;
+          padding-right: 30px;
+          font-size: 26px;
+        }
+
+        &:hover {
+          background-color: $color-blue90;
+          span,i{
+            color: white;
+
+          }
+        }
+      }
+    }
+  }
+}

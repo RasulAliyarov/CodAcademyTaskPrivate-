@@ -1,0 +1,70 @@
+.app_design {
+  height: 775px;
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &_left {
+      h1 {
+        width: 681px;
+        font-size: 4.5rem;
+        font-weight: 700;
+        color: #333333;
+      }
+    }
+
+    &_right {
+      span {
+        width: 215px;
+        transform: rotate(-90deg);
+        position: absolute;
+        bottom: 70px;
+        letter-spacing: 2px;
+        right: -90px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 27px;
+      }
+      &_line {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        // margin-top: 40px;
+        width: 720px;
+        height: 2px;
+        background-color: black;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &_bottom {
+    padding-top: 46px;
+    position: relative;
+
+    &_stat {
+      position: absolute;
+      top: -110px;
+      right: 135px;
+      width: 252px;
+      height: 525px;
+      background-color: $color-blue100;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+      align-items: center;
+
+      color: white;
+      font-weight: 400;
+
+      h2 {
+        font-size: 3.4rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
