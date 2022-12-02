@@ -48,39 +48,44 @@ function changeColor(cardDiv, cardDivTtitle) {
 
 
 savebtn.onclick = () => {
-    let inputTitle = document.createElement("h5")
-    let inputText = document.createElement("p")
-    let deletebtn = document.createElement("buuton")
-    let cardDivText = document.createElement("div")
-    let savebtn = document.getElementById("savebtn")
-    let cardDiv = document.createElement("div")
-    let cardDivTtitle = document.createElement("div")
+    if (noteTitle.value == "" || textArea.value == "") { alert("Fill inputs") }
+    else {
+        let inputTitle = document.createElement("h5")
+        let inputText = document.createElement("p")
+        let deletebtn = document.createElement("buuton")
+        let cardDivText = document.createElement("div")
+        let savebtn = document.getElementById("savebtn")
+        let cardDiv = document.createElement("div")
+        let cardDivTtitle = document.createElement("div")
 
-    cardDivTtitle.className = "app__cards__card__title"
-    cardDiv.className = "app__cards__card"
-    cardDivText.className = "app__cards__card__text"
-    deletebtn.className = "deletebtn"
+        cardDivTtitle.className = "app__cards__card__title"
+        cardDiv.className = "app__cards__card"
+        cardDivText.className = "app__cards__card__text"
+        deletebtn.className = "deletebtn"
 
         changeColor(cardDiv, cardDivTtitle)
 
-    inputTitle.textContent = noteTitle.value
-    inputText.textContent = textArea.value
+        inputTitle.textContent = noteTitle.value
+        inputText.textContent = textArea.value
 
-    cardDivTtitle.append(inputTitle, deletebtn)
-    cardDivText.appendChild(inputText)
+        cardDivTtitle.append(inputTitle, deletebtn)
+        cardDivText.appendChild(inputText)
 
-    cardDiv.append(
-        cardDivTtitle, cardDivText
-    )
-    cards.appendChild(cardDiv)
-
-
-    noteTitle.value = ""
-    textArea.value = ""
+        cardDiv.append(
+            cardDivTtitle, cardDivText
+        )
 
 
-    deletebtn.onclick = () => {
-        cards.removeChild(cardDiv)
+        cards.appendChild(cardDiv)
+
+
+        noteTitle.value = ""
+        textArea.value = ""
+
+
+        deletebtn.onclick = () => {
+            cards.removeChild(cardDiv)
+        }
+
     }
-
 }

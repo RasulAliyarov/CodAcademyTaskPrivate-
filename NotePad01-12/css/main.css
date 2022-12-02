@@ -158,8 +158,8 @@ body {
         background-color: #aed581;
         margin: 0; }
       .app .app__content__decor__colors__color:hover {
-        opacity: .6;
-        transform: scale(1.2);
+        opacity: .7;
+        transform: translateY(-4px);
         transition: .4s; }
   .app .app__content__decor #savebtn {
     background-image: url(/img/succsess.png);
@@ -167,6 +167,9 @@ body {
     background-position: 52px;
     background-size: 15px;
     background-position: 90%; }
+    .app .app__content__decor #savebtn:hover {
+      box-shadow: 0 0 15px #808080;
+      transition: .2s; }
   .app .app__content__decor button {
     padding: 10px 30px 10px 15px;
     height: fit-content;
@@ -176,10 +179,6 @@ body {
     color: white;
     cursor: pointer;
     transition: .5s; }
-    .app .app__content__decor button:hover {
-      opacity: .6;
-      transform: scale(1.1);
-      transition: .5s; }
 
 .app .app__content__search input {
   border: 1px solid #7e57c2;

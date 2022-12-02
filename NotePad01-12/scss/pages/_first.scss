@@ -41,7 +41,6 @@ body {
                 padding: 10px;
                 height: 228px;
                 border-radius: 8px;
-
             }
         }
 
@@ -86,8 +85,8 @@ body {
                     }
 
                     &:hover {
-                        opacity: .6;
-                        transform: scale(1.2);
+                        opacity: .7;
+                        transform: translateY(-4px);
                         transition: .4s;
                     }
                 }
@@ -99,6 +98,11 @@ body {
                 background-position: 52px;
                 background-size: 15px;
                 background-position: 90%;
+
+                &:hover {
+                    box-shadow: 0 0 15px #808080;
+                    transition: .2s;
+                }
             }
 
             button {
@@ -114,11 +118,7 @@ body {
 
 
 
-                &:hover {
-                    opacity: .6;
-                    transform: scale(1.1);
-                    transition: .5s;
-                }
+
             }
         }
 
