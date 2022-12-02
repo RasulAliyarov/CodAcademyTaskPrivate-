@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="https://dadanotepad.netlify.app/images/logo.png">
+    <title>Data NotePad</title>
+</head>
+
+<body class="app">
+    <div class="container">
+
+        <header class="app__header">
+            <h1>Dada Redux <span> Note</span>Pad</h1>
+        </header>
+
+        <section class="app__content">
+            <div class="app__content__title">
+                <input id="noteTitle" type="text" placeholder="Note Title">
+
+                <textarea class="app__content__textarea" name="comments" id="comments"
+                    placeholder="Write note..."></textarea>
+            </div>
+
+            <div class="app__content__decor">
+                <div class="app__content__decor__colors">
+
+                    <button class="app__content__decor__colors__color"></button>
+                    <button class="app__content__decor__colors__color"></button>
+                    <button class="dsadsadsa app__content__decor__colors__color"></button>
+                    <button class="app__content__decor__colors__color"></button>
+                    <button class="app__content__decor__colors__color"></button>
+                </div>
+                <button id="savebtn">Save</button>
+            </div>
+
+            <div class="app__content__search">
+                <input type="text" placeholder="Write to search">
+            </div>
+        </section>
+
+        <section class="app__cards">
+
+            <div class="app__cards__card">
+                <div class="app__cards__card__title">
+                    <h5>Add a title to your note</h5>
+                    <button class="deletebtn"></button>
+                </div>
+
+                <div class="app__cards__card__text">
+                    <p>You can choose a color while adding notes. The notes you add will not be lost even if you refresh
+                        the page.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

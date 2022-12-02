@@ -1,0 +1,222 @@
+.container {
+    width: 545px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #ede7f6;
+    width: 100%;
+    height: 100vh;
+    font-family: "Roboto Mono";
+}
+
+.app {
+    .app__header {
+        text-align: center;
+
+        h1 {
+            margin: 30px 0;
+            font-size: 1.7rem;
+            font-weight: 700;
+
+            span {
+                color: rgb(126, 87, 194);
+            }
+        }
+    }
+
+    .app__content {
+        &__title {
+            input {
+                border: 1px solid rgb(126, 87, 194);
+                padding: 10px;
+                border-radius: 8px;
+                width: 100%;
+                margin-bottom: 25px;
+            }
+
+            textarea {
+                width: 100%;
+                border: 1px solid rgb(126, 87, 194);
+                padding: 10px;
+                height: 228px;
+                border-radius: 8px;
+
+            }
+        }
+
+        &__decor {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 10px;
+
+            &__colors {
+                display: flex;
+                margin: 10px 0;
+
+                &__color {
+                    width: 42px !important;
+                    height: 42px !important;
+                    border-radius: 50% !important;
+                    margin-right: 15px;
+                    transition: .4s;
+                    cursor: pointer;
+
+                    &:nth-child(1) {
+                        background-color: rgb(240, 98, 146);
+
+                    }
+
+                    &:nth-child(2) {
+                        background-color: rgb(186, 104, 200);
+                    }
+
+                    &:nth-child(3) {
+                        background-color: rgb(79, 195, 247);
+                    }
+
+                    &:nth-child(4) {
+                        background-color: rgb(255, 213, 79);
+                    }
+
+                    &:nth-child(5) {
+                        background-color: rgb(174, 213, 129);
+                        margin: 0;
+                    }
+
+                    &:hover {
+                        opacity: .6;
+                        transform: scale(1.2);
+                        transition: .4s;
+                    }
+                }
+            }
+
+            #savebtn {
+                background-image: url(/img/succsess.png);
+                background-repeat: no-repeat;
+                background-position: 52px;
+                background-size: 15px;
+                background-position: 90%;
+            }
+
+            button {
+                padding: 10px 30px 10px 15px;
+                height: fit-content;
+                border: none;
+                background-color: rgb(126, 87, 194);
+                border-radius: 8px;
+                color: white;
+                cursor: pointer;
+                transition: .5s;
+
+
+
+
+                &:hover {
+                    opacity: .6;
+                    transform: scale(1.1);
+                    transition: .5s;
+                }
+            }
+        }
+
+        &__search {
+            input {
+                border: 1px solid rgb(126, 87, 194);
+                padding: 10px;
+                border-radius: 8px;
+                width: 100%;
+                margin-bottom: 25px;
+                background-image: url(/img/seach.png);
+                background-repeat: no-repeat;
+                background-position: 97%;
+
+            }
+        }
+    }
+
+
+    .app__cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &__card {
+            width: 264px;
+            height: 304px;
+            border: 2px dashed rgb(240, 98, 146);
+            border-radius: 8px;
+            margin: 4px;
+
+            &__title {
+                width: 100%;
+                background-color: rgba(240, 98, 146, 0.4);
+                color: black;
+                padding: 10px;
+                font-size: 14px;
+                font-weight: 600;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .deletebtn {
+                    align-items: center;
+                    background-image: url(/img/garbage.png);
+                    cursor: pointer;
+                    background-repeat: no-repeat;
+                    background-size: 25px;
+                    width: 25px;
+                    height: 25px;
+                    border: none;
+                    background-color: transparent;
+
+                }
+            }
+
+            &__text {
+                padding: 10px;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 19px;
+                color: rgb(71, 71, 71);
+            }
+        }
+    }
+
+    @media (max-width: 650px) {
+        .app__content__decor {
+            flex-direction: column;
+            margin: auto 0 !important;
+        }
+
+        .deletebtn {
+            margin: auto;
+        }
+
+        .container {
+            width: 90%;
+        }
+
+        button {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .app__content__decor__colors__color {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    @media (max-width: 350px) {
+
+        .app__content__decor__colors__color {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
