@@ -28,8 +28,8 @@ for (let i = 0; i < products.length; i++) {
             return
         }
         input[i].value++
-        noneCash.style.display = "none"
-        sellBtn.style.backgr = "red"
+        noneCash.style.display = "none";
+        sellBtn[i].style.backgroundColor = "red";
         name = productName[i].innerText
         b = input[i].value
         total = input[i].value * (parseInt(price[i].innerText))
