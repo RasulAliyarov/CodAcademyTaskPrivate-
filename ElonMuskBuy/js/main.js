@@ -183,7 +183,10 @@ for (let i = 0; i < products.length; i++) {
         }
         ////////////////////////////////////////
         // name = productName[i].innerText
-
+        sellBtn[i].style.backgroundColor = "red";
+        if (input[i].value == 0) {
+            sellBtn[i].style.backgroundColor = "rgb(220, 220, 220)"
+        }
         inputrezerv = input[i].value
         addda()
     })
