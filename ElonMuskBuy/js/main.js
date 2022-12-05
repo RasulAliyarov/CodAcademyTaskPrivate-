@@ -1,12 +1,21 @@
 let buyBtn = document.getElementsByClassName("buyBtn")
 let sellBtn = document.getElementsByClassName("sellBtn")
 let input = document.getElementsByTagName("input")
-// let cash = document.getElementById("cash")
 let products = document.getElementsByClassName("products__card")
 let price = document.getElementsByClassName("price")
 let dsad = document.getElementsByClassName("app__products__sum")[0]
 let noneCash = document.getElementById("cash")
 let totalSpan = document.getElementById("total")
+
+let divBlock = document.createElement("div")
+divBlock.className = "receipt__block__content__product"
+let spanb = document.createElement("span")
+spanb.className = "span"
+let spanname = document.createElement("span")
+spanname.className = "span"
+let spansum = document.createElement("span")
+spansum.className = "span"
+
 
 let receiptContent = document.getElementById("receipt__block__content")
 let productName = document.getElementsByClassName("product__name")
@@ -18,6 +27,7 @@ let inputrezervobnuleniya
 let b
 let name = ""
 let total
+
 for (let i = 0; i < products.length; i++) {
     buyBtn[i].addEventListener("click", (e) => {
         sellBtn[i].style.backgroundColor = "red"
@@ -38,81 +48,24 @@ for (let i = 0; i < products.length; i++) {
         return
     });
 
-    // input[i].addEventListener("input", (e) => {
-    //     // setTimeout(() => {
-    //     inputrezervobnuleniya = parseInt(e.target.value)
+    sellBtn[i].addEventListener("click", (e) => {
+        input[i].value--
+        if (input[i].value < 0) {
+            input[i].value = 0
+            return;
+        }
+        console.log(productName[i].innerText)
+        name = productName[i].innerText
 
+        ostatok = ostatok + (parseInt(price[i].innerText))
+        total = total - (parseInt(price[i].innerText))
+        if (input[i].value == 0) {
+            sellBtn[i].style.backgroundColor = "rgb(220, 220, 220)"
+        }
+        addda()
+        return
 
-    //     if (input[i].value == "")  //nulable
-    //     {
-    //         input[i].value = 0
-    //     }
-    //     if (input[i].value > 0) {
-    //         input[i].value = ""
-    //         input[i].value = inputrezervobnuleniya
-    //     }
-
-    //     if ((input[i].value * parseInt((price[i]).innerText)) > ostatok) {
-    //         input[i].value = Math.floor(ostatok / parseInt((price[i]).innerText))
-    //         ostatok = ostatok - (parseInt(price[i].innerText) * input[i].value)
-    //         console.log("rrrrr" + ostatok)
-    //         addda()
-    //         return
-    //     }
-
-    //     if (ostatok == 100) {
-    //         ostatok = cash - (parseInt(price[i].innerText) * input[i].value)
-    //         console.log("message2: " + inputrezerv)
-
-    //     }
-    //     else {
-    //         if (inputrezerv > input[i].value) {
-    //             ostatok = cash - (parseInt(price[i].innerText) * input[i].value)
-    //             console.log("inputrezerv4:  " + inputrezerv)
-    //         }
-    //         else {
-    //             ostatok = ostatok - (parseInt(price[i].innerText) * input[i].value)
-    //             console.log("inputrezerv33:  " + inputrezerv)
-    //         }
-    //     }
-    //     inputrezerv = parseInt(e.target.value)
-    //     console.log("inputrezerv55:  " + inputrezerv)
-
-    //     addda()
-    //     // },);
-
-    //     // inputrezerv = parseInt(e.target.value)
-
-    //     // setTimeout(() => {
-    //     //     if (input[i].value == "")  //nulable
-    //     //     {
-    //     //         input[i].value = 0
-    //     //     }
-
-    //     //     if (input[i].value > 0) {
-    //     //         input[i].value = ""
-    //     //         input[i].value = inputrezerv
-    //     //     }
-
-    //     //     if (input[i].value * parseInt((price[i]).innerText) > ostatok) {
-    //     //         input[i].value = Math.floor(ostatok / parseInt((price[i]).innerText))
-    //     //         ostatok = ostatok - (input[i].value * parseInt((price[i]).innerText))
-    //     //     }
-    //     //     else {
-    //     //         if (inputrezerv > input[i].value) {
-    //     //             ostatok = ostatok + parseInt((price[i]).innerText)
-
-    //     //         }
-    //     //         else {
-    //     //             console.log(ostatok)
-    //     //             ostatok = cash - (parseInt(price[i].innerText) * input[i].value)
-    //     //         }
-    //     //     }
-    //     //     addda()
-    //     //     console.log(input[i].value)
-
-    //     // }, 2000)
-    // })
+    });
 
     input[i].addEventListener("input", (e) => {
         if (ostatok == 0) {
@@ -135,6 +88,7 @@ for (let i = 0; i < products.length; i++) {
         if ((input[i].value * parseInt((price[i]).innerText)) > cash) {
             input[i].value = Math.floor(ostatok / parseInt((price[i]).innerText))
         }
+
         /////////////////////////////////////
         if (ostatok == 100) {
             ostatok = cash - (parseInt(price[i].innerText) * input[i].value)
@@ -151,6 +105,7 @@ for (let i = 0; i < products.length; i++) {
             }
             console.log("inprezerv")
         }
+
         ////////////////////////////////////////
         if (input[i].value.length == 2) {
 
@@ -181,8 +136,10 @@ for (let i = 0; i < products.length; i++) {
                 }
             }
         }
+
+
         ////////////////////////////////////////
-        // name = productName[i].innerText
+        name[i] = productName[i].innerText
         sellBtn[i].style.backgroundColor = "red";
         if (input[i].value == 0) {
             sellBtn[i].style.backgroundColor = "rgb(220, 220, 220)"
@@ -190,47 +147,16 @@ for (let i = 0; i < products.length; i++) {
         inputrezerv = input[i].value
         addda()
     })
-
-    sellBtn[i].addEventListener("click", (e) => {
-        input[i].value--
-        if (input[i].value < 0) {
-            input[i].value = 0
-            return;
-        }
-        console.log(productName[i].innerText)
-        name = productName[i].innerText
-
-        ostatok = ostatok + (parseInt(price[i].innerText))
-
-        if (input[i].value == 0) {
-            sellBtn[i].style.backgroundColor = "rgb(220, 220, 220)"
-        }
-        addda()
-        return
-
-    });
 }
-
-
-let divBlock = document.createElement("div")
-divBlock.className = "receipt__block__content__product"
-let spanb = document.createElement("span")
-spanb.className = "span"
-let spanname = document.createElement("span")
-spanname.className = "span"
-
-let spansum = document.createElement("span")
-spansum.className = "span"
 
 function addda() {
     dsad.innerHTML = (`
     <h1 id="cash"><span>$</span> ${ostatok}</h1>
     `)
-
+    
     spanname.textContent = b
     spanb.textContent = name
-    spansum.value = ostatok
-
+    spansum.textContent = total
 
     divBlock.append(spanname, spanb, spansum)
 
