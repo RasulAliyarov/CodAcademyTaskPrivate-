@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1100px;
+    margin:  0 auto;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.offcanvas-body {
+    padding: 0 !important;
+}
+
+.offcanvas__body__table {
+    width: 100%;
+}
+
+.products__section{
+    margin-top: 50px;
+}
+.products__section__products{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 10px;
+}
+.card{
+    padding: 5px;
+    cursor: pointer;
+    width: 24% !important;
+}
+.card:hover{
+    box-shadow: 0 0 10px rgb(206, 206, 206);
+}
+.addBtnCart{
+    transition: .4s;
+
+}
+.addBtnCart:hover{
+    transform: scale(1.1);
+    transition: .4s;
+}
