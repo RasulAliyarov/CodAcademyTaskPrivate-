@@ -1,9 +1,195 @@
-body{
-    background-color: aqua;
+body {
+    position: relative;
 
-    h1{
-        font-family: "Open Sans", sans-serif;
-        font-size: 30px;
+    .app {
+        background: url(../../img/leftimage-bg.jpg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;     //////////////////
+        background-size: cover;
+
+        &::after {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            opacity: .8;
+        }
     }
+    .pg__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-39%, 66%);
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            &__left {
+                width: 320px;
+
+                &__imgBox {
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: 10px solid rgba(255, 255, 255, .1);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 300px;
+                    }
+                }
+            }
+
+            &__right {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-family: "Open Sans", sans-serif;
+                width: 553px;
+                margin-left: 45px;
+
+                h5 {
+                    font-weight: 400;
+                    font-size: 1.2rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    line-height: 32px;
+                    font-weight: 400;
+                    margin: 11px 0 23px;
+                }
+
+                span {
+                    font-size: 42px;
+                    font-weight: 600;
+                    margin: 19px 0 10px;
+                    font-size: 2.6rem;
+                    font-family: 'Poppins', sans-serif;
+
+                    h1 {
+                        display: inline;
+                        transition: .5s;
+                        font-size: 2.6rem;
+                        line-height: 42px;
+                        font-weight: 800;
+                        font-family: "Open Sans";
+                        color: #2196F3;
+
+                        &::after {
+                            content: "A FREELANCER";
+                            animation: anim 10s infinite;
+                            transition: .5s;
+
+                        }
+
+                        @keyframes anim {
+                            30% {
+                                content: "A BLOGGER";
+                                transition: .5s;
+                            }
+
+                            60% {
+                                content: "A WEB DESIGNER";
+                                transition: .5s;
+                            }
+
+                            100% {
+                                content: "DARIA TAYLOR";
+                                transition: .5s;
+                            }
+                        }
+                    }
+                }
+
+                div {
+                    display: flex;
+
+                    .aboutBtn {
+                       
+                        @include buttons(#2196F3, 0, transparent, white);
+                        
+                    }
+                    
+                    .portfolioBtn {
+                        @include buttons(transparent, 1p, #2196F3, #2196F3);
+                    }
+                }
+
+            }
+        }
+    }
+
 }
 
+
+.bodyForResponsive {
+    display: none;
+    background-color: #222;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 24px;
+
+    a {
+        text-decoration: none;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        display: flex;
+        // flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: .4s;
+
+        .bodyForResponsive__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.8rem;
+
+            row-gap: 25px;
+            color: white;
+
+            i {
+                color: #2196F3;
+                font-size: 2rem;
+            }
+        }
+
+        &:hover {
+            h4 {
+
+                color: #2196F3;
+                transition: .4s;
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 1030px) {
+    .app {
+        transform: translateX(100%);
+        transition: 1s;
+        display: none !important;
+    }
+
+    .bodyForResponsive {
+        display: grid !important;
+    }
+}

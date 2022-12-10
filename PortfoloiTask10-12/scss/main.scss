@@ -1,2 +1,3 @@
-@import "./base/reset", "./base/typography";
-@import "./pages/home"
+@import "./base/reset", "./base/typography", "./utils/mixins";
+@import "./layout/colorSetting", "./layout/burger";
+@import "./pages/home", "./scss/pages/portfolio", "./pages/about";
