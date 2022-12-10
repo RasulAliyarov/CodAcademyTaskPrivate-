@@ -40,6 +40,81 @@ input {
 html {
   font-size: 16px; }
 
+.container {
+  width: 1140px;
+  margin: 0 auto; }
+
+.bodyForResponsive {
+  display: none;
+  background-color: #222;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 24px; }
+  .bodyForResponsive a {
+    text-decoration: none;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s; }
+    .bodyForResponsive a .bodyForResponsive__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      row-gap: 25px;
+      color: white; }
+      .bodyForResponsive a .bodyForResponsive__content i {
+        color: #2196F3;
+        font-size: 2rem; }
+    .bodyForResponsive a:hover h4 {
+      color: #2196F3;
+      transition: .4s; }
+
+@media (max-width: 1030px) {
+  .app, .appAbout, .appPortfolio, .appContact {
+    transform: translateX(100%);
+    transition: 1s;
+    display: none !important; }
+  .bodyForResponsive {
+    display: grid !important; } }
+
+.app__content__top__title {
+  padding: 60px 0 54px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto; }
+  .app__content__top__title h1 {
+    font-size: 3.5rem;
+    color: white;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif; }
+    .app__content__top__title h1 span {
+      color: #2196F3;
+      margin-left: 10px; }
+  .app__content__top__title .app__content__top__title__text {
+    display: flex;
+    margin-top: 20px;
+    align-items: center; }
+    .app__content__top__title .app__content__top__title__text span {
+      font-size: 0.9rem;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+      padding: 0 20px; }
+    .app__content__top__title .app__content__top__title__text div {
+      width: 30px;
+      height: 2px;
+      background-color: #007bff; }
+
 .colorSettings {
   display: flex;
   align-items: center;
@@ -52,7 +127,8 @@ html {
   right: 0;
   top: 200px;
   border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px; }
+  border-bottom-left-radius: 5px;
+  z-index: 99; }
   .colorSettings i {
     animation: chearAnim 1s linear infinite;
     font-size: 20px;
@@ -201,143 +277,348 @@ body {
             body .pg__content__wrapper__right div .portfolioBtn i {
               margin-right: 10px; }
 
-.bodyForResponsive {
-  display: none;
+.appPortfolio {
+  width: 100%;
+  background-color: #222;
+  height: 100vh; }
+  .appPortfolio__projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 0.1fr));
+    column-gap: 30px;
+    row-gap: 30px;
+    transition: .4s;
+    padding-bottom: 30px;
+    justify-content: center; }
+    .appPortfolio__projects__block {
+      cursor: pointer;
+      width: 350px;
+      position: relative;
+      border-radius: 10px; }
+      .appPortfolio__projects__block img {
+        width: 350px;
+        border-radius: 5px; }
+      .appPortfolio__projects__block span {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: 500;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.3rem; }
+      .appPortfolio__projects__block:hover span {
+        display: block;
+        z-index: 2; }
+      .appPortfolio__projects__block:hover::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 197px;
+        background-color: #007bff;
+        border-radius: 5px;
+        z-index: 1; }
+
+body {
   background-color: #222;
   width: 100%;
-  height: 100vh;
-  grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
-  column-gap: 20px;
-  row-gap: 20px;
-  padding: 24px; }
-  .bodyForResponsive a {
-    text-decoration: none;
-    width: 100%;
-    background-color: #333;
-    color: white;
+  position: relative; }
+  body .appAbout .app__content__top__info {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .4s; }
-    .bodyForResponsive a .bodyForResponsive__content {
+    justify-content: space-around; }
+    body .appAbout .app__content__top__info__left {
+      display: flex;
+      justify-content: center; }
+      body .appAbout .app__content__top__info__left .squad_line {
+        position: relative;
+        width: fit-content;
+        height: fit-content; }
+        body .appAbout .app__content__top__info__left .squad_line img {
+          z-index: 1 !important;
+          width: 440px; }
+        body .appAbout .app__content__top__info__left .squad_line:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          border: 6px solid #007bff;
+          transform: translate(26px, 26px);
+          z-index: -1; }
+    body .appAbout .app__content__top__info__right {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 1.8rem;
-      row-gap: 25px;
-      color: white; }
-      .bodyForResponsive a .bodyForResponsive__content i {
-        color: #2196F3;
-        font-size: 2rem; }
-    .bodyForResponsive a:hover h4 {
-      color: #2196F3;
-      transition: .4s; }
-
-@media (max-width: 1030px) {
-  .app {
-    transform: translateX(100%);
-    transition: 1s;
-    display: none !important; }
-  .bodyForResponsive {
-    display: grid !important; } }
-
-.app__about {
-  background-color: #222;
-  width: 100%; }
-  .app__about .app__content__top {
-    width: 1170px;
-    margin: 0 auto; }
-    .app__about .app__content__top .app__content__top__title {
-      padding: 60px 0 54px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-      .app__about .app__content__top .app__content__top__title h1 {
-        font-size: 3.5rem;
-        color: white;
-        font-weight: 900;
-        font-family: 'Poppins', sans-serif; }
-        .app__about .app__content__top .app__content__top__title h1 span {
-          color: #007bff; }
-      .app__about .app__content__top .app__content__top__title .app__content__top__title__text {
+      justify-content: center; }
+      body .appAbout .app__content__top__info__right__list {
         display: flex;
-        margin-top: 20px;
         align-items: center; }
-        .app__about .app__content__top .app__content__top__title .app__content__top__title__text span {
-          font-size: 0.9rem;
-          color: #fff;
+        body .appAbout .app__content__top__info__right__list ul {
           font-family: 'Open Sans', sans-serif;
-          padding: 0 20px; }
-        .app__about .app__content__top .app__content__top__title .app__content__top__title__text div {
-          width: 30px;
-          height: 2px;
-          background-color: #007bff; }
-    .app__about .app__content__top__info {
-      padding: 0 30px;
-      display: flex; }
-      .app__about .app__content__top__info__left {
-        padding: 0 15px;
-        width: 570px;
-        display: flex;
-        justify-content: center; }
-        .app__about .app__content__top__info__left .squad_line {
-          position: relative;
-          width: fit-content;
-          height: fit-content; }
-          .app__about .app__content__top__info__left .squad_line img {
-            z-index: 1 !important;
-            width: 440px; }
-          .app__about .app__content__top__info__left .squad_line:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            border: 6px solid #007bff;
-            transform: translate(26px, 26px);
-            z-index: -1; }
-      .app__about .app__content__top__info__right {
-        width: 570px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0 15px; }
-        .app__about .app__content__top__info__right__list {
-          display: flex;
-          align-items: center; }
-          .app__about .app__content__top__info__right__list ul {
+          padding: 0 15px; }
+          body .appAbout .app__content__top__info__right__list ul li {
             font-family: 'Open Sans', sans-serif;
-            padding: 0 15px; }
-            .app__about .app__content__top__info__right__list ul li {
-              font-family: 'Open Sans', sans-serif;
-              font-weight: 400;
-              color: rgba(255, 255, 255, 0.8);
-              font-size: 1rem;
-              width: 240px;
-              padding-bottom: 28px; }
-              .app__about .app__content__top__info__right__list ul li span {
-                margin-left: 20px;
-                color: #fff; }
-        .app__about .app__content__top__info__right button {
-          display: flex;
-          align-items: center;
-          padding: 15px 33px;
-          background-color: #2196F3;
-          color: white;
-          border: 1px solid transparent;
-          border: 0;
-          font-weight: 600;
-          border-radius: 26px;
-          margin-right: 25px;
-          font-size: 0.9rem;
-          letter-spacing: 1px;
-          cursor: pointer;
-          text-decoration: none;
-          width: fit-content;
-          margin-left: 15px;
-          margin-top: 8px; }
-          .app__about .app__content__top__info__right button i {
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            width: 200px;
+            padding-bottom: 28px; }
+            body .appAbout .app__content__top__info__right__list ul li span {
+              margin-left: 20px;
+              color: #fff; }
+      body .appAbout .app__content__top__info__right button {
+        display: flex;
+        align-items: center;
+        padding: 15px 33px;
+        background-color: #2196F3;
+        color: white;
+        border: 1px solid transparent;
+        border: 0;
+        font-weight: 600;
+        border-radius: 26px;
+        margin-right: 25px;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        cursor: pointer;
+        text-decoration: none;
+        width: fit-content;
+        margin-left: 15px;
+        margin-top: 8px; }
+        body .appAbout .app__content__top__info__right button i {
+          margin-right: 10px; }
+  body .appAbout .app__content__middle {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px; }
+    body .appAbout .app__content__middle__exp {
+      width: 540px;
+      padding-bottom: 50px;
+      color: white;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif; }
+      body .appAbout .app__content__middle__exp h5 {
+        margin-bottom: 50px;
+        font-size: 1.6rem; }
+      body .appAbout .app__content__middle__exp__block {
+        position: relative;
+        padding-left: 50px;
+        margin-top: 40px; }
+        body .appAbout .app__content__middle__exp__block span {
+          color: #eee;
+          font-size: 0.8rem;
+          opacity: .8; }
+          body .appAbout .app__content__middle__exp__block span i {
             margin-right: 10px; }
+        body .appAbout .app__content__middle__exp__block h6 {
+          padding: 32px 0 10px;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 300;
+          font-size: 1rem; }
+          body .appAbout .app__content__middle__exp__block h6 span {
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif; }
+        body .appAbout .app__content__middle__exp__block p {
+          line-height: 28px;
+          font-size: 0.9rem;
+          color: #eee;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400; }
+        body .appAbout .app__content__middle__exp__block::before {
+          content: "";
+          height: 159px;
+          width: 1px;
+          background-color: #007bff;
+          position: absolute;
+          top: 13px;
+          left: 7px; }
+        body .appAbout .app__content__middle__exp__block:last-child::before {
+          content: "";
+          height: 115px;
+          width: 1px;
+          background-color: #007bff;
+          position: absolute;
+          top: 13px;
+          left: 7px; }
+        body .appAbout .app__content__middle__exp__block::after {
+          content: "";
+          height: 15px;
+          width: 15px;
+          border: 2px solid #007bff;
+          position: absolute;
+          border-radius: 50%;
+          top: 0;
+          left: 0; }
+  body .appAbout .app__content__bottom h5 {
+    color: white;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 50px; }
+  body .appAbout .app__content__bottom__blocks {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+    body .appAbout .app__content__bottom__blocks ul {
+      width: 30%; }
+      body .appAbout .app__content__bottom__blocks ul .app__content__bottom__blocks__block {
+        height: fit-content;
+        display: flex;
+        position: relative;
+        margin-bottom: 50px; }
+        body .appAbout .app__content__bottom__blocks ul .app__content__bottom__blocks__block::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 60%;
+          height: 1px;
+          background-color: #007bff; }
+        body .appAbout .app__content__bottom__blocks ul .app__content__bottom__blocks__block::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #9c9c9c; }
+        body .appAbout .app__content__bottom__blocks ul .app__content__bottom__blocks__block h6 {
+          color: white;
+          padding-right: 40%;
+          font-family: "Opem Sans", sans-serif; }
+        body .appAbout .app__content__bottom__blocks ul .app__content__bottom__blocks__block i {
+          font-size: 36px;
+          position: relative;
+          font-weight: 400;
+          color: #007bff; }
+          body .appAbout .app__content__bottom__blocks ul .app__content__bottom__blocks__block i span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -70%);
+            font-size: 12px; }
+
+.aboutline {
+  margin: 72px auto 50px;
+  border-top: 1px solid #797979;
+  opacity: .6; }
+
+.appContact__content {
+  display: flex;
+  padding: 0 30px; }
+  .appContact__content__left {
+    width: 380px; }
+    .appContact__content__left__block {
+      padding-bottom: 25px;
+      font-family: 'Open Sans', sans-serif; }
+      .appContact__content__left__block h6 {
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 0.9rem;
+        color: #fff;
+        opacity: .8; }
+      .appContact__content__left__block span {
+        color: white;
+        font-weight: 500; }
+      .appContact__content__left__block i {
+        color: #2196F3;
+        padding-right: 10px; }
+    .appContact__content__left__social {
+      color: #2196F3;
+      margin-top: 10px; }
+      .appContact__content__left__social h5 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        color: #fff;
+        font-weight: 500;
+        opacity: .8;
+        margin-bottom: 12px; }
+      .appContact__content__left__social div {
+        display: flex;
+        column-gap: 20px;
+        transition: .4s; }
+        .appContact__content__left__social div span {
+          width: 35px;
+          border: 1px solid #2196F3;
+          border-radius: 50%;
+          height: 35px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer; }
+          .appContact__content__left__social div span i {
+            transition: .4s; }
+          .appContact__content__left__social div span:hover {
+            background-color: #2196F3;
+            transition: .4s; }
+            .appContact__content__left__social div span:hover i {
+              transform: rotateY(-360deg);
+              color: white;
+              transition: .4s; }
+  .appContact__content__right {
+    width: 760px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    height: 236px; }
+    .appContact__content__right p {
+      opacity: 0.8;
+      line-height: 32px;
+      font-size: 1rem;
+      margin-bottom: 24px; }
+    .appContact__content__right div {
+      display: flex;
+      justify-content: space-between; }
+      .appContact__content__right div div {
+        position: relative; }
+        .appContact__content__right div div input {
+          border: none;
+          border-radius: 25px;
+          padding: 15px 12px 15px 49px;
+          border: 1px solid #444;
+          background-color: #333;
+          width: 350px; }
+        .appContact__content__right div div i {
+          position: absolute;
+          top: 30%;
+          left: 20px;
+          color: #eee;
+          opacity: .5; }
+    .appContact__content__right div {
+      position: relative; }
+      .appContact__content__right div textarea {
+        margin-top: 15px;
+        min-width: 100%;
+        border: none;
+        border-radius: 30px;
+        border: 1px solid #444;
+        background-color: #333;
+        padding: 15px 0 0 60px;
+        height: 130px; }
+        .appContact__content__right div textarea::placeholder {
+          font-size: 1rem; }
+      .appContact__content__right div i {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #eee;
+        opacity: .5; }
+    .appContact__content__right button {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      padding: 15px 33px;
+      background-color: #2196F3;
+      color: white;
+      border: 1px solid transparent;
+      border: 0;
+      font-weight: 600;
+      border-radius: 26px;
+      margin-right: 25px;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-decoration: none; }
+      .appContact__content__right button i {
+        margin-right: 10px; }
