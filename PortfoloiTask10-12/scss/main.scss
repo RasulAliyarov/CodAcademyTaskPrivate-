@@ -1,4 +1,4 @@
 @import "./base/reset", "./base/typography", "./utils/mixins", "./base/default";
-@import "./layout/responsive", "./layout/titleTop";
+@import "./layout/backSte", "./layout/responsive", "./layout/titleTop";
 @import "./layout/colorSetting", "./layout/burger";
-@import "./pages/home", "./scss/pages/portfolio", "./pages/about", "./pages/contact";
+@import "./pages/home", "./scss/pages/portfolio", "./pages/about", "./pages/contact", "./pages/blog";

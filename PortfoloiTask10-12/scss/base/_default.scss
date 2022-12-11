@@ -1,4 +1,11 @@
-.container{
+.container {
     width: 1140px;
     margin: 0 auto;
+}
+
+body {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
 }

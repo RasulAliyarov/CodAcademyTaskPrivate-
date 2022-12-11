@@ -1,25 +1,24 @@
-body {
+.homeBody {
     position: relative;
-
-    .app {
-        background: url(../../img/leftimage-bg.jpg);
-        background-repeat: no-repeat;
+    background: url(../../img/leftimage-bg.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    // height: ; //////////////////        background-size: cover;
+    &::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 100%;     //////////////////
-        background-size: cover;
-
-        &::after {
-            content: "";
-            background-color: black;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            z-index: -1;
-            opacity: .8;
-        }
+        height: 100vh;
+        z-index: -1;
+        opacity: 0.9;
     }
+
+    .app {}
+
     .pg__content {
         position: absolute;
         top: 50%;
@@ -115,11 +114,11 @@ body {
                     display: flex;
 
                     .aboutBtn {
-                       
+
                         @include buttons(#2196F3, 0, transparent, white);
-                        
+
                     }
-                    
+
                     .portfolioBtn {
                         @include buttons(transparent, 1p, #2196F3, #2196F3);
                     }
@@ -129,5 +128,3 @@ body {
         }
     }
 }
-
-

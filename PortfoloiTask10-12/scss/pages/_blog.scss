@@ -1,0 +1,131 @@
+.Blog {
+    .appBlog__content {
+        &__blocks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            &__block {
+                width: 570px;
+                height: 526px;
+                padding: 0 15px;
+                border-radius: 3px;
+                color: white;
+                cursor: pointer;
+
+                &__top {
+                    overflow: hidden;
+                    border-radius: 3px;
+                    position: relative;
+
+                    img {
+                        width: 540px;
+                        border-radius: 3px;
+                        transition: .4s;
+
+                        &:hover {
+                            transform: scale(1.1);
+                            transition: .4s;
+                        }
+                    }
+
+                    div {
+                        position: absolute;
+                        right: 15px;
+                        top: 15px;
+                        padding: 10px 8px;
+                        border-radius: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #2196F3;
+                        row-gap: 7px;
+
+                        h6 {
+                            font-size: 0.8rem;
+                            font-family: "Open Sans", sans-serif;
+                        }
+                    }
+                }
+
+                &__middle {
+                    h1 {
+                        margin: 24px 0 12px 0;
+                        font-weight: 600;
+                        font-size: 1.3rem;
+                        font-family: "Poppins", sans-serif;
+
+                        &:hover {
+                            color: #2196F3;
+                        }
+                    }
+
+                    p {
+                        color: white;
+                        opacity: 0.8;
+                        font-family: 'Open Sans', sans-serif;
+                        line-height: 2;
+                    }
+                }
+
+                &__bottom {
+                    button {
+                        margin: 24px 0;
+                        @include buttons(#2196F3, 0, transparent, white, 0.9rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1030px) {
+    .backStep {
+        display: flex !important;
+    }
+
+    header {
+        display: none !important;
+    }
+
+    .container {
+        width: 90% !important;
+    }
+
+    .Blog {
+        .appBlog__content__blocks {
+            &__block {
+                width: 50% !important;
+                img {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 765px) {}
+
+@media (max-width: 560px) {
+    html{
+        font-size: 10px !important;
+    }
+    .Blog {
+        .appBlog__content__blocks {
+            display: flex;
+            flex-direction: column !important;
+            flex-wrap: wrap !important;
+            &__block {
+                width: 100% !important;
+                height: fit-content !important;
+                img {
+                    width: 100% !important;
+                }
+                p{
+                    font-size: 1.3rem !important;
+                }
+            }
+        }
+    }
+}

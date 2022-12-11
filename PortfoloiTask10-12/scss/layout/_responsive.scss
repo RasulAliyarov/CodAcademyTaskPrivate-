@@ -18,7 +18,8 @@
         align-items: center;
         justify-content: center;
         transition: .4s;
-
+        border-radius: 5px;
+        text-align: center;
         .bodyForResponsive__content {
             display: flex;
             flex-direction: column;
@@ -47,10 +48,13 @@
 
 
 }
-
-
 @media (max-width: 1030px) {
-    .app, .appAbout, .appPortfolio, .appContact {
+
+    .app,
+    .appAbout,
+    .appPortfolio,
+    .appContact,
+    .appBlog {
         transform: translateX(100%);
         transition: 1s;
         display: none !important;
@@ -58,5 +62,21 @@
 
     .bodyForResponsive {
         display: grid !important;
+    }
+}
+
+@media (max-width: 765px) {
+    .bodyForResponsive__content {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .bodyForResponsive{
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+
+    }
+    .bodyForResponsive__content {
+        font-size: 1rem !important;
     }
 }
