@@ -144,3 +144,16 @@ function changeColor(color) {
         console.log("outline")
     }
 }
+
+const preloaders = document.getElementsByClassName("preloader")[0]
+
+
+function preloader() {
+    setTimeout(() => {
+        if (!preloaders.classList.contains("unpreloader")) {
+            preloaders.classList.add("unpreloader")
+
+        }
+    }, 2000)
+}
+preloader();

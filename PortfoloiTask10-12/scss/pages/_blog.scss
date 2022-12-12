@@ -168,7 +168,36 @@
     }
 }
 
-@media (max-width: 765px) {}
+@media (max-width: 765px) {
+    .modal {
+        .modal-dialog-scrollable {
+            transform: translateX(40px) !important;
+            .modal-content {
+                width: 500px;
+                .blog__modal {
+
+                    border-radius: 10px;
+                    width: 500px !important;
+    
+                    &__img {
+                        width: 500px;
+                        margin-bottom: 10px;
+    
+                        img {
+                            width: 400px;
+                            border-radius: 10px;
+                        }
+    
+                    }
+    
+                    .blog__modal__text {
+                    
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media (max-width: 560px) {
     html {

@@ -496,6 +496,37 @@ header {
               .homeBody .pg__content__wrapper__right div .portfolioBtn:hover:before {
                 width: 100%; }
 
+.preloader {
+  position: fixed !important;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  z-index: 100000;
+  transition: .7s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .6s;
+  position: relative; }
+  .preloader .preloader__content {
+    text-align: center;
+    transition: 6s;
+    transition: 6s; }
+    .preloader .preloader__content h1 {
+      color: white;
+      font-size: 3rem;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600; }
+    .preloader .preloader__content div {
+      transition: 6s !important;
+      background-color: white;
+      width: 100% !important;
+      height: 4px;
+      margin: 5px 0; }
+
+.unpreloader {
+  opacity: 0; }
+
 .Portfolio {
   width: 100%;
   background-color: #222;
@@ -1331,6 +1362,21 @@ body {
     width: 50% !important; }
     .Blog .appBlog__content__blocks__block img {
       width: 100% !important; } }
+
+@media (max-width: 765px) {
+  .modal .modal-dialog-scrollable {
+    transform: translateX(40px) !important; }
+    .modal .modal-dialog-scrollable .modal-content {
+      width: 500px; }
+      .modal .modal-dialog-scrollable .modal-content .blog__modal {
+        border-radius: 10px;
+        width: 500px !important; }
+        .modal .modal-dialog-scrollable .modal-content .blog__modal__img {
+          width: 500px;
+          margin-bottom: 10px; }
+          .modal .modal-dialog-scrollable .modal-content .blog__modal__img img {
+            width: 400px;
+            border-radius: 10px; } }
 
 @media (max-width: 560px) {
   html {
