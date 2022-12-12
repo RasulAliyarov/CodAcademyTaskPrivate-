@@ -1,6 +1,6 @@
 .homeBody {
     position: relative;
-    background: url(../../img/leftimage-bg.jpg);
+    background: url("../img/leftimage-bg.jpg");
     background-repeat: no-repeat;
     width: 100%;
     background-size: cover;
@@ -190,5 +190,5 @@
 
 
 .unpreloader {
-    opacity: 0;
+    display: none;
 }

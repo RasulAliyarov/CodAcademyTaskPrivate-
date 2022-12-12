@@ -328,7 +328,7 @@ header {
 
 .homeBody {
   position: relative;
-  background: url(../../img/leftimage-bg.jpg);
+  background: url("../img/leftimage-bg.jpg");
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover; }
@@ -525,7 +525,7 @@ header {
       margin: 5px 0; }
 
 .unpreloader {
-  opacity: 0; }
+  display: none; }
 
 .Portfolio {
   width: 100%;
