@@ -12,6 +12,7 @@
         transition: .4s;
         padding-bottom: 30px;
         justify-content: center;
+
         &__block {
             cursor: pointer;
             width: 350px;
@@ -35,6 +36,7 @@
                 font-family: 'Poppins', sans-serif;
                 font-size: 1.3rem;
             }
+
             height: fit-content;
 
             &:hover {
@@ -54,20 +56,113 @@
                     border-radius: 5px;
                     z-index: 1;
                 }
-
             }
         }
     }
+
+
+
 }
 
+.offcanvas {
+    width: 55% !important;
+    background-color: #333;
+
+}
+
+.offcanvas_body_content {
+    width: 100%;
+    padding: 0 15px;
+    z-index: 3;
+
+    &_img {
+        width: 100%;
+        border-radius: 5px;
+
+        img {
+            border-radius: 5px;
+            width: inherit;
+        }
+    }
+
+    &_top {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        span {
+            font-size: 34px;
+            font-weight: 600;
+            margin: 0 0 22px 0;
+            font-family: 'Open Sans', sans-serif;
+            color: #2196F3;
+        }
+
+        .closeBtn {
+            @include buttons(transparent, 1p, #2196F3, #2196F3);
+            font-family: 'Poppins', sans-serif;
+
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 0;
+                background: #2196F3;
+                z-index: -1;
+                transition: .3s ease-in all;
+                border-radius: 26px;
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: white;
+
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+    &_info {
+        color: white;
+
+        h6 {
+            display: block;
+            font-size: 15px;
+            padding-bottom: 12px;
+            font-weight: 500;
+            font-family: "Open Sans", sans-serif;
+
+            i {
+                margin-right: 15px;
+            }
+
+            span {
+                font-weight: 400;
+            }
+        }
+    }
+
+    button {
+        @include buttons(#2196F3, 0, transparent, white);
+        font-family: 'Poppins', sans-serif;
+        margin-top: 10px;
+    }
+}
 
 @media (max-width: 1030px) {
-    
-    .Portfolio{
-        .container{
+
+    .Portfolio {
+        .container {
             width: 90% !important;
         }
-        .appPortfolio__projects{
+
+        .appPortfolio__projects {
             display: flex;
             flex-wrap: wrap !important;
         }
@@ -76,28 +171,58 @@
     .backStep {
         display: flex !important;
     }
-    header{
+
+    header {
         display: none !important;
     }
+
     .bodyForResponsive {
         display: grid !important;
     }
 }
 
 @media (max-width: 765px) {
-    .Portfolio{
-        .container{
+    .Portfolio {
+        .container {
             width: 90% !important;
         }
-        .appPortfolio__projects{
+
+        .appPortfolio__projects {
             display: flex;
             flex-wrap: wrap !important;
 
-            &__block{
+            &__block {
                 width: 100% !important;
-                img{
+
+                img {
                     width: 100% !important;
                 }
+            }
+        }
+    }
+
+    .offcanvas_body_content {
+        &_top {
+
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 23px !important;
+                margin: 0;
+            }
+
+            button {
+                padding: 10px 20px !important;
+                margin: 0;
+            }
+        }
+
+        &_info {
+            margin-top: 20px;
+
+            h6 {
+                margin-bottom: 15px;
             }
         }
     }
@@ -108,6 +233,35 @@
         font-size: 14px !important;
     }
 
-    
+    .offcanvas_body_content {
+        &_top {
+
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+
+            span {
+                font-size: 16px !important;
+                margin: 0;
+            }
+
+            button {
+                padding: 10px 20px !important;
+                margin-top: 10px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &_info {
+            margin-top: 20px;
+
+            h6 {
+                margin-bottom: 15px;
+                font-size: 1.2rem;
+            }
+        }
+    }
 
 }

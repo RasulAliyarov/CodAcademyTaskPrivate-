@@ -6,7 +6,7 @@
             justify-content: space-between;
 
             &__block {
-                width: 570px;
+                width: 50%;
                 height: 526px;
                 padding: 0 15px;
                 border-radius: 3px;
@@ -72,7 +72,68 @@
                 &__bottom {
                     button {
                         margin: 24px 0;
+                        font-family: sans-serif;
                         @include buttons(#2196F3, 0, transparent, white, 0.9rem);
+                        border-radius: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal {
+    .modal-dialog-scrollable {
+        transform: translateX(-50px) !important;
+        .modal-content {
+            width: 700px;
+            background-color: #333;
+            border-radius: 10px;
+
+            .blog__modal {
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                background-color: #222;
+                border-radius: 10px;
+                width: 700px !important;
+                padding: 50px;
+
+                &__img {
+                    width: 700px;
+                    margin-bottom: 10px;
+
+                    img {
+                        width: 600px;
+                        border-radius: 10px;
+                    }
+
+                }
+
+                .blog__modal__text {
+                    color: white;
+                    font-family: "Open Sans", sans-serif;
+
+                    h1 {
+                        font-size: 24px;
+                        margin-bottom: 10px;
+                        font-weight: 600;
+                        font-family: "Poppins", sans-serif;
+
+                    }
+
+                    h5 {
+                        margin-bottom: 25px;
+                        opacity: .8;
+                        font-size: 14px;
+                    }
+
+                    p {
+                        color: #eee;
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                        font-weight: 500;
+                        line-height: 22px;
                     }
                 }
             }
@@ -95,8 +156,10 @@
 
     .Blog {
         .appBlog__content__blocks {
+
             &__block {
                 width: 50% !important;
+
                 img {
                     width: 100% !important;
                 }
@@ -108,24 +171,89 @@
 @media (max-width: 765px) {}
 
 @media (max-width: 560px) {
-    html{
+    html {
         font-size: 10px !important;
     }
+
     .Blog {
         .appBlog__content__blocks {
             display: flex;
             flex-direction: column !important;
             flex-wrap: wrap !important;
+
             &__block {
                 width: 100% !important;
                 height: fit-content !important;
+
                 img {
                     width: 100% !important;
                 }
-                p{
+
+                p {
                     font-size: 1.3rem !important;
                 }
             }
         }
     }
+
+
+    .modal {
+        .modal-dialog-scrollable {
+            transform: translateX(40px) !important;
+            .modal-content {
+                width: 400px;
+                background-color: #333;
+                border-radius: 10px;
+    
+                .blog__modal {
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    background-color: #222;
+                    border-radius: 10px;
+                    width: 400px !important;
+                    padding: 50px;
+    
+                    &__img {
+                        width: 400px;
+                        margin-bottom: 10px;
+    
+                        img {
+                            width: 300px;
+                            border-radius: 10px;
+                        }
+    
+                    }
+    
+                    .blog__modal__text {
+                        color: white;
+                        font-family: "Open Sans", sans-serif;
+    
+                        h1 {
+                            font-size: 24px;
+                            margin-bottom: 10px;
+                            font-weight: 600;
+                            font-family: "Poppins", sans-serif;
+    
+                        }
+    
+                        h5 {
+                            margin-bottom: 25px;
+                            opacity: .8;
+                            font-size: 14px;
+                        }
+    
+                        p {
+                            color: #eee;
+                            font-size: 14px;
+                            margin-bottom: 10px;
+                            font-weight: 500;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }

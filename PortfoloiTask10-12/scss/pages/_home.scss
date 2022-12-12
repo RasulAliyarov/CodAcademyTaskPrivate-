@@ -16,9 +16,6 @@
         z-index: -1;
         opacity: 0.9;
     }
-
-    .app {}
-
     .pg__content {
         position: absolute;
         top: 50%;
@@ -121,6 +118,27 @@
 
                     .portfolioBtn {
                         @include buttons(transparent, 1p, #2196F3, #2196F3);
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            height: 100%;
+                            width: 0;
+                            background: #2196F3;
+                            z-index: -1;
+                            transition: .3s ease-in all;
+                            border-radius: 26px;
+                        }
+                    
+                        &:hover {
+                            cursor: pointer;
+                            color: white;
+                            &:before {
+                                width: 100%;
+                            }
+                        }
                     }
                 }
 

@@ -7,6 +7,7 @@
     column-gap: 20px;
     row-gap: 20px;
     padding: 24px;
+    transition: .5s;
 
     a {
         text-decoration: none;
@@ -20,6 +21,7 @@
         transition: .4s;
         border-radius: 5px;
         text-align: center;
+
         .bodyForResponsive__content {
             display: flex;
             flex-direction: column;
@@ -48,16 +50,16 @@
 
 
 }
-@media (max-width: 1030px) {
 
+@media (max-width: 1030px) { 
     .app,
     .appAbout,
     .appPortfolio,
     .appContact,
     .appBlog {
-        transform: translateX(100%);
-        transition: 1s;
-        display: none !important;
+        transform: translateX(120%);
+        transition: .5s ease-in-out;
+        display: none;
     }
 
     .bodyForResponsive {
@@ -72,10 +74,11 @@
 }
 
 @media (max-width: 560px) {
-    .bodyForResponsive{
+    .bodyForResponsive {
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 
     }
+
     .bodyForResponsive__content {
         font-size: 1rem !important;
     }

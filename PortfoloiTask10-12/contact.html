@@ -12,26 +12,59 @@
 </head>
 
 <body>
-    <div class="appContact container">
-        <header>
+
+    <div class="appContact Contact container">
+        <header id="burgerBtn">
             <button><i class="fa-solid fa-bars"></i></button>
+
+            <div class="burger__buttons">
+                <div class="burger__buttons__block">
+                    <a href="index.html" class="burger__buttons__block__button">
+                        <i class="fa-solid fa-house textColor"></i>
+                        <span class="textColor">Home</span>
+                    </a>
+                    <a href="/about.html" class="burger__buttons__block__button">
+                        <i class="fa-solid fa-user-large textColor"></i>
+                        <span class="textColor">About</span>
+                    </a>
+                    <a href="/portfolio.html" class="burger__buttons__block__button">
+                        <i class="fa-solid fa-suitcase textColor"></i>
+                        <span class="textColor">Portfolio</span>
+                    </a>
+                    <a href="/contact.html" class="burger__buttons__block__button">
+                        <i class="fa-solid fa-comments textColor"></i>
+                        <span class="textColor">Contact</span>
+                    </a>
+                    <a href="/myblog.html" class="burger__buttons__block__button">
+                        <i class="fa-solid fa-envelope-open textColor"></i>
+                        <span class="textColor">Blog</span>
+                    </a>
+                </div>
+            </div>
         </header>
         <div class="colorSettings">
-            <i class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-gear chear"></i>
             <div class="colorSettings__content">
-
+                <h5>STYLE SWITCHER </h5>
+                <span><i class="fa-solid fa-droplet" id="blue"></i></span>
+                <span><i class="fa-solid fa-droplet" id="red"></i></span>
+                <span><i class="fa-solid fa-droplet" id="orange"></i></span>
+                <span><i class="fa-solid fa-droplet" id="purple"></i></span>
+                <span><i class="fa-solid fa-droplet" id="green"></i></span>
+                <button><i class="fa-solid fa-cart-shopping"></i>PURCHASE</button>
             </div>
         </div>
 
+
         <div class="app__content__top__title">
-            <h1>GET<span> IN TOUCH
+            <h1>GET<span class="textColor"> IN TOUCH
                 </span>
             </h1>
             <div class="app__content__top__title__text">
-                <div class="line"></div>
+                <div class="line btnColor"></div>
                 <span>I’M ALWAYS OPEN TO DISCUSSING PRODUCT DESIGN WORK OR PARTNERSHIPS.
                 </span>
-                <div class="line"></div>
+                <div class="line btnColor"></div>
             </div>
         </div>
 
@@ -39,23 +72,23 @@
             <div class="appContact__content__left">
                 <div class="appContact__content__left__block">
                     <h6>Phone</h6>
-                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-whatsapp textColor"></i>
                     <span>+216 21 184 010</span>
                 </div>
                 <div class="appContact__content__left__block">
                     <h6>Email</h6>
-                    <i class="fa-regular fa-envelope"></i>
+                    <i class="fa-regular fa-envelope textColor"></i>
                     <span>info@daria.ua </span>
                 </div>
                 <div class="appContact__content__left__block">
                     <h6>Instagram</h6>
-                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-instagram textColor"></i>
                     <span>daria.198
                     </span>
                 </div>
                 <div class="appContact__content__left__block">
                     <h6>Dribbble</h6>
-                    <i class="fa-brands fa-dribbble"></i>
+                    <i class="fa-brands fa-dribbble textColor"></i>
                     <span>daria.dribble
                     </span>
                 </div>
@@ -63,17 +96,17 @@
                 <div class="appContact__content__left__social">
                     <h5>Social Profiles </h5>
                     <div>
-                        <span>
-                            <i class="fa-brands fa-facebook-f"></i>
+                        <span class="outline">
+                            <i class="fa-brands fa-facebook-f textColor"></i>
                         </span>
-                        <span>
-                            <i class="fa-brands fa-twitter"></i>
+                        <span class="outline">
+                            <i class="fa-brands fa-twitter textColor"></i>
                         </span>
-                        <span>
-                            <i class="fa-brands fa-youtube"></i>
+                        <span class="outline">
+                            <i class="fa-brands fa-youtube textColor"></i>
                         </span>
-                        <span>
-                            <i class="fa-brands fa-dribbble"></i>
+                        <span class="outline">
+                            <i class="fa-brands fa-dribbble textColor"></i>
                         </span>
                     </div>
                 </div>
@@ -96,21 +129,26 @@
                     <i class="fa-solid fa-comments"></i>
                     <textarea name="" id="" cols="30" rows="10" placeholder="YOUR MESSAGE"></textarea>
                 </div>
-                <button><i class="fa-solid fa-paper-plane"></i>SEND MESSAGE</button>
+                <button class="btnColor"><i class="fa-solid fa-paper-plane"></i>SEND MESSAGE</button>
             </div>
         </div>
 
     </div>
 
-
-
-
     <section class="bodyForResponsive">
         <div class="colorSettings">
-            <i class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-gear chear"></i>
             <div class="colorSettings__content">
+                <h5>STYLE SWITCHER </h5>
+                <span><i class="fa-solid fa-droplet" id="blue"></i></span>
+                <span><i class="fa-solid fa-droplet" id="red"></i></span>
+                <span><i class="fa-solid fa-droplet" id="orange"></i></span>
+                <span><i class="fa-solid fa-droplet" id="purple"></i></span>
+                <span><i class="fa-solid fa-droplet" id="green"></i></span>
+                <button><i class="fa-solid fa-cart-shopping"></i>PURCHASE</button>
             </div>
         </div>
+
         <a href="/ResponsHtml/respAbout.html">
             <div class="bodyForResponsive__content">
                 <i class="fa-solid fa-user"></i>
@@ -136,6 +174,8 @@
             </div>
         </a>
     </section>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
