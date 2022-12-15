@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Inter:wght@400;500;600;800&display=swap");
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -42,21 +42,25 @@ html {
   font-family: "Inter", sans-serif; }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto; }
 
-header .header__top__covid {
+html {
+  overflow-x: hidden; }
+
+header .header__top {
   background-color: #233a95;
-  width: 100%;
-  height: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 0.75rem; }
-  header .header__top__covid span {
-    font-weight: 700;
-    margin: 0 5px; }
+  width: 100%; }
+  header .header__top__covid {
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.75rem; }
+    header .header__top__covid span {
+      font-weight: 700;
+      margin: 0 5px; }
 
 header .header__middle {
   border-bottom: 1px solid #edeef5; }
@@ -123,11 +127,15 @@ header .header__bottom {
   margin-top: 30px;
   display: flex;
   height: 62px; }
+  header .header__bottom .respBurger {
+    display: none; }
   header .header__bottom__left {
     font-size: 0.7rem;
     text-decoration: none;
     color: #bebec2;
     width: 180px; }
+    header .header__bottom__left .respLogo {
+      display: none; }
     header .header__bottom__left h6 {
       margin-top: 3px; }
     header .header__bottom__left img {
@@ -144,7 +152,8 @@ header .header__bottom {
       border-radius: 6px;
       margin-left: 60px;
       justify-content: space-between;
-      box-shadow: 0 0 3px #dadada; }
+      box-shadow: 0 0 3px #dadada;
+      cursor: pointer; }
       header .header__bottom__middle__location__text h5 {
         font-size: 0.65rem;
         margin-bottom: 8px;
@@ -167,7 +176,7 @@ header .header__bottom {
     header .header__bottom__middle [placeholder~="Search"] {
       background: url(../../img/searchIcon.png);
       padding: 0 15px;
-      background-position: 513px;
+      background-position: 97%;
       background-repeat: no-repeat;
       background-color: #f1f2f7;
       background-size: 22px; }
@@ -256,7 +265,8 @@ header .header__tabs {
         display: flex;
         align-items: center;
         gap: 10px;
-        transition: .4s; }
+        transition: .4s;
+        color: #3e445a; }
         header .header__tabs__wrapper ul li a .btn_chev {
           font-size: 12px; }
         header .header__tabs__wrapper ul li a i {
@@ -270,6 +280,70 @@ header .header__tabs {
           header .header__tabs__wrapper ul li a:hover i {
             color: #2bbef9;
             transition: .4s; }
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100%; }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    padding-bottom: 15px; }
+    header .header__middle,
+    header .header__tabs {
+      display: none; }
+    header .header__bottom {
+      display: flex;
+      justify-content: space-between; }
+      header .header__bottom .respBurger {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        padding: 10px; }
+      header .header__bottom__left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; }
+        header .header__bottom__left h6 {
+          width: 240px !important; }
+        header .header__bottom__left img {
+          display: none; }
+        header .header__bottom__left .respLogo {
+          display: block;
+          width: 93px; }
+      header .header__bottom__middle {
+        width: 100%; }
+        header .header__bottom__middle__location {
+          display: none; }
+        header .header__bottom__middle input {
+          margin-left: 60px;
+          width: 100%; }
+        header .header__bottom__middle [placeholder~="Search"] {
+          background-position: 97%; }
+      header .header__bottom__right {
+        gap: 20px;
+        justify-content: flex-end;
+        width: fit-content; } }
+
+@media (max-width: 765px) {
+  .container {
+    width: 100%; }
+  header .header__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 0; }
+    header .header__bottom__left .respLogo {
+      margin: 0 auto; }
+    header .header__bottom__left h6 {
+      display: none; }
+    header .header__bottom__middle {
+      display: none; }
+    header .header__bottom__right {
+      padding: 0; }
+      header .header__bottom__right__user {
+        display: none; } }
 
 .map__wrapper {
   padding: 0 15px;
@@ -324,7 +398,137 @@ header .header__tabs {
         transition: .4s;
         color: #2bbef9; }
   .map__wrapper__right {
-    padding: 0 15px; }
+    padding: 10px;
+    background-color: none;
+    height: 486px;
+    overflow: hidden; }
+    .map__wrapper__right .owl-carousel .owl-item {
+      background: none !important; }
+    .map__wrapper__right .owl-carousel a {
+      position: relative; }
+      .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage {
+        position: absolute;
+        top: 17%;
+        left: 10%; }
+        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage span {
+          font-size: 2rem;
+          font-weight: 500;
+          font-size: 0.75rem;
+          font-family: "Dosis", sans-serif;
+          letter-spacing: 1px;
+          color: #202435; }
+        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage .map__discount {
+          margin-left: 10px;
+          padding: 8px 20px;
+          border-radius: 20px;
+          color: #038e42;
+          background: #55c792;
+          background: -moz-linear-gradient(left, #559592 0%, #acf19e 0%, rgba(170, 249, 159, 0.85) 25%, rgba(183, 251, 178, 0.82) 46%, rgba(207, 254, 213, 0.78) 84%, rgba(217, 255, 227, 0.76) 99%, rgba(255, 255, 255, 0.76) 100%);
+          background: -webkit-gradient(left top, right top, color-stop(0%, #55c792), color-stop(0%, #9af788), color-stop(25%, rgba(170, 249, 159, 0.85)), color-stop(46%, rgba(183, 251, 178, 0.82)), color-stop(84%, rgba(207, 254, 213, 0.78)), color-stop(99%, rgba(217, 255, 227, 0.76)), color-stop(100%, rgba(255, 255, 255, 0.76)));
+          background: -webkit-linear-gradient(left, #559592 0%, #acf19e 0%, rgba(170, 249, 159, 0.85) 25%, rgba(183, 251, 178, 0.82) 46%, rgba(207, 254, 213, 0.78) 84%, rgba(217, 255, 227, 0.76) 99%, rgba(255, 255, 255, 0.76) 100%);
+          background: -o-linear-gradient(left, #559592 0%, #acf19e 0%, rgba(170, 249, 159, 0.85) 25%, rgba(183, 251, 178, 0.82) 46%, rgba(207, 254, 213, 0.78) 84%, rgba(217, 255, 227, 0.76) 99%, rgba(255, 255, 255, 0.76) 100%);
+          background: -ms-linear-gradient(left, #559592 0%, #acf19e 0%, rgba(170, 249, 159, 0.85) 25%, rgba(183, 251, 178, 0.82) 46%, rgba(207, 254, 213, 0.78) 84%, rgba(217, 255, 227, 0.76) 99%, rgba(255, 255, 255, 0.76) 100%);
+          background: linear-gradient(to right, #559592 0%, #acf19e 0%, rgba(170, 249, 159, 0.85) 25%, rgba(183, 251, 178, 0.82) 46%, rgba(207, 254, 213, 0.78) 84%, rgba(217, 255, 227, 0.76) 99%, rgba(255, 255, 255, 0.76) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#55c768', endColorstr='#ffffff', GradientType=1); }
+        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage h1 {
+          font-weight: 700;
+          font-size: 2.8rem;
+          color: #202435;
+          width: 410px;
+          padding: 20px 0 15px 0;
+          line-height: 60px; }
+        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage p {
+          color: #202435;
+          font-weight: 400;
+          font-size: 1rem;
+          padding-bottom: 40px; }
+        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage .map__wrapper__right__price {
+          color: #d51243;
+          font-size: 2.3rem;
+          font-weight: 600; }
+        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage div {
+          display: flex;
+          margin-bottom: 10px; }
+        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage button {
+          padding: 12px 23px;
+          background-color: #2bbef9;
+          border: none;
+          border-radius: 20px;
+          color: white;
+          font-size: 14px; }
+          .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage button i {
+            color: white !important; }
+
+@media (max-width: 1200px) {
+  .map .container {
+    width: 100%; }
+  .map .map__wrapper__left {
+    display: none; } }
+
+@media (max-width: 992px) {
+  .map .container {
+    width: 100%; }
+  .map .map__wrapper__left {
+    display: none; }
+  .map .map__wrapper__right .owl-carousel img {
+    object-fit: cover;
+    object-position: center; }
+  .map .map__wrapper__right .owl-carousel .owl-item {
+    width: 100%;
+    height: 267px;
+    padding: 0; }
+  .map .map__wrapper__right .owl-carousel a {
+    position: relative; }
+    .map .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage {
+      position: absolute;
+      top: 5%;
+      left: 10%; }
+      .map .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage .map__discount {
+        margin-left: 10px;
+        padding: 0 20px; }
+      .map .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage h1 {
+        font-size: 1.5rem;
+        padding: 0; }
+      .map .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage p {
+        padding-bottom: 30px; } }
+
+.bestSellers {
+  padding: 30px 15px;
+  display: flex; }
+  .bestSellers__left img {
+    width: 270px;
+    border-radius: 6px; }
+  .bestSellers__right {
+    width: 100%;
+    padding: 0 28px; }
+    .bestSellers__right__top {
+      display: flex;
+      justify-content: space-between; }
+      .bestSellers__right__top a {
+        text-decoration: none;
+        padding: 5px 20px;
+        border: 1px solid #9b9bb4;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #9b9bb4;
+        font-size: 12px;
+        gap: 10px;
+        transition: .3s; }
+        .bestSellers__right__top a i {
+          font-size: 12px; }
+        .bestSellers__right__top a:hover {
+          color: black;
+          transition: .3s; }
+      .bestSellers__right__top h4 {
+        font-size: 1.25rem;
+        font-family: "Dosis", sans-serif;
+        font-weight: 600; }
+      .bestSellers__right__top p {
+        font-size: .75rem;
+        color: #9b9bb4;
+        padding-top: 5px; }
 
 .active {
   padding: 5px 18px;
