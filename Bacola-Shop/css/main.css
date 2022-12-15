@@ -271,8 +271,60 @@ header .header__tabs {
             color: #2bbef9;
             transition: .4s; }
 
-header .map__wrapper__left {
-  padding: 18px 0; }
+.map__wrapper {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between; }
+  .map__wrapper__left__list {
+    padding: 18px 0;
+    border: 1px solid #cacaca;
+    border-top: 0;
+    width: 268px; }
+    .map__wrapper__left__list li {
+      text-decoration: none;
+      padding: 10px 25px;
+      gap: 10px;
+      display: flex;
+      align-items: center;
+      width: fit-content; }
+      .map__wrapper__left__list li a {
+        text-decoration: none;
+        color: #3e445a;
+        font-size: .8rem;
+        display: flex; }
+        .map__wrapper__left__list li a .mapChev {
+          font-size: 10px !important; }
+      .map__wrapper__left__list li i {
+        color: #717277; }
+        .map__wrapper__left__list li i:first-child {
+          margin-right: 10px;
+          font-size: 18px; }
+      .map__wrapper__left__list li:hover a,
+      .map__wrapper__left__list li:hover i {
+        opacity: .7;
+        transition: .4s;
+        color: #2bbef9; }
+  .map__wrapper__left__bottom {
+    padding: 18px 0;
+    border: 1px solid #cacaca;
+    border-top: 0;
+    width: 268px; }
+    .map__wrapper__left__bottom li {
+      padding: 10px 25px;
+      transition: .4s;
+      width: fit-content; }
+      .map__wrapper__left__bottom li a {
+        text-decoration: none;
+        font-size: .8rem;
+        color: #3e445a;
+        font-weight: 500;
+        transition: .4s; }
+      .map__wrapper__left__bottom li:hover a {
+        opacity: .7;
+        transition: .4s;
+        color: #2bbef9; }
+  .map__wrapper__right {
+    padding: 0 15px; }
 
 .active {
   padding: 5px 18px;

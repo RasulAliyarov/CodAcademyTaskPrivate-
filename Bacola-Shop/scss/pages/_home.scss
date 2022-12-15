@@ -340,16 +340,97 @@ header {
             }
         }
     }
+}
 
+.map {
+    &__wrapper {
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        &__left {
 
-
-    .map {
-        &__wrapper {
-            &__left {
+            &__list {
                 padding: 18px 0;
+                border: 1px solid rgb(202, 202, 202);
+                border-top: 0;
+                width: 268px;
 
-                &__list {}
+                li {
+                    text-decoration: none;
+                    padding: 10px 25px;
+                    gap: 10px;
+                    display: flex;
+                    align-items: center;
+                    width: fit-content;
+
+                    a {
+                        text-decoration: none;
+                        color: rgb(62, 68, 90);
+                        font-size: .8rem;
+                        display: flex;
+
+                        .mapChev {
+                            font-size: 10px !important;
+                        }
+
+                    }
+
+                    i {
+                        color: rgb(113, 114, 119);
+
+                        &:first-child {
+                            margin-right: 10px;
+                            font-size: 18px;
+                        }
+                    }
+
+                    &:hover {
+
+                        a,
+                        i {
+
+                            opacity: .7;
+                            transition: .4s;
+                            color: #2bbef9;
+                        }
+                    }
+
+                }
+
             }
+
+            &__bottom {
+                padding: 18px 0;
+                border: 1px solid rgb(202, 202, 202);
+                border-top: 0;
+                width: 268px;
+
+                li {
+                    padding: 10px 25px;
+                    transition: .4s;
+                    width: fit-content;
+                    
+                    a{
+                        text-decoration: none;
+                        font-size: .8rem;
+                        color: rgb(62, 68, 90);
+                        font-weight: 500;
+                        transition: .4s;
+                    }
+                    &:hover {
+                        a {
+
+                            opacity: .7;
+                            transition: .4s;
+                            color: #2bbef9;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__right{
+            padding: 0 15px;
         }
     }
 }
