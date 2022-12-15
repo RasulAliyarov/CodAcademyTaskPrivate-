@@ -143,7 +143,8 @@ header .header__bottom {
       border: 1px solid #e0e0e4;
       border-radius: 6px;
       margin-left: 60px;
-      justify-content: space-between; }
+      justify-content: space-between;
+      box-shadow: 0 0 3px #dadada; }
       header .header__bottom__middle__location__text h5 {
         font-size: 0.65rem;
         margin-bottom: 8px;
@@ -161,6 +162,8 @@ header .header__bottom {
       padding: 0 15px;
       width: 553px;
       padding: 10px; }
+      header .header__bottom__middle input:focus {
+        outline: none; }
     header .header__bottom__middle [placeholder~="Search"] {
       background: url(../../img/searchIcon.png);
       padding: 0 15px;
@@ -200,3 +203,81 @@ header .header__bottom {
         font-size: 10px;
         top: -4px;
         right: -4px; }
+
+header .header__tabs {
+  height: 88px;
+  margin-top: 9px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dedfe4; }
+  header .header__tabs__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px; }
+    header .header__tabs__wrapper__left button {
+      position: relative;
+      padding: 15px 20px;
+      border-radius: 25px;
+      background-color: #2bbef9;
+      border: none;
+      color: white;
+      column-gap: 20px;
+      font-family: "Dosis", sans-serif;
+      font-size: 15px;
+      transition: .4s;
+      cursor: pointer; }
+      header .header__tabs__wrapper__left button:hover {
+        opacity: .7;
+        transition: .4s; }
+      header .header__tabs__wrapper__left button i:first-child {
+        padding-right: 15px; }
+      header .header__tabs__wrapper__left button i:last-child {
+        padding-left: 20px; }
+      header .header__tabs__wrapper__left button span {
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        color: #3e445a;
+        background-color: #faf8f8;
+        justify-items: center;
+        transform: translateY(50%);
+        border-radius: 25px;
+        font-size: 10px;
+        padding: 3px 10px; }
+    header .header__tabs__wrapper ul {
+      display: flex; }
+      header .header__tabs__wrapper ul li a {
+        padding: 12px 20px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        font-family: "Dosis", sans-serif;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: .4s; }
+        header .header__tabs__wrapper ul li a .btn_chev {
+          font-size: 12px; }
+        header .header__tabs__wrapper ul li a i {
+          color: black;
+          font-size: 20px; }
+        header .header__tabs__wrapper ul li a:hover {
+          background-color: rgba(43, 190, 249, 0.1);
+          color: #2bbef9;
+          border-radius: 20px;
+          transition: .4s; }
+          header .header__tabs__wrapper ul li a:hover i {
+            color: #2bbef9;
+            transition: .4s; }
+
+header .map__wrapper__left {
+  padding: 18px 0; }
+
+.active {
+  padding: 5px 18px;
+  background-color: rgba(43, 190, 249, 0.1);
+  color: #2bbef9;
+  border-radius: 20px; }
+  .active i {
+    color: #2bbef9 !important; }
