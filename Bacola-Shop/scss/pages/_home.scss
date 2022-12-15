@@ -778,6 +778,146 @@ header {
                 padding-top: 5px;
             }
         }
+
+        &__bottom {
+            margin-top: 30px;
+            &__card {
+                width: 217px;
+                padding: 20px;
+                border: 1px solid rgb(224, 224, 224);
+                overflow: hidden;
+                position: relative;
+
+                &__top {
+                    padding: 5px;
+                    overflow: hidden;
+
+                    img {
+                        width: 177px;
+                    }
+                }
+
+                &__middle {
+                    font-family: "Dosis", sans-serif;
+
+                    .star_list {
+                        display: flex;
+                        margin-bottom: 12px;
+                        margin-top: 10px;
+
+                        i {
+                            color: gold;
+                            font-size: 10px;
+                        }
+
+                        span {
+                            margin-left: 5px;
+                            color: black !important;
+                        }
+                    }
+
+                    h5 {
+                        font-size: 14px;
+                        font-weight: 500;
+                        font-family: "Inter", sans-serif;
+                        margin-bottom: 10px;
+
+                    }
+
+                    span {
+                        font-size: 11px;
+                        font-weight: 600;
+                        color: #00b853;
+                    }
+
+                    .past_price {
+                        text-decoration: line-through;
+                        color: #c2c2d3;
+                    }
+
+                    .new_price {
+                        color: #d51243;
+                        font-size: 18px;
+                        padding-left: 5px;
+                    }
+                }
+
+                &__bottom {
+                    padding-top: 20px;
+
+                    button {
+                        padding: 8px 0;
+                        border: 1px solid #2bbef9;
+                        background-color: transparent;
+                        border-radius: 20px;
+                        color: #2bbef9;
+                        width: 100%;
+                        cursor: pointer;
+
+                    }
+                }
+
+                .discponunt {
+                    position: absolute;
+                    top: 20px;
+                    padding: 5px 10px;
+                    color: white;
+                    font-size: 11px;
+                    border-radius: 4px;
+                    background-color: #2bbef9;
+                }
+
+                .productFeature {
+                    position: absolute;
+                    top: 45px;
+                    padding: 5px 10px;
+                    color: #078841;
+                    font-size: 12px;
+                    font-family: 'Dosis', sans-serif;
+                    border-radius: 8px;
+                    background-color: #d3f1e1;
+                }
+
+                .fullScreen {
+                    position: absolute;
+                    padding: 10px;
+                    background-color: white;
+                    border-radius: 50%;
+                    box-shadow: 0 0 5px #b1b1b1;
+                    top: 20px;
+                    right: 20px;
+                    display: none;
+                    transform: translate(10px, 0);
+                    transition: .5s;
+                }
+
+                .likeMe {
+                    position: absolute;
+                    padding: 10px;
+                    background-color: white;
+                    box-shadow: 0 0 5px #b1b1b1;
+                    border-radius: 50%;
+                    top: 65px;
+                    right: 20px;
+                    display: none;
+                    transform: translate(10px, 0);
+                    transition: .6s;
+                }
+
+                transition: .4s;
+                &:hover {
+
+                    .fullScreen,
+                    .likeMe {
+                        display: block;
+                        transition: .5s;
+                        transform: translate(0, 0);
+                    }
+
+                    transition: .4s;
+                }
+            }
+        }
     }
 }
 

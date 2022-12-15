@@ -529,6 +529,104 @@ header .header__tabs {
         font-size: .75rem;
         color: #9b9bb4;
         padding-top: 5px; }
+    .bestSellers__right__bottom {
+      margin-top: 30px; }
+      .bestSellers__right__bottom__card {
+        width: 217px;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        overflow: hidden;
+        position: relative;
+        transition: .4s; }
+        .bestSellers__right__bottom__card__top {
+          padding: 5px;
+          overflow: hidden; }
+          .bestSellers__right__bottom__card__top img {
+            width: 177px; }
+        .bestSellers__right__bottom__card__middle {
+          font-family: "Dosis", sans-serif; }
+          .bestSellers__right__bottom__card__middle .star_list {
+            display: flex;
+            margin-bottom: 12px;
+            margin-top: 10px; }
+            .bestSellers__right__bottom__card__middle .star_list i {
+              color: gold;
+              font-size: 10px; }
+            .bestSellers__right__bottom__card__middle .star_list span {
+              margin-left: 5px;
+              color: black !important; }
+          .bestSellers__right__bottom__card__middle h5 {
+            font-size: 14px;
+            font-weight: 500;
+            font-family: "Inter", sans-serif;
+            margin-bottom: 10px; }
+          .bestSellers__right__bottom__card__middle span {
+            font-size: 11px;
+            font-weight: 600;
+            color: #00b853; }
+          .bestSellers__right__bottom__card__middle .past_price {
+            text-decoration: line-through;
+            color: #c2c2d3; }
+          .bestSellers__right__bottom__card__middle .new_price {
+            color: #d51243;
+            font-size: 18px;
+            padding-left: 5px; }
+        .bestSellers__right__bottom__card__bottom {
+          padding-top: 20px; }
+          .bestSellers__right__bottom__card__bottom button {
+            padding: 8px 0;
+            border: 1px solid #2bbef9;
+            background-color: transparent;
+            border-radius: 20px;
+            color: #2bbef9;
+            width: 100%;
+            cursor: pointer; }
+        .bestSellers__right__bottom__card .discponunt {
+          position: absolute;
+          top: 20px;
+          padding: 5px 10px;
+          color: white;
+          font-size: 11px;
+          border-radius: 4px;
+          background-color: #2bbef9; }
+        .bestSellers__right__bottom__card .productFeature {
+          position: absolute;
+          top: 45px;
+          padding: 5px 10px;
+          color: #078841;
+          font-size: 12px;
+          font-family: 'Dosis', sans-serif;
+          border-radius: 8px;
+          background-color: #d3f1e1; }
+        .bestSellers__right__bottom__card .fullScreen {
+          position: absolute;
+          padding: 10px;
+          background-color: white;
+          border-radius: 50%;
+          box-shadow: 0 0 5px #b1b1b1;
+          top: 20px;
+          right: 20px;
+          display: none;
+          transform: translate(10px, 0);
+          transition: .5s; }
+        .bestSellers__right__bottom__card .likeMe {
+          position: absolute;
+          padding: 10px;
+          background-color: white;
+          box-shadow: 0 0 5px #b1b1b1;
+          border-radius: 50%;
+          top: 65px;
+          right: 20px;
+          display: none;
+          transform: translate(10px, 0);
+          transition: .6s; }
+        .bestSellers__right__bottom__card:hover {
+          transition: .4s; }
+          .bestSellers__right__bottom__card:hover .fullScreen,
+          .bestSellers__right__bottom__card:hover .likeMe {
+            display: block;
+            transition: .5s;
+            transform: translate(0, 0); }
 
 .active {
   padding: 5px 18px;
