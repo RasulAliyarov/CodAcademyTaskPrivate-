@@ -1,7 +1,7 @@
 $('.owl-carousel').owlCarousel({
     loop: true,
     responsiveClass: true,
-    nav:true,
+    nav: true,
     autoplay: true,
     autoplayTimeout: 5000,
     responsive: {
@@ -13,6 +13,25 @@ $('.owl-carousel').owlCarousel({
         },
         1000: {
             items: 1
+        }
+    }
+})
+
+$('.product_carousel').owlCarousel({
+    // loop: true,
+    responsiveClass: true,
+    // autoplay: true,
+    // autoplayTimeout: 5000,
+    margin: 1,
+    responsive: {
+        0: {
+            items: 2
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 4
         }
     }
 })

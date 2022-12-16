@@ -1,0 +1,25 @@
+@mixin button ($bg-color, $border, $border-color, $text-color, $font-size: 0.9rem) {
+
+    text-decoration: none;
+    padding: 5px 20px;
+    border: $border solid $border-color;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text-color;
+    font-size: $font-size;
+    gap: 10px;
+    transition: .3s;
+    background-color: $bg-color;
+
+    i {
+        font-size: 12px;
+    }
+
+    &:hover {
+        color: black;
+        transition: .3s;
+    }
+
+}

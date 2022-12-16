@@ -99,7 +99,7 @@
 
                 </div>
                 <ul class="header__tabs__wrapper__right">
-                    <li><a href="#" class="active">HOME <i class="fa-solid fa-chevron-down btn_chev"></i></a></li>
+                    <li><a href="#" class="activeBtn">HOME <i class="fa-solid fa-chevron-down btn_chev"></i></a></li>
                     <li><a href="#">SHOP <i class="fa-solid fa-chevron-down btn_chev"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-drumstick-bite"></i>MEATS&SEAFOOD</a></li>
                     <li><a href="#"><i class="fa-solid fa-cookie-bite"></i>BAKERY</a></li>
@@ -110,7 +110,6 @@
             </div>
         </div>
     </header>
-
 
     <section class="map">
         <div class="map__wrapper container">
@@ -155,7 +154,7 @@
                             <h1>Specialist in the grocery store</h1>
                             <p>Only this week. Don't miss...</p>
                             <div>
-                                <p>from</p><span class="map__wrapper__right__price">$7.99</span>
+                                <p>from</p><span class="map__wrapper__right__price price">$7.99</span>
                             </div>
                             <button>Shop now <i class="fa-solid fa-arrow-right-long"></i></button>
                         </div>
@@ -177,10 +176,30 @@
         </div>
     </section>
 
-
     <section class="bestSellers container">
-        <div class="bestSellers__left">
-            <img src="./img/leftBanner.jpg" alt="Bacola Natural Foods">
+        <div class="bestSellers__left reklam">
+            <a href="#" class="card">
+                <img src="./img/leftBanner.jpg" alt="Bacola Natural Foods">
+                <div class="bestSellers__left__content">
+                    <h6>Bacola Natural Foods</h6>
+                    <h5>Special Organic</h5>
+                    <h4>Roats Burger</h4>
+                    <span class="besrSells_onlyForm">only-from</span>
+                    <span class="price bestSellers_price">$14.99</span>
+                </div>
+            </a>
+
+            <a href="#" class="card">
+                <img src="./img/leftBanner2.jpg" alt="Bacola Natural Foods">
+                <div class="bestSellers__left__content">
+                    <h6 class="bestSellers__left__content_title--modified">Best Bakery Products</h6>
+                    <h5>Freshest Products</h5>
+                    <h4>every hour.</h4>
+                    <span class="besrSells_onlyForm">only-from</span>
+                    <span class="price bestSellers_price">$24.99</span>
+                    <button>Shop Now</button>
+                </div>
+            </a>
         </div>
         <div class="bestSellers__right">
             <div class="bestSellers__right__top">
@@ -191,10 +210,14 @@
                 <a href="#">View All <i class="fa-solid fa-arrow-right-long"></i></a>
             </div>
             <div class="bestSellers__right__bottom">
+
+                <button class="sliderbtn sliderLeft"><i class="fa-solid fa-chevron-left"></i></button>
+                <!-- <div class="owl-carousel product_carousel"> -->
                 <div class="bestSellers__right__bottom__card">
-                    <div class="bestSellers__right__bottom__card__top">
-                        <img src="https://k4j3j2s7.rocketcdn.me/bacola/wp-content/uploads/2021/04/product-image-46-346x310.jpg" alt="">
-                    </div>
+                    <a class="bestSellers__right__bottom__card__top">
+                        <img src="https://k4j3j2s7.rocketcdn.me/bacola/wp-content/uploads/2021/04/product-image-46-346x310.jpg"
+                            alt="">
+                    </a>
                     <div class="bestSellers__right__bottom__card__middle">
                         <h5>Field Roast Chao Cheese Creamy Original</h5>
                         <span>IN STOCK</span>
@@ -217,9 +240,132 @@
                     <span class="fullScreen"><i class="fa-solid fa-compress"></i></span>
                     <span class="likeMe"><i class="fa-regular fa-heart"></i></span>
                 </div>
+                <!-- Card -->
+                <div class="bestSellers__right__bottom__card">
+                    <a class="bestSellers__right__bottom__card__top">
+                        <img src="https://k4j3j2s7.rocketcdn.me/bacola/wp-content/uploads/2021/04/product-image-46-346x310.jpg"
+                            alt="">
+                    </a>
+                    <div class="bestSellers__right__bottom__card__middle">
+                        <h5>Field Roast Chao Cheese Creamy Original</h5>
+                        <span>IN STOCK</span>
+                        <ul class="star_list">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><span class="star_list_count">1</span></li>
+                        </ul>
+                        <span class="past_price">$24.09</span>
+                        <span class="new_price">$19.50</span>
+                    </div>
+                    <div class="bestSellers__right__bottom__card__bottom">
+                        <button>Add to cart</button>
+                    </div>
+                    <span class="discponunt">19%</span>
+                    <span class="productFeature">ORGANIC</span>
+                    <span class="fullScreen"><i class="fa-solid fa-compress"></i></span>
+                    <span class="likeMe"><i class="fa-regular fa-heart"></i></span>
+                </div>
+                <!-- Card -->
+                <div class="bestSellers__right__bottom__card">
+                    <a class="bestSellers__right__bottom__card__top">
+                        <img src="https://k4j3j2s7.rocketcdn.me/bacola/wp-content/uploads/2021/04/product-image-46-346x310.jpg"
+                            alt="">
+                    </a>
+                    <div class="bestSellers__right__bottom__card__middle">
+                        <h5>Field Roast Chao Cheese Creamy Original</h5>
+                        <span>IN STOCK</span>
+                        <ul class="star_list">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><span class="star_list_count">1</span></li>
+                        </ul>
+                        <span class="past_price">$24.09</span>
+                        <span class="new_price">$19.50</span>
+                    </div>
+                    <div class="bestSellers__right__bottom__card__bottom">
+                        <button>Add to cart</button>
+                    </div>
+                    <span class="discponunt">19%</span>
+                    <span class="productFeature">ORGANIC</span>
+                    <span class="fullScreen"><i class="fa-solid fa-compress"></i></span>
+                    <span class="likeMe"><i class="fa-regular fa-heart"></i></span>
+                    <!-- Card -->
+                </div>
+                <!-- Card -->
+                <div class="bestSellers__right__bottom__card">
+                    <a class="bestSellers__right__bottom__card__top">
+                        <img src="https://k4j3j2s7.rocketcdn.me/bacola/wp-content/uploads/2021/04/product-image-46-346x310.jpg"
+                            alt="">
+                    </a>
+                    <div class="bestSellers__right__bottom__card__middle">
+                        <h5>Field Roast Chao Cheese Creamy Original</h5>
+                        <span>IN STOCK</span>
+                        <ul class="star_list">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><span class="star_list_count">1</span></li>
+                        </ul>
+                        <span class="past_price">$24.09</span>
+                        <span class="new_price">$19.50</span>
+                    </div>
+                    <div class="bestSellers__right__bottom__card__bottom">
+                        <button>Add to cart</button>
+                    </div>
+                    <span class="discponunt">19%</span>
+                    <span class="productFeature">ORGANIC</span>
+                    <span class="fullScreen"><i class="fa-solid fa-compress"></i></span>
+                    <span class="likeMe"><i class="fa-regular fa-heart"></i></span>
+                    <!-- Card -->
+                </div>
+                <!-- Card -->
+
+                <!-- </div> -->
+
+                <button class="sliderbtn sliderRight"><i class="fa-solid fa-chevron-right"></i></button>
+
+            </div>
+
+            <div class="bestSellers__right__banner">
+                <span>Always Taking Care</span>
+                <h4>In store or online your health & safety is our top priority.</h4>
+            </div>
+
+            <div class="bestSellers__right__timeDiscount">
+                <div class="bestSellers__right__timeDiscount__title">
+                    <div class="bestSellers__right__timeDiscount__title__text">
+                        <h2>Hot Product For <span> This Week</span></h2>
+                        <p>Dont miss this opportunity at a special discount just for this week.</p>
+                    </div>
+                    <a href="#">View All<i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+                <div class="bestSellers__right__timeDiscount__block">
+                    <div class="bestSellers__right__timeDiscount__block__left">
+                        <img src="https://k4j3j2s7.rocketcdn.me/bacola/wp-content/uploads/2021/04/product-image-50.jpg" alt="">
+                        <div class="discount_percent">19%</div>
+                    </div>
+                    <div class="bestSellers__right__timeDiscount__block__right">
+                        
+                    </div>
+
+                    
+                </div>
             </div>
         </div>
+
     </section>
+
+    <!-- <section>
+        <img src="https://k4j3j2s7.rocketcdn.me/bacola/wp-content/plugins/bacola-core/elementor/images/banner-box2.jpg" alt="">
+    </section> -->
 
     <script src="./js/jguery.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
