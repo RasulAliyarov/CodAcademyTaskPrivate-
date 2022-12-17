@@ -967,6 +967,8 @@ header .header__tabs {
       padding: 20px;
       border-bottom: 1px solid #cfcfcf;
       align-items: center; }
+      .bestSellers__left__features__block:last-child {
+        border-bottom: 0; }
       .bestSellers__left__features__block__icon {
         width: 50px;
         display: flex;
@@ -983,12 +985,95 @@ header .header__tabs {
     margin-top: 40px;
     padding: 10px 0; }
     .bestSellers__left__trendingProducts h1 {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-family: "Dosis", sans-serif;
+      font-size: 15px;
+      color: #202435;
+      font-weight: 600; }
     .bestSellers__left__trendingProducts__products {
-      border: 1px solid #e7e6e6; }
+      border: 1px solid #e7e6e6;
+      border-radius: 6px; }
       .bestSellers__left__trendingProducts__products__product {
-        padding: 15px;
-        border-bottom: 1px solid #e7e6e6; }
+        display: flex;
+        padding: 15px; }
+        .bestSellers__left__trendingProducts__products__product__img {
+          width: 70px;
+          cursor: pointer;
+          margin-right: 12px; }
+          .bestSellers__left__trendingProducts__products__product__img img {
+            width: 70px; }
+        .bestSellers__left__trendingProducts__products__product__text a {
+          color: #343436;
+          font-size: 13px;
+          transition: .4s;
+          font-weight: 500;
+          font-family: "Inter", sans-serif;
+          width: 100% !important; }
+          .bestSellers__left__trendingProducts__products__product__text a:hover {
+            color: #4b52bb;
+            transition: .4s; }
+        .bestSellers__left__trendingProducts__products__product__text .pricies {
+          margin: 15px 0;
+          display: flex;
+          font-family: "Dosis", sans-serif; }
+          .bestSellers__left__trendingProducts__products__product__text .pricies .lastPrice {
+            text-decoration: line-through;
+            color: #c2c2d3;
+            font-size: 13px; }
+          .bestSellers__left__trendingProducts__products__product__text .pricies .newPrice {
+            color: #d51243;
+            font-size: 15px;
+            padding-left: 5px;
+            font-weight: 600; }
+  .bestSellers__left__customerContact {
+    margin-top: 40px; }
+    .bestSellers__left__customerContact h1 {
+      margin-bottom: 20px;
+      font-family: "Dosis", sans-serif;
+      font-size: 15px;
+      color: #202435;
+      font-weight: 600; }
+    .bestSellers__left__customerContact__block {
+      padding: 30px;
+      background-color: #fffbec;
+      font-family: "Inter", sans-serif; }
+      .bestSellers__left__customerContact__block h3 {
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #202435;
+        font-weight: 600; }
+      .bestSellers__left__customerContact__block p {
+        color: #71778e;
+        font-size: 13px;
+        line-height: 19.5px; }
+      .bestSellers__left__customerContact__block__person {
+        margin-top: 40px;
+        display: flex;
+        align-items: center; }
+        .bestSellers__left__customerContact__block__person__img {
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          justify-content: flex-start;
+          width: 50px !important;
+          margin-right: 15px; }
+          .bestSellers__left__customerContact__block__person__img img {
+            border-radius: 50%;
+            width: 50px;
+            object-fit: cover; }
+        .bestSellers__left__customerContact__block__person__detail {
+          width: 100%;
+          font-family: "Inter", sans-serif; }
+          .bestSellers__left__customerContact__block__person__detail h4 {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 6px; }
+          .bestSellers__left__customerContact__block__person__detail h3 {
+            font-size: 12px;
+            color: #8c8c91;
+            font-weight: 400;
+            margin: 0; }
   .bestSellers__right {
     width: 100%;
     padding: 0 28px; }
@@ -1202,6 +1287,51 @@ header .header__tabs {
             margin-top: 20px; }
             .bestSellers__right__timeDiscount__block__right__time span {
               font-size: 14px; }
+    .bestSellers__right__superDiscount {
+      width: 100%;
+      padding: 20px 15px;
+      background-color: #FFEEF2;
+      margin: 30px 0;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Inter", sans-serif;
+      cursor: pointer; }
+      .bestSellers__right__superDiscount span {
+        color: #ed174a;
+        font-size: 16px; }
+        .bestSellers__right__superDiscount span:last-child {
+          color: #96969e;
+          font-size: 12px; }
+        .bestSellers__right__superDiscount span:nth-child(2) {
+          font-weight: 600;
+          text-decoration: underline;
+          margin-left: 5px; }
+      .bestSellers__right__superDiscount button {
+        text-decoration: none;
+        padding: 5px 20px;
+        border: 1px solid #ed174a;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ed174a;
+        font-size: 0.9rem;
+        gap: 10px;
+        transition: .3s;
+        background-color: transparent;
+        border: 1px dashed;
+        margin: 0 15px;
+        padding: 10px 20px !important;
+        font-weight: 600; }
+        .bestSellers__right__superDiscount button i {
+          font-size: 12px; }
+        .bestSellers__right__superDiscount button:hover {
+          color: black;
+          transition: .3s; }
+        .bestSellers__right__superDiscount button:hover {
+          color: #ed174a; }
 
 @media (max-width: 1200px) {
   .container {

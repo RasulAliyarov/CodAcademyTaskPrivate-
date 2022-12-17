@@ -405,6 +405,10 @@
                 border-bottom: 1px solid #cfcfcf;
                 align-items: center;
 
+                &:last-child {
+                    border-bottom: 0;
+                }
+
                 &__icon {
                     width: 50px;
                     display: flex;
@@ -431,20 +435,149 @@
         &__trendingProducts {
             margin-top: 40px;
             padding: 10px 0;
+
             h1 {
                 margin-bottom: 20px;
+                font-family: "Dosis", sans-serif;
+                font-size: 15px;
+                color: #202435;
+                font-weight: 600;
             }
 
             &__products {
                 border: 1px solid #e7e6e6;
+                border-radius: 6px;
 
-                &__product{
+                &__product {
+                    display: flex;
                     padding: 15px;
-                    border-bottom: 1px solid #e7e6e6;
+
+                    &__img {
+                        width: 70px;
+                        cursor: pointer;
+                        margin-right: 12px;
+
+                        img {
+                            width: 70px;
+
+                        }
+                    }
+
+                    &__text {
+                        a {
+                            color: #343436;
+                            font-size: 13px;
+                            transition: .4s;
+                            font-weight: 500;
+                            font-family: "Inter", sans-serif;
+                            width: 100% !important;
+
+                            &:hover {
+                                color: #4b52bb;
+                                transition: .4s;
+                            }
+
+                        }
+
+                        .pricies {
+                            margin: 15px 0;
+                            display: flex;
+                            font-family: "Dosis", sans-serif;
+
+                            .lastPrice {
+                                text-decoration: line-through;
+                                color: #c2c2d3;
+                                font-size: 13px;
+
+                            }
+
+                            .newPrice {
+                                color: #d51243;
+                                font-size: 15px;
+                                padding-left: 5px;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
 
                 }
             }
         }
+
+
+        &__customerContact {
+            margin-top: 40px;
+
+            h1 {
+                margin-bottom: 20px;
+                font-family: "Dosis", sans-serif;
+                font-size: 15px;
+                color: #202435;
+                font-weight: 600;
+            }
+
+            &__block {
+                padding: 30px;
+                background-color: #fffbec;
+                font-family: "Inter", sans-serif;
+
+                h3 {
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    color: #202435;
+                    font-weight: 600;
+                }
+
+                p {
+                    color: #71778e;
+                    font-size: 13px;
+                    line-height: 19.5px;
+                }
+
+                &__person {
+                    margin-top: 40px;
+                    display: flex;
+                    align-items: center;
+
+                    &__img {
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        justify-content: flex-start;
+                        width: 50px !important;
+                        margin-right: 15px;
+
+                        img {
+                            border-radius: 50%;
+                            width: 50px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &__detail {
+                        width: 100%;
+                        font-family: "Inter", sans-serif;
+
+                        h4 {
+                            font-weight: 600;
+                            font-size: 14px;
+                            margin-bottom: 6px;
+                        }
+
+                        h3 {
+                            font-size: 12px;
+                            color: #8c8c91;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+
     }
 
     &__right {
@@ -727,6 +860,47 @@
 
             }
 
+        }
+
+        &__superDiscount {
+            width: 100%;
+            padding: 20px 15px;
+            background-color: #FFEEF2;
+            margin: 30px 0;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Inter", sans-serif;
+            cursor: pointer;
+            span {
+                color: #ed174a;
+                font-size: 16px;
+
+                &:last-child {
+                    color: #96969e;
+                    font-size: 12px;
+                }
+
+                &:nth-child(2) {
+                    font-weight: 600;
+                    text-decoration: underline;
+                    margin-left: 5px;
+
+                }
+            }
+
+            button {
+                @include button(transparent, 1px, #ed174a, #ed174a);
+                border: 1px dashed;
+                margin: 0 15px;
+                padding: 10px 20px !important;
+                font-weight: 600;
+
+                &:hover {
+                    color: #ed174a;
+                }
+            }
         }
     }
 }
