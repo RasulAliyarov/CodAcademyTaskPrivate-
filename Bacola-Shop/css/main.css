@@ -784,24 +784,24 @@ header .header__tabs {
     background-color: none;
     height: 486px;
     overflow: hidden; }
-    .map__wrapper__right .owl-carousel .owl-item {
+    .map__wrapper__right .map_carousel .map_carousel {
       background: none !important; }
-    .map__wrapper__right .owl-carousel .owl-dots {
+    .map__wrapper__right .map_carousel .owl-dots {
       display: none; }
-    .map__wrapper__right .owl-carousel a {
+    .map__wrapper__right .map_carousel a {
       position: relative; }
-      .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage {
+      .map__wrapper__right .map_carousel a .map__wrapper__right__contentOnImage {
         position: absolute;
         top: 17%;
         left: 10%; }
-        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage span {
+        .map__wrapper__right .map_carousel a .map__wrapper__right__contentOnImage span {
           font-size: 2rem;
           font-weight: 500;
           font-size: 0.75rem;
           font-family: "Dosis", sans-serif;
           letter-spacing: 1px;
           color: #202435; }
-        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage .map__discount {
+        .map__wrapper__right .map_carousel a .map__wrapper__right__contentOnImage .map__discount {
           margin-left: 10px;
           padding: 8px 20px;
           border-radius: 20px;
@@ -814,33 +814,33 @@ header .header__tabs {
           background: -ms-linear-gradient(left, #559592 0%, #acf19e 0%, rgba(170, 249, 159, 0.85) 25%, rgba(183, 251, 178, 0.82) 46%, rgba(207, 254, 213, 0.78) 84%, rgba(217, 255, 227, 0.76) 99%, rgba(255, 255, 255, 0.76) 100%);
           background: linear-gradient(to right, #559592 0%, #acf19e 0%, rgba(170, 249, 159, 0.85) 25%, rgba(183, 251, 178, 0.82) 46%, rgba(207, 254, 213, 0.78) 84%, rgba(217, 255, 227, 0.76) 99%, rgba(255, 255, 255, 0.76) 100%);
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#55c768', endColorstr='#ffffff', GradientType=1); }
-        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage h1 {
+        .map__wrapper__right .map_carousel a .map__wrapper__right__contentOnImage h1 {
           font-weight: 700;
           font-size: 2.8rem;
           color: #202435;
           width: 410px;
           padding: 20px 0 15px 0;
           line-height: 60px; }
-        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage p {
+        .map__wrapper__right .map_carousel a .map__wrapper__right__contentOnImage p {
           color: #202435;
           font-weight: 400;
           font-size: 1rem;
           padding-bottom: 40px; }
-        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage .map__wrapper__right__price {
+        .map__wrapper__right .map_carousel a .map__wrapper__right__contentOnImage .map__wrapper__right__price {
           color: #d51243;
           font-size: 2.3rem;
           font-weight: 600; }
-        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage div {
+        .map__wrapper__right .map_carousel a .map__wrapper__right__contentOnImage div {
           display: flex;
           margin-bottom: 10px; }
-        .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage button {
+        .map__wrapper__right .map_carousel a .map__wrapper__right__contentOnImage button {
           padding: 12px 23px;
           background-color: #2bbef9;
           border: none;
           border-radius: 20px;
           color: white;
           font-size: 14px; }
-          .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage button i {
+          .map__wrapper__right .map_carousel a .map__wrapper__right__contentOnImage button i {
             color: white !important; }
 
 @media (max-width: 1200px) {
@@ -959,6 +959,36 @@ header .header__tabs {
       font-weight: 600;
       font-family: "Dosis", sans-serif;
       font-size: 1.9rem; }
+  .bestSellers__left__features {
+    border: 1px solid #e7e6e6;
+    border-radius: 6px; }
+    .bestSellers__left__features__block {
+      display: flex;
+      padding: 20px;
+      border-bottom: 1px solid #cfcfcf;
+      align-items: center; }
+      .bestSellers__left__features__block__icon {
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        margin-right: 15px; }
+        .bestSellers__left__features__block__icon i {
+          font-size: 28px;
+          color: #696c7c; }
+      .bestSellers__left__features__block div span {
+        font-size: .7rem;
+        width: 100%;
+        font-weight: 400; }
+  .bestSellers__left__trendingProducts {
+    margin-top: 40px;
+    padding: 10px 0; }
+    .bestSellers__left__trendingProducts h1 {
+      margin-bottom: 20px; }
+    .bestSellers__left__trendingProducts__products {
+      border: 1px solid #e7e6e6; }
+      .bestSellers__left__trendingProducts__products__product {
+        padding: 15px;
+        border-bottom: 1px solid #e7e6e6; }
   .bestSellers__right {
     width: 100%;
     padding: 0 28px; }
@@ -967,7 +997,6 @@ header .header__tabs {
       justify-content: space-between; }
       .bestSellers__right__top a {
         text-decoration: none;
-        padding: 5px 20px;
         gap: 10px;
         text-decoration: none;
         padding: 5px 20px;
@@ -980,7 +1009,8 @@ header .header__tabs {
         font-size: 0.9rem;
         gap: 10px;
         transition: .3s;
-        background-color: transparent; }
+        background-color: transparent;
+        padding: 3px 20px !important; }
         .bestSellers__right__top a i {
           font-size: 12px; }
         .bestSellers__right__top a:hover {
@@ -999,7 +1029,8 @@ header .header__tabs {
     .bestSellers__right__bottom {
       margin-top: 30px;
       display: flex;
-      position: relative; }
+      position: relative;
+      width: 870px; }
       .bestSellers__right__bottom .sliderbtn {
         border: none;
         background-color: white;
@@ -1034,7 +1065,6 @@ header .header__tabs {
       margin-top: 40px;
       height: 126px;
       overflow: hidden;
-      width: 80%;
       background: url(https://k4j3j2s7.rocketcdn.me/bacola/wp-content/plugins/bacola-core/elementor/images/banner-box2.jpg);
       background-repeat: no-repeat;
       background-position: right;
@@ -1053,8 +1083,7 @@ header .header__tabs {
         letter-spacing: -1px; }
     .bestSellers__right__timeDiscount {
       font-family: "Dosis", sans-serif;
-      font-size: 1.25rem;
-      width: 80%; }
+      font-size: 1.25rem; }
       .bestSellers__right__timeDiscount__title {
         margin: 30px 0;
         display: flex;
@@ -1071,6 +1100,8 @@ header .header__tabs {
           margin-top: 5px; }
         .bestSellers__right__timeDiscount__title a {
           text-decoration: none;
+          gap: 10px;
+          text-decoration: none;
           padding: 5px 20px;
           border: 1px solid #9b9bb4;
           border-radius: 20px;
@@ -1081,12 +1112,15 @@ header .header__tabs {
           font-size: 0.9rem;
           gap: 10px;
           transition: .3s;
-          background-color: transparent; }
+          background-color: transparent;
+          padding: 3px 20px; }
           .bestSellers__right__timeDiscount__title a i {
             font-size: 12px; }
           .bestSellers__right__timeDiscount__title a:hover {
             color: black;
             transition: .3s; }
+          .bestSellers__right__timeDiscount__title a i {
+            font-size: 12px; }
       .bestSellers__right__timeDiscount__block {
         width: 100%;
         border: 1px solid #d51243;

@@ -27,7 +27,22 @@ let PRODUCTS = [
         title: "Blue Diamond Almonds Lightly Salted",
         img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-59-346x310.jpg",
         count: 0
+    },
+    {
+        id: "4",
+        price: 10.58,
+        title: "Blue Diamond Almonds Lightly Salted",
+        img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-59-346x310.jpg",
+        count: 0
+    },
+    {
+        id: "5",
+        price: 10.58,
+        title: "Blue Diamond Almonds Lightly Salted",
+        img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-59-346x310.jpg",
+        count: 0
     }
+
 ]
 
 let CART = [
@@ -125,9 +140,10 @@ function RenderModalCart(array) {
 
 // Location modal and categories button
 $(".header__bottom__middle__location").click(() => {
-    $("#locationModal").slideToggle(500)
+    $("#locationModal").slideToggle(500, () => { })
     $("body").toggleClass("changeStyle")
 })
+
 
 $("#categoriesBtn").click(() => {
     $(".map__wrapper__left__list").slideToggle(300)
@@ -136,7 +152,7 @@ $("#categoriesBtn").click(() => {
 
 
 // OWL CAROUSEL
-$('.owl-carousel').owlCarousel({
+$('.map_carousel').owlCarousel({
     loop: true,
     responsiveClass: true,
     // nav: true,
@@ -156,19 +172,18 @@ $('.owl-carousel').owlCarousel({
 })
 
 $('.product_carousel').owlCarousel({
-    // loop: true,
+    loop: true,
     responsiveClass: true,
-    // autoplay: true,
-    // autoplayTimeout: 5000,
-    margin: 1,
+    autoplay: true,
+    autoplayTimeout: 5000,
     responsive: {
         0: {
-            items: 2
+            items: 1
         },
         600: {
             items: 2
         },
-        1000: {
+        1200: {
             items: 4
         }
     }

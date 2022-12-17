@@ -93,13 +93,15 @@
             height: 486px;
             overflow: hidden;
 
-            .owl-carousel {
-                .owl-item {
+            .map_carousel {
+                .map_carousel {
                     background: none !important;
                 }
-                .owl-dots{
+
+                .owl-dots {
                     display: none;
                 }
+
                 a {
                     position: relative;
 
@@ -266,7 +268,7 @@
 
                 &__right {
                     height: fit-content;
-                    
+
                     .owl-carousel {
                         img {
                             object-fit: cover;
@@ -392,6 +394,57 @@
                 font-size: 1.9rem;
             }
         }
+
+        &__features {
+            border: 1px solid #e7e6e6;
+            border-radius: 6px;
+
+            &__block {
+                display: flex;
+                padding: 20px;
+                border-bottom: 1px solid #cfcfcf;
+                align-items: center;
+
+                &__icon {
+                    width: 50px;
+                    display: flex;
+                    justify-content: center;
+                    margin-right: 15px;
+
+                    i {
+                        font-size: 28px;
+                        color: #696c7c;
+                    }
+                }
+
+                div {
+                    span {
+                        font-size: .7rem;
+                        width: 100%;
+                        font-weight: 400;
+                    }
+                }
+
+            }
+        }
+
+        &__trendingProducts {
+            margin-top: 40px;
+            padding: 10px 0;
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            &__products {
+                border: 1px solid #e7e6e6;
+
+                &__product{
+                    padding: 15px;
+                    border-bottom: 1px solid #e7e6e6;
+
+                }
+            }
+        }
     }
 
     &__right {
@@ -404,9 +457,9 @@
 
             a {
                 text-decoration: none;
-                padding: 5px 20px;
                 gap: 10px;
                 @include button (transparent, 1px, #9b9bb4, #9b9bb4);
+                padding: 3px 20px !important;
 
                 i {
                     font-size: 12px;
@@ -430,7 +483,7 @@
             margin-top: 30px;
             display: flex;
             position: relative;
-            // width: 100% !important;
+            width: 870px;
 
             .sliderbtn {
                 border: none;
@@ -475,8 +528,8 @@
             }
 
             .product_carousel {
+                .owl-stage {}
 
-                .owl-stage{}
                 .owl-nav,
                 .owl-dots {
                     display: none;
@@ -494,7 +547,6 @@
             margin-top: 40px;
             height: 126px;
             overflow: hidden;
-            width: 80%;
             background: url(https://k4j3j2s7.rocketcdn.me/bacola/wp-content/plugins/bacola-core/elementor/images/banner-box2.jpg);
             background-repeat: no-repeat;
             background-position: right;
@@ -520,7 +572,6 @@
         &__timeDiscount {
             font-family: "Dosis", sans-serif;
             font-size: 1.25rem;
-            width: 80%;
 
             &__title {
                 margin: 30px 0;
@@ -547,7 +598,14 @@
                 }
 
                 a {
-                    @include button(transparent, 1px, #9b9bb4, #9b9bb4);
+                    text-decoration: none;
+                    gap: 10px;
+                    @include button (transparent, 1px, #9b9bb4, #9b9bb4);
+                    padding: 3px 20px;
+
+                    i {
+                        font-size: 12px;
+                    }
                 }
             }
 
@@ -568,7 +626,7 @@
                     position: relative;
 
                     img {
-                        width:140px;
+                        width: 140px;
                     }
 
                     .discount_percent {
