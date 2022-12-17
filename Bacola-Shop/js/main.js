@@ -1,8 +1,9 @@
 const product_carousel = document.getElementsByClassName("product_carousel")[0]
 const cart_count = document.getElementsByClassName("header__bottom__right__cart__count")[0]
-const cartContent = document.getElementsByClassName("cartContent")[0]
+const cartContent = document.getElementsByClassName("cartContent__scroll")[0]
+const cartContentGeneral = document.getElementsByClassName("cartContent")[0]
 let countCart = parseInt(cart_count.innerText)
-let cartId = 0
+let cartId = 1
 
 let PRODUCTS = [
     {
@@ -46,7 +47,7 @@ class Cart {
 
 // Cart
 PRODUCTS.forEach((card) => {
-    console.log(card)
+    let innerHTML = ``
     product_carousel.innerHTML +=
         ` <div class="bestSellers__right__bottom__card">
                         <a class="bestSellers__right__bottom__card__top">
@@ -81,66 +82,45 @@ const addToCartBtn = document.getElementsByClassName("addToCartBtn")
 function AddToCart(id) {
     let index = PRODUCTS.find((item) => item.id == id)
 
-    // let some = PRODUCTS.indexOf((item) => item.id == id)
-    // console.log(some, "dsad")
-    console.log(CART.length)
-    if (CART.length > 0) {
-        if(CART.id == index.id){
-            CART[index].count 
-            console.log("message", CART[index].count)
-        }
+    let cartItem = CART.find((item) => item.id == id)
 
-    }
-    else {
-        let productCart = new Cart(index.title, index.price, index.img, index.count)
-        cartId += CART.id
-        CART.push(productCart)
-        console.log("2222")
-    }
+    index.count++
+    let productCart = new Cart(index.title, index.price, index.img, index.count)
+    CART.push(productCart)
+
+    cartId++
     countCart++
-console.log(cartId += CART.id)
 
     cart_count.textContent = countCart
-
     RenderModalCart(CART)
 }
 
-console.log(PRODUCTS)
-
 function RenderModalCart(array) {
+    let innerHTML = ``
     for (let i = 0; i < array.length; i++) {
-        console.log(array)
-        cartContent.innerHTML += `
-
-        <div class="cartContent__top">
-                            <div>
-                                <img src="${array[i].img}" alt="">
+        innerHTML = (
+            `
+            <div class="cartContent__top">
+            <div>
+            <img src="${array[i].img}"
+            alt="">
                                 <div class="deleteBtn" id="deleteWithCart">
                                     <i class="fa-solid fa-xmark"></i>
                                 </div>
                             </div>
                             <div class="cartContent__top__text">
-                                <h5 class="cartContent__top__title">
-                                   ${array[i].title}
-                                </h5>
-                                <h6><span>2 x</span>$ ${array[i].price}</h6>
+                            <h5 class="cartContent__top__title">
+                            ${array[i].title}
+                            </h5>
+                            <h6><span>2 x</span>$ ${array[i].price}</h6>
                             </div>
                         </div>
-                        <div class="cartContent__middle">
-                            <span>Subtotal: </span>
-                            <span class="price">$ ${array[i].price}</span>
-                            <div class="cartContent__middle__btns">
-                                <button>View Cart</button>
-                                <button>Checkout</button>
-                            </div>
-                        </div>
-                        <div class="cartContent__bottom">
-                            <span> We reduce shipping prices to only 2.49 €! </span>
-                        </div>
-
-
-        `
+                    
+                        `
+        )
     }
+
+    cartContent.innerHTML += innerHTML
 }
 
 // Location modal and categories button
@@ -159,7 +139,7 @@ $("#categoriesBtn").click(() => {
 $('.owl-carousel').owlCarousel({
     loop: true,
     responsiveClass: true,
-    nav: true,
+    // nav: true,
     autoplay: true,
     autoplayTimeout: 5000,
     responsive: {

@@ -1,126 +1,8 @@
 .bestSellers {
-    padding: 30px 15px;
-    display: flex;
-
-    &__left {
-        .bannerLeft {
-            position: relative;
-            margin-bottom: 50px;
-        }
-
-        img {
-            width: 270px;
-            border-radius: 6px;
-        }
-
-        &__content {
-            position: absolute;
-            top: 40px;
-            left: 40px;
-            display: flex;
-            flex-direction: column;
-            text-decoration: none;
-            color: black;
-
-            .bestSellers__left__content_title--modified {
-                color: #9b9bb4;
-            }
-
-            button {
-                padding: 10px 20px;
-                width: fit-content;
-                background-color: #2bbef9;
-                border: none;
-                border-radius: 20px;
-                color: white;
-                font-size: 12px;
-                margin-top: 15px;
-
-                i {
-                    color: white !important;
-                }
-            }
-
-            h6 {
-                margin-bottom: 15px;
-                font-size: 0.81rem;
-                color: white;
-            }
-
-            h5 {
-                font-weight: 200;
-                font-size: 1.4rem;
-                margin-bottom: 5px;
-            }
-
-            h4 {
-                font-size: 1.5rem;
-                font-weight: 600;
-                margin-bottom: 5px;
-            }
-
-            .besrSells_onlyForm {
-                font-weight: 400;
-                font-size: 0.75rem;
-            }
-
-            span {
-                margin-top: 15px;
-            }
-
-            .bestSellers_price {
-                margin-top: 10px;
-                color: rgb(213, 18, 67);
-                font-weight: 600;
-                font-family: "Dosis", sans-serif;
-                font-size: 1.9rem;
-            }
-        }
-    }
 
     &__right {
         width: 100%;
         padding: 0 28px;
-
-        &__top {
-            display: flex;
-            justify-content: space-between;
-
-            a {
-                text-decoration: none;
-                padding: 5px 20px;
-                border: 1px solid #9b9bb4;
-                border-radius: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #9b9bb4;
-                font-size: 12px;
-                gap: 10px;
-                transition: .3s;
-
-                i {
-                    font-size: 12px;
-                }
-
-                &:hover {
-                    color: black;
-                    transition: .3s;
-                }
-            }
-
-            h4 {
-                font-size: 1.25rem;
-                font-family: "Dosis", sans-serif;
-                font-weight: 600;
-            }
-
-            p {
-                font-size: .75rem;
-                color: #9b9bb4;
-                padding-top: 5px;
-            }
-        }
 
         &__bottom {
             margin-top: 30px;
@@ -270,14 +152,15 @@
                     padding-top: 20px;
 
                     button {
-                        padding: 8px 0;
-                        border: 1px solid #2bbef9;
-                        background-color: transparent;
-                        border-radius: 20px;
-                        color: #2bbef9;
+                        padding: 8px 0 !important;
                         width: 100%;
-                        cursor: pointer;
+                        @include button(transparent, 1px, #2bbef9, #2bbef9);
 
+                        &:hover {
+                            background-color: #2bbef9;
+                            color: white;
+                            transition: .4s;
+                        }
                     }
                 }
 
@@ -366,130 +249,6 @@
                     transition: .4s;
                 }
             }
-        }
-
-        &__banner {
-            margin-top: 40px;
-            height: 126px;
-            overflow: hidden;
-            width: 100%;
-            background: url(https://k4j3j2s7.rocketcdn.me/bacola/wp-content/plugins/bacola-core/elementor/images/banner-box2.jpg);
-            background-repeat: no-repeat;
-            background-position: right;
-            background-color: #F8EFEA;
-            border-radius: 10px;
-            padding: 45px;
-
-            span {
-                color: rgb(156, 156, 156);
-                font-size: .9rem;
-                font-weight: 400px;
-            }
-
-            h4 {
-                margin-top: 10px;
-                color: #808088;
-                font-weight: 600;
-                font-size: 1.2rem;
-                letter-spacing: -1px;
-            }
-        }
-
-        &__timeDiscount {
-            font-family: "Dosis", sans-serif;
-            font-size: 1.25rem;
-
-            &__title {
-                margin: 30px 0;
-                display: flex;
-                justify-content: space-between;
-
-                &__text {
-
-                    h2 {
-                        text-transform: uppercase;
-
-                        span {
-                            color: rgb(213, 18, 67);
-                        }
-                    }
-
-                    p {
-                        color: #9b9bb4;
-                        font-size: 0.75rem;
-                        font-family: "Inter", sans-serif;
-                        font-weight: 400;
-                        margin-top: 5px;
-                    }
-                }
-
-                a {
-                    @include button(transparent, 1px, #9b9bb4, #9b9bb4);
-                }
-            }
-
-            &__block {
-                width: 100%;
-                padding: 30px;
-                border: 1px solid rgb(213, 18, 67);
-                border-radius: 10px;
-                display: flex;
-                padding: 20px;
-
-                &__left {
-                    width: 180px;
-                    padding: 10px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-
-                    img {
-                        width: 180px;
-                    }
-
-                    .discount_percent {
-                        padding: 20px 15px;
-                        position: absolute;
-                        background-color: #ed174a;
-                        border-radius: 50%;
-                        color: white;
-                        top: 0;
-                        left: 0;
-                    }
-                }
-
-                &__right {
-                    padding: 0 18px 18px;
-                    &__price {
-                        .lastPrice {
-                            text-decoration: line-through;
-                            color: #c2c2d3;
-                        }
-
-                        .newPrice{
-                            color: #d51243;
-                            font-size: 18px;
-                            padding-left: 5px;
-                        }
-                    }
-
-                    &__title {}
-
-                    &__amount {
-                        .inStock {
-                            font-size: 11px;
-                            font-weight: 600;
-                            color: #00b853;
-                        }
-                    }
-
-                    &__time {}
-                }
-
-
-            }
-
         }
     }
 }

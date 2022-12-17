@@ -51,339 +51,181 @@ html {
 html {
   overflow-x: hidden; }
 
-.bestSellers {
-  padding: 30px 15px;
-  display: flex; }
-  .bestSellers__left .bannerLeft {
-    position: relative;
-    margin-bottom: 50px; }
-  .bestSellers__left img {
-    width: 270px;
-    border-radius: 6px; }
-  .bestSellers__left__content {
-    position: absolute;
-    top: 40px;
-    left: 40px;
+.bestSellers__right {
+  width: 100%;
+  padding: 0 28px; }
+  .bestSellers__right__bottom {
+    margin-top: 30px;
     display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: black; }
-    .bestSellers__left__content .bestSellers__left__content_title--modified {
-      color: #9b9bb4; }
-    .bestSellers__left__content button {
-      padding: 10px 20px;
-      width: fit-content;
-      background-color: #2bbef9;
+    position: relative; }
+    .bestSellers__right__bottom .sliderbtn {
       border: none;
-      border-radius: 20px;
-      color: white;
-      font-size: 12px;
-      margin-top: 15px; }
-      .bestSellers__left__content button i {
-        color: white !important; }
-    .bestSellers__left__content h6 {
-      margin-bottom: 15px;
-      font-size: 0.81rem;
-      color: white; }
-    .bestSellers__left__content h5 {
-      font-weight: 200;
-      font-size: 1.4rem;
-      margin-bottom: 5px; }
-    .bestSellers__left__content h4 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 5px; }
-    .bestSellers__left__content .besrSells_onlyForm {
-      font-weight: 400;
-      font-size: 0.75rem; }
-    .bestSellers__left__content span {
-      margin-top: 15px; }
-    .bestSellers__left__content .bestSellers_price {
-      margin-top: 10px;
-      color: #d51243;
-      font-weight: 600;
-      font-family: "Dosis", sans-serif;
-      font-size: 1.9rem; }
-  .bestSellers__right {
-    width: 100%;
-    padding: 0 28px; }
-    .bestSellers__right__top {
-      display: flex;
-      justify-content: space-between; }
-      .bestSellers__right__top a {
-        text-decoration: none;
-        padding: 5px 20px;
-        border: 1px solid #9b9bb4;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #9b9bb4;
-        font-size: 12px;
-        gap: 10px;
-        transition: .3s; }
-        .bestSellers__right__top a i {
-          font-size: 12px; }
-        .bestSellers__right__top a:hover {
-          color: black;
-          transition: .3s; }
-      .bestSellers__right__top h4 {
-        font-size: 1.25rem;
-        font-family: "Dosis", sans-serif;
-        font-weight: 600; }
-      .bestSellers__right__top p {
-        font-size: .75rem;
-        color: #9b9bb4;
-        padding-top: 5px; }
-    .bestSellers__right__bottom {
-      margin-top: 30px;
-      display: flex;
-      position: relative; }
-      .bestSellers__right__bottom .sliderbtn {
-        border: none;
-        background-color: white;
-        padding: 10px;
-        height: fit-content;
-        box-shadow: 0 0 5px #9c9c9c;
-        border-radius: 50%;
-        position: absolute;
-        z-index: 10; }
-        .bestSellers__right__bottom .sliderbtn i {
-          transition: .4s;
-          color: #9b9bb4; }
-      .bestSellers__right__bottom .sliderLeft {
-        transform: translate(-20px, 150px); }
-        .bestSellers__right__bottom .sliderLeft:hover i {
-          transform: translateX(-3px);
-          transition: .4s;
-          color: #2bbef9; }
-      .bestSellers__right__bottom .sliderRight {
-        right: 0;
-        transform: translate(20px, 150px); }
-        .bestSellers__right__bottom .sliderRight:hover i {
-          transform: translateX(3px);
-          transition: .4s;
-          color: #2bbef9; }
-      .bestSellers__right__bottom .product_carousel .owl-nav,
-      .bestSellers__right__bottom .product_carousel .owl-dots {
-        display: none; }
-      .bestSellers__right__bottom .product_carousel .owl-item {
-        background-color: transparent; }
-      .bestSellers__right__bottom__card {
-        width: 217px;
-        padding: 20px;
-        border: 1px solid #e0e0e0;
-        overflow: hidden;
-        position: relative;
-        transition: .4s; }
-        .bestSellers__right__bottom__card:first-child {
-          border-top-left-radius: 10px;
-          border-bottom-left-radius: 10px; }
-        .bestSellers__right__bottom__card:last-child {
-          border-top-right-radius: 10px;
-          border-bottom-right-radius: 10px; }
-        .bestSellers__right__bottom__card__top {
-          padding: 5px;
-          cursor: pointer; }
-          .bestSellers__right__bottom__card__top img {
-            width: 177px; }
-        .bestSellers__right__bottom__card__middle {
-          font-family: "Dosis", sans-serif; }
-          .bestSellers__right__bottom__card__middle h5 {
-            cursor: pointer;
-            overflow: hidden;
-            color: #3e445a; }
-            .bestSellers__right__bottom__card__middle h5:hover {
-              color: #233a95; }
-          .bestSellers__right__bottom__card__middle .star_list {
-            display: flex;
-            margin-bottom: 12px;
-            margin-top: 10px; }
-            .bestSellers__right__bottom__card__middle .star_list i {
-              color: gold !important;
-              font-size: 10px; }
-            .bestSellers__right__bottom__card__middle .star_list span {
-              margin-left: 5px;
-              color: black !important; }
-          .bestSellers__right__bottom__card__middle h5 {
-            font-size: 14px;
-            font-weight: 500;
-            font-family: "Inter", sans-serif;
-            margin-bottom: 10px; }
-          .bestSellers__right__bottom__card__middle span {
-            font-size: 11px;
-            font-weight: 600;
-            color: #00b853; }
-          .bestSellers__right__bottom__card__middle .past_price {
-            text-decoration: line-through;
-            color: #c2c2d3; }
-          .bestSellers__right__bottom__card__middle .new_price {
-            color: #d51243;
-            font-size: 18px;
-            padding-left: 5px; }
-        .bestSellers__right__bottom__card__bottom {
-          padding-top: 20px; }
-          .bestSellers__right__bottom__card__bottom button {
-            padding: 8px 0;
-            border: 1px solid #2bbef9;
-            background-color: transparent;
-            border-radius: 20px;
-            color: #2bbef9;
-            width: 100%;
-            cursor: pointer; }
-        .bestSellers__right__bottom__card .discponunt {
-          position: absolute;
-          top: 20px;
-          padding: 5px 10px;
-          color: white;
-          font-size: 11px;
-          border-radius: 4px;
-          background-color: #2bbef9; }
-        .bestSellers__right__bottom__card .productFeature {
-          position: absolute;
-          top: 45px;
-          padding: 5px 10px;
-          color: #078841;
-          font-size: 12px;
-          font-family: 'Dosis', sans-serif;
-          border-radius: 8px;
-          background-color: #d3f1e1; }
-        .bestSellers__right__bottom__card .fullScreen {
-          position: absolute;
-          padding: 10px;
-          background-color: white;
-          border-radius: 50%;
-          box-shadow: 0 0 5px #b1b1b1;
-          top: 20px;
-          right: 20px;
-          display: none;
-          transform: translate(10px, 0);
-          transition: .5s;
-          cursor: pointer; }
-          .bestSellers__right__bottom__card .fullScreen i {
-            color: #3e445a !important; }
-          .bestSellers__right__bottom__card .fullScreen:hover {
-            background-color: #233a95; }
-            .bestSellers__right__bottom__card .fullScreen:hover i {
-              color: white !important; }
-        .bestSellers__right__bottom__card .likeMe {
-          position: absolute;
-          padding: 10px;
-          background-color: white;
-          box-shadow: 0 0 5px #b1b1b1;
-          border-radius: 50%;
-          top: 65px;
-          right: 20px;
-          display: none;
-          transform: translate(10px, 0);
-          transition: .6s;
-          cursor: pointer; }
-          .bestSellers__right__bottom__card .likeMe i {
-            color: #3e445a !important; }
-          .bestSellers__right__bottom__card .likeMe:hover {
-            background-color: #233a95; }
-            .bestSellers__right__bottom__card .likeMe:hover i {
-              color: white !important; }
-        .bestSellers__right__bottom__card:hover {
-          transition: .4s; }
-          .bestSellers__right__bottom__card:hover .fullScreen,
-          .bestSellers__right__bottom__card:hover .likeMe {
-            display: block;
-            transition: .5s;
-            transform: translate(0, 0); }
-    .bestSellers__right__banner {
-      margin-top: 40px;
-      height: 126px;
+      background-color: white;
+      padding: 10px;
+      height: fit-content;
+      box-shadow: 0 0 5px #9c9c9c;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 10; }
+      .bestSellers__right__bottom .sliderbtn i {
+        transition: .4s;
+        color: #9b9bb4; }
+    .bestSellers__right__bottom .sliderLeft {
+      transform: translate(-20px, 150px); }
+      .bestSellers__right__bottom .sliderLeft:hover i {
+        transform: translateX(-3px);
+        transition: .4s;
+        color: #2bbef9; }
+    .bestSellers__right__bottom .sliderRight {
+      right: 0;
+      transform: translate(20px, 150px); }
+      .bestSellers__right__bottom .sliderRight:hover i {
+        transform: translateX(3px);
+        transition: .4s;
+        color: #2bbef9; }
+    .bestSellers__right__bottom .product_carousel .owl-nav,
+    .bestSellers__right__bottom .product_carousel .owl-dots {
+      display: none; }
+    .bestSellers__right__bottom .product_carousel .owl-item {
+      background-color: transparent; }
+    .bestSellers__right__bottom__card {
+      width: 217px;
+      padding: 20px;
+      border: 1px solid #e0e0e0;
       overflow: hidden;
-      width: 100%;
-      background: url(https://k4j3j2s7.rocketcdn.me/bacola/wp-content/plugins/bacola-core/elementor/images/banner-box2.jpg);
-      background-repeat: no-repeat;
-      background-position: right;
-      background-color: #F8EFEA;
-      border-radius: 10px;
-      padding: 45px; }
-      .bestSellers__right__banner span {
-        color: #9c9c9c;
-        font-size: .9rem;
-        font-weight: 400px; }
-      .bestSellers__right__banner h4 {
-        margin-top: 10px;
-        color: #808088;
-        font-weight: 600;
-        font-size: 1.2rem;
-        letter-spacing: -1px; }
-    .bestSellers__right__timeDiscount {
-      font-family: "Dosis", sans-serif;
-      font-size: 1.25rem; }
-      .bestSellers__right__timeDiscount__title {
-        margin: 30px 0;
-        display: flex;
-        justify-content: space-between; }
-        .bestSellers__right__timeDiscount__title__text h2 {
-          text-transform: uppercase; }
-          .bestSellers__right__timeDiscount__title__text h2 span {
-            color: #d51243; }
-        .bestSellers__right__timeDiscount__title__text p {
-          color: #9b9bb4;
-          font-size: 0.75rem;
+      position: relative;
+      transition: .4s; }
+      .bestSellers__right__bottom__card:first-child {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px; }
+      .bestSellers__right__bottom__card:last-child {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px; }
+      .bestSellers__right__bottom__card__top {
+        padding: 5px;
+        cursor: pointer; }
+        .bestSellers__right__bottom__card__top img {
+          width: 177px; }
+      .bestSellers__right__bottom__card__middle {
+        font-family: "Dosis", sans-serif; }
+        .bestSellers__right__bottom__card__middle h5 {
+          cursor: pointer;
+          overflow: hidden;
+          color: #3e445a; }
+          .bestSellers__right__bottom__card__middle h5:hover {
+            color: #233a95; }
+        .bestSellers__right__bottom__card__middle .star_list {
+          display: flex;
+          margin-bottom: 12px;
+          margin-top: 10px; }
+          .bestSellers__right__bottom__card__middle .star_list i {
+            color: gold !important;
+            font-size: 10px; }
+          .bestSellers__right__bottom__card__middle .star_list span {
+            margin-left: 5px;
+            color: black !important; }
+        .bestSellers__right__bottom__card__middle h5 {
+          font-size: 14px;
+          font-weight: 500;
           font-family: "Inter", sans-serif;
-          font-weight: 400;
-          margin-top: 5px; }
-        .bestSellers__right__timeDiscount__title a {
+          margin-bottom: 10px; }
+        .bestSellers__right__bottom__card__middle span {
+          font-size: 11px;
+          font-weight: 600;
+          color: #00b853; }
+        .bestSellers__right__bottom__card__middle .past_price {
+          text-decoration: line-through;
+          color: #c2c2d3; }
+        .bestSellers__right__bottom__card__middle .new_price {
+          color: #d51243;
+          font-size: 18px;
+          padding-left: 5px; }
+      .bestSellers__right__bottom__card__bottom {
+        padding-top: 20px; }
+        .bestSellers__right__bottom__card__bottom button {
+          padding: 8px 0 !important;
+          width: 100%;
           text-decoration: none;
           padding: 5px 20px;
-          border: 1px solid #9b9bb4;
+          border: 1px solid #2bbef9;
           border-radius: 20px;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #9b9bb4;
+          color: #2bbef9;
           font-size: 0.9rem;
           gap: 10px;
           transition: .3s;
           background-color: transparent; }
-          .bestSellers__right__timeDiscount__title a i {
+          .bestSellers__right__bottom__card__bottom button i {
             font-size: 12px; }
-          .bestSellers__right__timeDiscount__title a:hover {
+          .bestSellers__right__bottom__card__bottom button:hover {
             color: black;
             transition: .3s; }
-      .bestSellers__right__timeDiscount__block {
-        width: 100%;
-        padding: 30px;
-        border: 1px solid #d51243;
-        border-radius: 10px;
-        display: flex;
-        padding: 20px; }
-        .bestSellers__right__timeDiscount__block__left {
-          width: 180px;
-          padding: 10px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: relative; }
-          .bestSellers__right__timeDiscount__block__left img {
-            width: 180px; }
-          .bestSellers__right__timeDiscount__block__left .discount_percent {
-            padding: 20px 15px;
-            position: absolute;
-            background-color: #ed174a;
-            border-radius: 50%;
+          .bestSellers__right__bottom__card__bottom button:hover {
+            background-color: #2bbef9;
             color: white;
-            top: 0;
-            left: 0; }
-        .bestSellers__right__timeDiscount__block__right {
-          padding: 0 18px 18px; }
-          .bestSellers__right__timeDiscount__block__right__price .lastPrice {
-            text-decoration: line-through;
-            color: #c2c2d3; }
-          .bestSellers__right__timeDiscount__block__right__price .newPrice {
-            color: #d51243;
-            font-size: 18px;
-            padding-left: 5px; }
-          .bestSellers__right__timeDiscount__block__right__amount .inStock {
-            font-size: 11px;
-            font-weight: 600;
-            color: #00b853; }
+            transition: .4s; }
+      .bestSellers__right__bottom__card .discponunt {
+        position: absolute;
+        top: 20px;
+        padding: 5px 10px;
+        color: white;
+        font-size: 11px;
+        border-radius: 4px;
+        background-color: #2bbef9; }
+      .bestSellers__right__bottom__card .productFeature {
+        position: absolute;
+        top: 45px;
+        padding: 5px 10px;
+        color: #078841;
+        font-size: 12px;
+        font-family: 'Dosis', sans-serif;
+        border-radius: 8px;
+        background-color: #d3f1e1; }
+      .bestSellers__right__bottom__card .fullScreen {
+        position: absolute;
+        padding: 10px;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: 0 0 5px #b1b1b1;
+        top: 20px;
+        right: 20px;
+        display: none;
+        transform: translate(10px, 0);
+        transition: .5s;
+        cursor: pointer; }
+        .bestSellers__right__bottom__card .fullScreen i {
+          color: #3e445a !important; }
+        .bestSellers__right__bottom__card .fullScreen:hover {
+          background-color: #233a95; }
+          .bestSellers__right__bottom__card .fullScreen:hover i {
+            color: white !important; }
+      .bestSellers__right__bottom__card .likeMe {
+        position: absolute;
+        padding: 10px;
+        background-color: white;
+        box-shadow: 0 0 5px #b1b1b1;
+        border-radius: 50%;
+        top: 65px;
+        right: 20px;
+        display: none;
+        transform: translate(10px, 0);
+        transition: .6s;
+        cursor: pointer; }
+        .bestSellers__right__bottom__card .likeMe i {
+          color: #3e445a !important; }
+        .bestSellers__right__bottom__card .likeMe:hover {
+          background-color: #233a95; }
+          .bestSellers__right__bottom__card .likeMe:hover i {
+            color: white !important; }
+      .bestSellers__right__bottom__card:hover {
+        transition: .4s; }
+        .bestSellers__right__bottom__card:hover .fullScreen,
+        .bestSellers__right__bottom__card:hover .likeMe {
+          display: block;
+          transition: .5s;
+          transform: translate(0, 0); }
 
 header .header__top {
   background-color: #233a95;
@@ -634,6 +476,9 @@ header .header__bottom {
       border-bottom: 1px solid #a3a3a3;
       transition: .5s;
       display: none; }
+      header .header__bottom__right .cartContent__scroll {
+        overflow-y: scroll;
+        height: 130px; }
       header .header__bottom__right .cartContent__top {
         display: flex;
         padding-bottom: 15px;
@@ -674,7 +519,7 @@ header .header__bottom {
             font-size: 10px; }
       header .header__bottom__right .cartContent__middle {
         margin-top: 20px;
-        padding-bottom: 25px;
+        padding-bottom: 15px;
         border-bottom: 1px solid #c7c6c6; }
         header .header__bottom__right .cartContent__middle span {
           font-weight: 600;
@@ -704,7 +549,7 @@ header .header__bottom {
               background-color: transparent;
               border-radius: 5px;
               padding: 15px;
-              margin-bottom: 10px; }
+              margin-bottom: 5px; }
               header .header__bottom__right .cartContent__middle__btns button:first-child i {
                 font-size: 12px; }
               header .header__bottom__right .cartContent__middle__btns button:first-child:hover {
@@ -734,7 +579,7 @@ header .header__bottom {
                 opacity: .7;
                 color: white; }
       header .header__bottom__right .cartContent__bottom {
-        padding-top: 25px;
+        padding-top: 10px;
         font-size: 13px; }
 
 header .header__tabs {
@@ -881,7 +726,7 @@ header .header__tabs {
   z-index: 3; }
 
 .map__wrapper {
-  padding: 0 15px;
+  padding: 0 0 15px 15px;
   display: flex;
   justify-content: space-between; }
   .map__wrapper__left {
@@ -935,12 +780,14 @@ header .header__tabs {
           transition: .4s;
           color: #2bbef9; }
   .map__wrapper__right {
-    padding: 10px;
+    padding: 25px 15px 0 15px;
     background-color: none;
     height: 486px;
     overflow: hidden; }
     .map__wrapper__right .owl-carousel .owl-item {
       background: none !important; }
+    .map__wrapper__right .owl-carousel .owl-dots {
+      display: none; }
     .map__wrapper__right .owl-carousel a {
       position: relative; }
       .map__wrapper__right .owl-carousel a .map__wrapper__right__contentOnImage {
@@ -1121,20 +968,26 @@ header .header__tabs {
       .bestSellers__right__top a {
         text-decoration: none;
         padding: 5px 20px;
+        gap: 10px;
+        text-decoration: none;
+        padding: 5px 20px;
         border: 1px solid #9b9bb4;
         border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: #9b9bb4;
-        font-size: 12px;
+        font-size: 0.9rem;
         gap: 10px;
-        transition: .3s; }
+        transition: .3s;
+        background-color: transparent; }
         .bestSellers__right__top a i {
           font-size: 12px; }
         .bestSellers__right__top a:hover {
           color: black;
           transition: .3s; }
+        .bestSellers__right__top a i {
+          font-size: 12px; }
       .bestSellers__right__top h4 {
         font-size: 1.25rem;
         font-family: "Dosis", sans-serif;
@@ -1146,8 +999,7 @@ header .header__tabs {
     .bestSellers__right__bottom {
       margin-top: 30px;
       display: flex;
-      position: relative;
-      width: 100% !important; }
+      position: relative; }
       .bestSellers__right__bottom .sliderbtn {
         border: none;
         background-color: white;
@@ -1249,6 +1101,8 @@ header .header__tabs {
           justify-content: center;
           align-items: center;
           position: relative; }
+          .bestSellers__right__timeDiscount__block__left img {
+            width: 140px; }
           .bestSellers__right__timeDiscount__block__left .discount_percent {
             padding: 20px 15px;
             position: absolute;

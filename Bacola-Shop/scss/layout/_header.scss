@@ -316,9 +316,10 @@ header {
             }
 
             transition: .5s;
+
             &:hover {
                 transition: .5s;
-                
+
                 .cartContent {
                     transition: .3s;
                     display: block;
@@ -339,6 +340,11 @@ header {
                 border-bottom: 1px solid #a3a3a3;
                 transition: .5s;
                 display: none;
+
+                &__scroll {
+                    overflow-y: scroll;
+                    height: 130px;
+                }
 
                 &__top {
                     display: flex;
@@ -399,7 +405,7 @@ header {
 
                 &__middle {
                     margin-top: 20px;
-                    padding-bottom: 25px;
+                    padding-bottom: 15px;
                     border-bottom: 1px solid #c7c6c6;
 
                     span {
@@ -425,7 +431,7 @@ header {
                                 @include button(transparent, 1px, #a8a8a8, black);
                                 border-radius: 5px;
                                 padding: 15px;
-                                margin-bottom: 10px;
+                                margin-bottom: 5px;
                             }
 
                             &:last-child {
@@ -443,7 +449,7 @@ header {
                 }
 
                 &__bottom {
-                    padding-top: 25px;
+                    padding-top: 10px;
                     font-size: 13px;
                 }
             }

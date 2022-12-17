@@ -1,16 +1,18 @@
 .map {
     &__wrapper {
-        padding: 0 15px;
+        padding: 0 0 15px 15px;
         display: flex;
         justify-content: space-between;
 
         &__left {
             width: 135%;
+
             &__list {
                 padding: 18px 0;
                 border: 1px solid rgb(202, 202, 202);
                 border-top: 0;
                 width: 268px;
+
                 li {
                     text-decoration: none;
                     padding: 10px 25px;
@@ -86,7 +88,7 @@
         }
 
         &__right {
-            padding: 10px;
+            padding: 25px 15px 0 15px;
             background-color: none;
             height: 486px;
             overflow: hidden;
@@ -95,7 +97,9 @@
                 .owl-item {
                     background: none !important;
                 }
-
+                .owl-dots{
+                    display: none;
+                }
                 a {
                     position: relative;
 
@@ -262,7 +266,7 @@
 
                 &__right {
                     height: fit-content;
-
+                    
                     .owl-carousel {
                         img {
                             object-fit: cover;
@@ -401,23 +405,11 @@
             a {
                 text-decoration: none;
                 padding: 5px 20px;
-                border: 1px solid #9b9bb4;
-                border-radius: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #9b9bb4;
-                font-size: 12px;
                 gap: 10px;
-                transition: .3s;
+                @include button (transparent, 1px, #9b9bb4, #9b9bb4);
 
                 i {
                     font-size: 12px;
-                }
-
-                &:hover {
-                    color: black;
-                    transition: .3s;
                 }
             }
 
@@ -438,7 +430,8 @@
             margin-top: 30px;
             display: flex;
             position: relative;
-            width: 100% !important;
+            // width: 100% !important;
+
             .sliderbtn {
                 border: none;
                 background-color: white;
@@ -483,6 +476,7 @@
 
             .product_carousel {
 
+                .owl-stage{}
                 .owl-nav,
                 .owl-dots {
                     display: none;
@@ -574,7 +568,7 @@
                     position: relative;
 
                     img {
-                        // width;
+                        width:140px;
                     }
 
                     .discount_percent {
@@ -688,17 +682,15 @@
         &__left {}
 
         &__right {
-            &__top{
+            &__top {}
 
-            }
-            &__bottom{
+            &__bottom {}
 
-            }
-
-            &__banner{
+            &__banner {
                 // width: 100%;
             }
-            &__timeDiscount{
+
+            &__timeDiscount {
                 // width: 100%;
             }
         }
@@ -722,17 +714,15 @@
         &__left {}
 
         &__right {
-            &__top{
+            &__top {}
 
-            }
-            &__bottom{
+            &__bottom {}
 
-            }
-
-            &__banner{
+            &__banner {
                 width: 100% !important;
             }
-            &__timeDiscount{
+
+            &__timeDiscount {
                 width: 100% !important;
             }
         }
