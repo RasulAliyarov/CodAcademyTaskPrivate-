@@ -16,7 +16,7 @@
     <title>Bacola</title>
 </head>
 
-<body class="">
+<body class="" id="body">
 
     <header>
         <div class="header__top">
@@ -119,6 +119,17 @@
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span class="header__bottom__right__cart__count">0</span>
                 </a>
+
+                <div class="cartcontent__empty">
+                    <div class="empty-icon">
+                        <img src="./img/shopingBag.png" alt="">
+                    </div>
+                    <h6>No products in the cart. </h6>
+
+                    <div class="cartcontent__empty__bottom">
+                        <span> We reduce shipping prices to only 2.49 €! </span>
+                    </div>
+                </div>
 
                 <div class="cartContent">
                     <div class="cartContent__scroll">
@@ -686,12 +697,15 @@
                         <p>Download App on Mobile :</p>
                         <span>15% discount on your first purchase</span>
                     </div>
-                    <a href="#">
-                        <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/google-play.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/app-store.png" alt="">
-                    </a>
+                    <div>
+
+                        <a href="#">
+                            <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/google-play.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/app-store.png" alt="">
+                        </a>
+                    </div>
                 </div>
 
                 <div class="footer__contact__right__icons">
@@ -718,6 +732,105 @@
             </div>
         </div>
     </footer>
+
+    <div class="cardModal">
+        <div class="cardModalBackground"></div>
+        <div class="cardModalContent">
+
+            <div class="cardModalContent__top">
+                <h1>All Natural Italian-Style Chicken Meatballs </h1>
+                <div class="cardModalContent__top__content">
+                    <span>Brands: <span>Welch's</span> </span>
+                    <ul class="star_list">
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li> <span> Review <span class="star_list_count"> 1</span></span> </li>
+                    </ul>
+                    <span> SKU: <span> ZU49VOR</span></span>
+                </div>
+            </div>
+
+            <div class="cardModalContent__bottom">
+                <div class="cardModalContent__bottom__left">
+                    <div class="cardModalContent__bottom__left__top">
+                        <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-60.jpg" alt="">
+                    </div>
+                    <div class="cardModalContent__bottom__left__bottom">
+                        <div class="cardModalContent__bottom__left__bottom__imgNav">
+                            <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image2-46.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardModalContent__bottom__left__bottom__imgNav">
+                            <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image2-46.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardModalContent__bottom__left__bottom__imgNav">
+                            <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image2-46.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cardModalContent__bottom__right">
+                    <div class="cardModalContent__bottom__right__top">
+
+                        <span class="pastPrice">$4.29 </span><span class="newPrice">$3.29</span>
+                        <h6>IN STOCK</h6>
+                        <p>Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class
+                            aptent
+                            taciti sociosqu ad litora torquent </p>
+                        <div>
+                            <button class="cardModalContent__bottom__right__top__mathBtn">-</button>
+                            <span class="prouctCount">1</span>
+                            <button class="cardModalContent__bottom__right__top__mathBtn">+</button>
+
+                            <button class="addToCartBtn">Add to cart</button>
+                        </div>
+
+                        <div>
+                            <button class="addToWishlist"><i class="fa-regular fa-heart"></i>Add to wishlist</button>
+                            <button class="compareBtn"><i class="fa-solid fa-down-left-and-up-right-to-center"></i>Compare</button>
+                        </div>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i>Type: Organic</li>
+                            <li><i class="fa-solid fa-check"></i>MFG: Jun 4.2021</li>
+                            <li><i class="fa-solid fa-check"></i>LIFE: 70 days</li>
+                        </ul>
+                    </div>
+                    <div class="cardModalContent__bottom__right__bottom">
+                        <span>Category <a href="#">Biscuits & Snacks</a></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="windowsBottom">
+
+        <a href="#" class="windowsBottom__store">
+            <i class="fa-solid fa-store"></i>
+            <span>Store</span>
+        </a>
+
+        <button class="windowsBottom__search"><i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span></button>
+
+        <button class="windowsBottom__wishlist"><i class="fa-regular fa-heart"></i><span>Wishlist</span></button>
+
+        <button class="windowsBottom__account"><i class="fa-regular fa-user"></i><span>Account</span></button>
+
+        <button class="windowsBottom__categories"><i class="fa-solid fa-bars"></i> <span>Categories</span></button>
+
+    </section>
+
+    <a href="#body">
+        <div class="ArroUp">
+            <i class="fa-solid fa-chevron-up"></i>
+        </div>
+    </a>
 
     <script src="./js/jguery.js"></script>
     <script src="./js/owl.carousel.min.js"></script>

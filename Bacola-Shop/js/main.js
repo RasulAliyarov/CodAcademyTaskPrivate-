@@ -4,6 +4,9 @@ const cart_count = document.getElementsByClassName("header__bottom__right__cart_
 const cartContent = document.getElementsByClassName("cartContent__scroll")[0]
 const cartContentGeneral = document.getElementsByClassName("cartContent")[0]
 let countCart = parseInt(cart_count.innerText)
+if (countCart < 0) {
+    countCart = 0
+}
 let cartId = 1
 
 let PRODUCTS = [
@@ -115,8 +118,6 @@ function RenderCardInPage() {
     for (let i = 4; i < PRODUCTS.length; i++) {
         let card = PRODUCTS[i]
         product_carousel.innerHTML += (
-
-
             ` <div class="bestSellers__right__bottom__card">
                         <a class="bestSellers__right__bottom__card__top">
                             <img src="${card.img}" alt="">
@@ -178,7 +179,7 @@ function RenderCardInPage() {
     }
 }
 
-RenderCardInPage()
+RenderCardInPage(PRODUCTS)
 
 const addToCartBtn = document.getElementsByClassName("addToCartBtn")
 
@@ -193,21 +194,46 @@ function AddToCart(id) {
 
     cartId++
     countCart++
+    cartContent.style.overflowY = "scroll"
 
     cart_count.textContent = countCart
     RenderModalCart(CART)
 }
 
+function DeleteFromCart(id) {
+    let product = CART.find((item) => item.id == id)
+    let indexOfProduct = CART.indexOf(product)
+    console.log(indexOfProduct)
+
+    CART.splice(indexOfProduct, 1);
+
+    countCart--
+    cart_count.textContent = countCart
+
+    RenderModalCart(CART)
+}
+
 function RenderModalCart(array) {
+
+    if (CART.length > 0) {
+
+        $(".header__bottom__right").addClass("showAndHideCartContent")
+        $(".header__bottom__right").removeClass("showAndHideCartContentEmpty")
+    }
+    else {
+        $(".header__bottom__right").addClass("showAndHideCartContentEmpty")
+        $(".header__bottom__right").removeClass("showAndHideCartContent")
+    }
+
     let innerHTML = ``
     for (let i = 0; i < array.length; i++) {
-        innerHTML = (
+        innerHTML += (
             `
             <div class="cartContent__top">
             <div>
             <img src="${array[i].img}"
             alt="">
-                                <div class="deleteBtn" id="deleteWithCart">
+                                <div class="deleteBtn" onclick=DeleteFromCart(${array[i].id}) id="deleteWithCart">
                                     <i class="fa-solid fa-xmark"></i>
                                 </div>
                             </div>
@@ -223,7 +249,7 @@ function RenderModalCart(array) {
         )
     }
 
-    cartContent.innerHTML += innerHTML
+    cartContent.innerHTML = innerHTML
 }
 
 // Location modal and categories button
@@ -231,11 +257,25 @@ $(".header__bottom__middle__location").click(() => {
     $("#locationModal").show(500, () => { })
     $(".locationBackground").addClass("changeStyle")
     $(".locationBackground").css("display", "block")
-
+    
     $(".locationBackground").click(() => {
         $(".locationBackground").removeClass("changeStyle")
         $("#locationModal").hide(500)
         $(".locationBackground").css("display", "none")
+        
+    })
+})
+
+// Card modal 
+$(".fullScreen").click(() => {
+    $(".cardModalContent").show(10, () => { })
+    $(".cardModalBackground").addClass("changeStyle")
+    $(".cardModalBackground").css("display", "block")
+
+    $(".cardModalBackground").click(() => {
+        $(".cardModalContent").hide(10)
+        $(".cardModalBackground").removeClass("changeStyle")
+        $(".cardModalBackground").css("display", "none")
 
     })
 })
@@ -269,8 +309,8 @@ $('.map_carousel').owlCarousel({
 
 $('.product_carousel').owlCarousel({
     loop: true,
-    responsiveClass: true,
     autoplay: true,
+    responsiveClass: true,
     autoplayTimeout: 5000,
     responsive: {
         0: {
@@ -282,9 +322,8 @@ $('.product_carousel').owlCarousel({
         992: {
             items: 3
         },
-        1050: {
+        1170: {
             items: 4,
-            loop:false
         }
     }
 })
