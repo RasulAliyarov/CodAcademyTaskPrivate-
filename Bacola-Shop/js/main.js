@@ -1,4 +1,5 @@
 const product_carousel = document.getElementsByClassName("product_carousel")[0]
+const newProducts = document.getElementsByClassName("bestSellers__right__newProroducts")[0]
 const cart_count = document.getElementsByClassName("header__bottom__right__cart__count")[0]
 const cartContent = document.getElementsByClassName("cartContent__scroll")[0]
 const cartContentGeneral = document.getElementsByClassName("cartContent")[0]
@@ -32,14 +33,63 @@ let PRODUCTS = [
         id: "4",
         price: 10.58,
         title: "Blue Diamond Almonds Lightly Salted",
-        img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-59-346x310.jpg",
+        img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg",
         count: 0
     },
     {
         id: "5",
         price: 10.58,
         title: "Blue Diamond Almonds Lightly Salted",
+        img: "	https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg",
+        count: 0
+    },
+    {
+        id: "6",
+        price: 11.99,
+        title: "Blue Diamond Almonds Lightly Salted",
         img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-59-346x310.jpg",
+        count: 0
+    },
+    {
+        id: "7",
+        price: 3.29,
+        title: "Blue Diamond Almonds Lightly Salted",
+        img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-60-346x310.jpg",
+        count: 0
+    },
+    {
+        id: "8",
+        price: 6.32,
+        title: "Blue Diamond Almonds Lightly Salted",
+        img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-32-346x310.jpg",
+        count: 0
+    },
+    {
+        id: "9",
+        price: 49.99,
+        title: "Blue Diamond Almonds Lightly Salted",
+        img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-45-346x310.jpg",
+        count: 0
+    },
+    {
+        id: "10",
+        price: 4.85,
+        title: "Blue Diamond Almonds Lightly Salted",
+        img: "	https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-58-346x310.jpg",
+        count: 0
+    },
+    {
+        id: "11",
+        price: 4.49,
+        title: "Fresh Organic Broccoli Crowns",
+        img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-57-346x310.jpg",
+        count: 0
+    },
+    {
+        id: "12",
+        price: 4.49,
+        title: "Chobani Complete Vanilla Greek Yogurt",
+        img: "	https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-50-346x310.jpg",
         count: 0
     }
 
@@ -61,10 +111,13 @@ class Cart {
 
 
 // Cart
-PRODUCTS.forEach((card) => {
-    let innerHTML = ``
-    product_carousel.innerHTML +=
-        ` <div class="bestSellers__right__bottom__card">
+function RenderCardInPage() {
+    for (let i = 4; i < PRODUCTS.length; i++) {
+        let card = PRODUCTS[i]
+        product_carousel.innerHTML += (
+
+
+            ` <div class="bestSellers__right__bottom__card">
                         <a class="bestSellers__right__bottom__card__top">
                             <img src="${card.img}" alt="">
                         </a>
@@ -89,8 +142,43 @@ PRODUCTS.forEach((card) => {
                         <span class="productFeature">ORGANIC</span>
                         <span class="fullScreen"><i class="fa-solid fa-compress"></i></span>
                         <span class="likeMe"><i class="fa-regular fa-heart"></i></span>
-                    </div> `
-})
+                    </div> ` )
+
+
+        newProducts.innerHTML += (`
+    <div class="bestSellers__right__bottom__card">
+    <a class="bestSellers__right__bottom__card__top">
+        <img src="${card.img}" alt="">
+    </a>
+    <div class="bestSellers__right__bottom__card__middle">
+        <h5>${card.title}</h5>
+        <span>IN STOCK</span>
+        <ul class="star_list">
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><span class="star_list_count">1</span></li>
+        </ul>
+        <span class="past_price">$24.09</span>
+        <span class="new_price">$ ${card.price}</span>
+    </div>
+    <div class="bestSellers__right__bottom__card__bottom addToCartBtn">
+        <button  >Add to cart</button>
+    </div>
+    <span class="discponunt">19%</span>
+    <span class="productFeature">ORGANIC</span>
+    <span class="fullScreen"><i class="fa-solid fa-compress"></i></span>
+    <span class="likeMe"><i class="fa-regular fa-heart"></i></span>
+</div>
+    
+    
+    `)
+    }
+}
+
+RenderCardInPage()
 
 const addToCartBtn = document.getElementsByClassName("addToCartBtn")
 
@@ -140,8 +228,16 @@ function RenderModalCart(array) {
 
 // Location modal and categories button
 $(".header__bottom__middle__location").click(() => {
-    $("#locationModal").slideToggle(500, () => { })
-    $("body").toggleClass("changeStyle")
+    $("#locationModal").show(500, () => { })
+    $(".locationBackground").addClass("changeStyle")
+    $(".locationBackground").css("display", "block")
+
+    $(".locationBackground").click(() => {
+        $(".locationBackground").removeClass("changeStyle")
+        $("#locationModal").hide(500)
+        $(".locationBackground").css("display", "none")
+
+    })
 })
 
 
@@ -183,8 +279,12 @@ $('.product_carousel').owlCarousel({
         600: {
             items: 2
         },
-        1200: {
-            items: 4
+        992: {
+            items: 3
+        },
+        1050: {
+            items: 4,
+            loop:false
         }
     }
 })

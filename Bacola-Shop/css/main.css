@@ -95,12 +95,6 @@ html {
       overflow: hidden;
       position: relative;
       transition: .4s; }
-      .bestSellers__right__bottom__card:first-child {
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px; }
-      .bestSellers__right__bottom__card:last-child {
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px; }
       .bestSellers__right__bottom__card__top {
         padding: 5px;
         cursor: pointer; }
@@ -595,7 +589,7 @@ header .header__tabs {
     padding: 0 15px; }
     header .header__tabs__wrapper__left button {
       position: relative;
-      padding: 15px 20px;
+      padding: 17px 24px;
       border-radius: 25px;
       background-color: #2bbef9;
       border: none;
@@ -611,12 +605,13 @@ header .header__tabs {
       header .header__tabs__wrapper__left button i:first-child {
         padding-right: 15px; }
       header .header__tabs__wrapper__left button i:last-child {
-        padding-left: 20px; }
+        padding-left: 20px;
+        font-size: 12px; }
       header .header__tabs__wrapper__left button span {
         position: absolute;
         bottom: 0;
         left: 20%;
-        color: #3e445a;
+        color: #606470;
         background-color: #faf8f8;
         justify-items: center;
         transform: translateY(50%);
@@ -1026,7 +1021,7 @@ header .header__tabs {
             padding-left: 5px;
             font-weight: 600; }
   .bestSellers__left__customerContact {
-    margin-top: 40px; }
+    margin-top: 50px; }
     .bestSellers__left__customerContact h1 {
       margin-bottom: 20px;
       font-family: "Dosis", sans-serif;
@@ -1147,7 +1142,7 @@ header .header__tabs {
       .bestSellers__right__bottom .product_carousel .owl-item {
         background-color: transparent; }
     .bestSellers__right__banner {
-      margin-top: 40px;
+      margin-top: 30px;
       height: 126px;
       overflow: hidden;
       background: url(https://k4j3j2s7.rocketcdn.me/bacola/wp-content/plugins/bacola-core/elementor/images/banner-box2.jpg);
@@ -1332,29 +1327,306 @@ header .header__tabs {
           transition: .3s; }
         .bestSellers__right__superDiscount button:hover {
           color: #ed174a; }
+    .bestSellers__right__newProroducts {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 40px; }
+      .bestSellers__right__newProroducts .bestSellers__right__bottom__card__middle .past_price {
+        font-size: 15px; }
+      .bestSellers__right__newProroducts .bestSellers__right__bottom__card__bottom {
+        display: none;
+        position: relative; }
+    .bestSellers__right__weekend {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between; }
+      .bestSellers__right__weekend__left {
+        border-radius: 10px;
+        width: 420px;
+        position: relative; }
+        .bestSellers__right__weekend__left img {
+          width: 420px;
+          border-radius: 10px; }
+      .bestSellers__right__weekend__right {
+        position: relative;
+        width: 420px; }
+        .bestSellers__right__weekend__right img {
+          width: 420px;
+          border-radius: 10px; }
+      .bestSellers__right__weekend .bestSellers__right__weekend__text {
+        position: absolute;
+        top: 0;
+        padding: 50px 40px;
+        font-family: "Inter", sans-serif;
+        font-weight: 600; }
+        .bestSellers__right__weekend .bestSellers__right__weekend__text h4 {
+          padding-bottom: 15px;
+          color: #00b853;
+          font-size: .875rem;
+          text-transform: uppercase;
+          font-family: "Dosis", sans-serif; }
+        .bestSellers__right__weekend .bestSellers__right__weekend__text h1 {
+          color: #3e445a;
+          font-size: 1.5rem;
+          padding-bottom: 15px; }
+        .bestSellers__right__weekend .bestSellers__right__weekend__text p {
+          font-size: 0.75rem;
+          color: #9b9bb4; }
+        .bestSellers__right__weekend .bestSellers__right__weekend__text a {
+          text-decoration: none;
+          padding: 5px 20px;
+          border: transparent solid #c2c2d3;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 0.9rem;
+          gap: 10px;
+          transition: .3s;
+          background-color: #c2c2d3;
+          width: fit-content;
+          padding: 10px 20px;
+          font-size: 12px;
+          margin-top: 18px; }
+          .bestSellers__right__weekend .bestSellers__right__weekend__text a i {
+            font-size: 12px; }
+          .bestSellers__right__weekend .bestSellers__right__weekend__text a:hover {
+            color: black;
+            transition: .3s; }
 
-@media (max-width: 1200px) {
-  .container {
-    width: 100%; } }
+.itemsInGrid {
+  display: flex;
+  margin-top: 20px;
+  font-family: "Inter", sans-serif;
+  padding: 0 15px; }
+  .itemsInGrid h1 {
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 110px; }
+  .itemsInGrid p {
+    font-size: 12px;
+    padding-top: 10px; }
+  .itemsInGrid__left {
+    width: 233px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #cecfd3; }
+    .itemsInGrid__left__top {
+      display: flex;
+      justify-content: center;
+      width: 192px;
+      overflow: hidden; }
+      .itemsInGrid__left__top img {
+        width: 192px;
+        cursor: pointer; }
+    .itemsInGrid__left__bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+  .itemsInGrid__right {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #cecfd3;
+    width: fit-content; }
+    .itemsInGrid__right__block {
+      display: flex;
+      align-items: center;
+      height: fit-content;
+      padding: 30px 21px;
+      border-right: 1px solid #cecfd3;
+      border-bottom: 1px solid #cecfd3; }
+      .itemsInGrid__right__block__left {
+        width: 70px;
+        margin-right: 10px;
+        cursor: pointer;
+        overflow: hidden; }
+        .itemsInGrid__right__block__left img {
+          width: 70px; }
 
-@media (max-width: 992px) {
-  .container {
-    width: 100%; } }
+.discountTicket {
+  margin-top: 150px;
+  width: 100%;
+  background: url("https://klbtheme.com/bacola/wp-content/uploads/2021/04/coupon.png");
+  background-repeat: no-repeat;
+  background-position: 85% bottom;
+  background-color: #233a95 !important;
+  height: 350px; }
+  .discountTicket__content {
+    padding: 60px 15px;
+    width: fit-content;
+    font-family: "Inter", sans-serif;
+    color: white; }
+    .discountTicket__content span {
+      font-size: 1rem;
+      font-weight: 300; }
+    .discountTicket__content h1 {
+      font-size: 1.7rem;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      font-weight: 600; }
+    .discountTicket__content p {
+      font-size: 0.8rem;
+      opacity: .7;
+      width: 300px;
+      line-height: 24px;
+      margin-bottom: 25px; }
+    .discountTicket__content div {
+      padding: 5px 5px;
+      background-color: white;
+      width: fit-content;
+      border-radius: 5px; }
+      .discountTicket__content div input {
+        border: none;
+        padding: 10px 70px; }
+        .discountTicket__content div input:focus {
+          outline: none; }
+      .discountTicket__content div [placeholder~="address"] {
+        background: url("../../img/envelopeIcon.png");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: 15px 6px;
+        font-size: 14px; }
+      .discountTicket__content div button {
+        padding: 20px 15px;
+        background-color: #233a95;
+        border: none;
+        border-radius: 5px;
+        color: white; }
 
-@media (max-width: 765px) {
-  .container {
-    width: 100%; }
-  .bestSellers__right__banner {
-    width: 100% !important; }
-  .bestSellers__right__timeDiscount {
-    width: 100% !important; }
-  .bestSellers__right__banner {
-    height: fit-content;
-    background-position: center; }
-  .bestSellers__left {
-    display: none !important; }
-  .bestSellers__right__banner {
-    width: 100%; } }
+.underFooterBenefits {
+  padding: 35px 0;
+  width: 100%;
+  border-bottom: 1px solid #e4e5ee;
+  background-color: #f7f8fd; }
+  .underFooterBenefits__wrapper {
+    display: flex;
+    justify-content: center; }
+    .underFooterBenefits__wrapper__block {
+      width: 270px;
+      border-right: 1px solid #e4e5ee;
+      padding: 5px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .underFooterBenefits__wrapper__block span {
+        font-size: 13px;
+        font-family: "Inter", sans-serif; }
+      .underFooterBenefits__wrapper__block i {
+        padding-right: 10px;
+        font-size: 20px; }
+      .underFooterBenefits__wrapper__block:last-child {
+        border: none; }
+
+.footer__wrapper {
+  background-color: #f7f8fd; }
+  .footer__wrapper__links {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 15px;
+    flex-wrap: wrap; }
+    .footer__wrapper__links ul span {
+      font-family: "Dosis", sans-serif;
+      font-size: 15px; }
+    .footer__wrapper__links ul li {
+      line-height: 19.5px;
+      margin-top: 8px; }
+      .footer__wrapper__links ul li a {
+        color: #71778e;
+        font-size: 13px; }
+        .footer__wrapper__links ul li a:hover {
+          color: #2bbef9; }
+
+.footer__contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 46px 15px;
+  border-bottom: 1px solid #d1d1da; }
+  .footer__contact__left {
+    display: flex;
+    align-items: center; }
+    .footer__contact__left__telIcon {
+      margin-right: 15px;
+      padding: 10px;
+      border: 1px solid #d1d1da;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: .4s; }
+      .footer__contact__left__telIcon:hover {
+        transition: .4s;
+        transform: translateY(-5px); }
+      .footer__contact__left__telIcon i {
+        color: #202435; }
+    .footer__contact__left__tel {
+      display: flex;
+      flex-direction: column; }
+      .footer__contact__left__tel a {
+        font-size: 20px;
+        color: #202435;
+        font-weight: 600;
+        margin-bottom: 8px;
+        transition: .4s; }
+        .footer__contact__left__tel a:hover {
+          color: #233a95;
+          transform: scale(1.08);
+          transition: .4s; }
+      .footer__contact__left__tel span {
+        font-size: 11px;
+        color: #57585f; }
+  .footer__contact__right {
+    display: flex;
+    gap: 20px; }
+    .footer__contact__right__app {
+      display: flex;
+      align-items: center;
+      gap: 5px; }
+      .footer__contact__right__app__text {
+        text-align: end;
+        margin-right: 10px; }
+        .footer__contact__right__app__text p {
+          font-size: 14px;
+          font-weight: 600;
+          color: #202435; }
+        .footer__contact__right__app__text span {
+          font-size: 12px;
+          color: #202435; }
+    .footer__contact__right__icons {
+      display: flex;
+      gap: 10px; }
+      .footer__contact__right__icons i {
+        border-radius: 50%;
+        border: 1px solid #bfbfc5;
+        font-size: 14px;
+        padding: 8px 9px;
+        color: #233a95;
+        cursor: pointer;
+        transition: .4s; }
+        .footer__contact__right__icons i:hover {
+          transform: translateY(-5px);
+          transition: .4s; }
+
+.footer__copyright {
+  display: flex;
+  padding: 30px 15px;
+  align-items: center;
+  justify-content: space-between; }
+  .footer__copyright__left p {
+    font-size: 12px;
+    color: #9b9bb4; }
+  .footer__copyright__middle {
+    display: flex;
+    align-items: center;
+    padding: 0 15px; }
+    .footer__copyright__middle a {
+      font-size: 12px;
+      color: #9b9bb4;
+      margin-left: 10px; }
+      .footer__copyright__middle a:hover {
+        text-decoration: underline; }
 
 .activeBtn {
   padding: 5px 18px;
@@ -1363,3 +1635,127 @@ header .header__tabs {
   border-radius: 20px; }
   .activeBtn i {
     color: #2bbef9 !important; }
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100%; }
+  .bestSellers__left__bannerLeft img {
+    width: 100%; }
+  .bestSellers__right {
+    width: 100% !important; }
+    .bestSellers__right__top {
+      width: 100% !important; }
+    .bestSellers__right__bottom {
+      width: 100% !important; }
+    .bestSellers__right__weekend__left {
+      width: 100%; }
+      .bestSellers__right__weekend__left img {
+        width: 100%; }
+    .bestSellers__right__weekend__right {
+      width: 100%; }
+      .bestSellers__right__weekend__right img {
+        width: 100%; } }
+
+@media (max-width: 1022px) {
+  .container {
+    width: 100%; } }
+
+@media (max-width: 765px) {
+  .container {
+    width: 100%; }
+  .bestSellers {
+    flex-direction: column-reverse !important; }
+    .bestSellers__left .bannerLeft {
+      padding: 0 30px;
+      overflow: hidden;
+      height: 211px;
+      padding-top: 30px !important;
+      margin: 0; }
+      .bestSellers__left .bannerLeft img {
+        width: 100% !important; }
+    .bestSellers__left__features {
+      margin-top: 30px !important; }
+    .bestSellers__right__bottom__card {
+      width: fit-content !important; }
+    .bestSellers__right__banner {
+      text-align: center;
+      width: 100% !important;
+      height: 338px !important;
+      background-position: center bottom !important;
+      padding-bottom: 0; }
+    .bestSellers__right__timeDiscount {
+      width: 100% !important; }
+      .bestSellers__right__timeDiscount__block {
+        flex-direction: column !important; }
+        .bestSellers__right__timeDiscount__block__left {
+          width: 100%; }
+          .bestSellers__right__timeDiscount__block__left img {
+            width: 100%; }
+    .bestSellers__right__newProroducts .bestSellers__right__bottom__card {
+      width: 50% !important; }
+      .bestSellers__right__newProroducts .bestSellers__right__bottom__card__top img {
+        width: 100%; }
+    .bestSellers__right__weekend {
+      display: flex;
+      flex-direction: column; }
+      .bestSellers__right__weekend__left {
+        margin-bottom: 30px; }
+        .bestSellers__right__weekend__left img {
+          height: 211px; }
+      .bestSellers__right__weekend__right img {
+        height: 211px; }
+  .itemsInGrid {
+    display: flex;
+    flex-direction: column; }
+    .itemsInGrid__left {
+      width: 100% !important;
+      padding: 5px !important;
+      border: 0;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px; }
+      .itemsInGrid__left__top {
+        width: 100% !important; }
+        .itemsInGrid__left__top img {
+          width: 100% !important; }
+    .itemsInGrid__right {
+      border: 1px solid #b8b8bd;
+      border: 1px solid #b8b8bd;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      border-top: 0;
+      width: 100%; }
+      .itemsInGrid__right__block {
+        width: 50%;
+        border: 0 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center !important; }
+        .itemsInGrid__right__block__left {
+          width: 100% !important; }
+          .itemsInGrid__right__block__left img {
+            width: 100% !important; }
+        .itemsInGrid__right__block__right {
+          text-align: center !important; }
+          .itemsInGrid__right__block__right h1 {
+            width: 100% !important; }
+  .discountTicket {
+    height: 556px !important;
+    background-position: center bottom !important; }
+    .discountTicket__content {
+      width: 100% !important; }
+      .discountTicket__content div {
+        width: 100% !important; }
+        .discountTicket__content div button {
+          float: right !important;
+          padding: 12px 10px !important;
+          font-size: 14px; }
+  .underFooterBenefits__wrapper {
+    flex-direction: column; }
+    .underFooterBenefits__wrapper__block {
+      border: 0 !important;
+      width: fit-content !important; }
+      .underFooterBenefits__wrapper__block i {
+        width: 35px; }
+  .footer__wrapper {
+    display: flex;
+    flex-wrap: wrap !important; } }
