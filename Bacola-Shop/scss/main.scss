@@ -1,4 +1,5 @@
 @import "./base/reset", "./base/typography", "./base/default";
 @import "./utils/mixin";
-@import "./layout/card", "./layout/header", "./layout/cardModal";
-@import "./pages/home";
+@import "./layout/wishList","./layout/card", "./layout/header", "./layout/cardModal";
+@import "./layout/location", "./layout/discountTicket";
+@import "./pages/home", "./pages/cart";

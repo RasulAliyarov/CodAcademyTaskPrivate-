@@ -1,0 +1,134 @@
+body {
+    .wishList {
+        width: 380px;
+        height: 100vh;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 11000;
+        overflow-y: auto;
+        // transform: translateX(-100%);
+        display: none;
+
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+
+            a {
+                img {
+                    width: 127px;
+                }
+            }
+
+            &__exitBtn {
+                background-color: #c2c2d3;
+                border-radius: 50%;
+                padding: 5px 7px;
+                color: white;
+                font-size: 12px;
+                cursor: pointer;
+            }
+        }
+
+        &__middle {
+            padding: 0 30px;
+
+            .header__bottom__middle__location--modifier {
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 15px !important;
+            }
+
+            @extend %CatButton;
+
+            .categoriesBtn--modifier {
+                margin: 20px 0 !important;
+                width: 100% !important;
+                border-radius: 6px !important;
+                display: flex;
+                justify-content: space-between !important;
+            }
+
+            .map__wrapper__left__list--modifier {
+                display: none;
+                border: none !important;
+                width: 100% !important;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #c2c2d3;
+
+                li {
+
+                    padding-left: 0 !important;
+                }
+            }
+        }
+
+        .wishList__bottom {
+            font-family: "Inter", sans-serif;
+            margin-top: 40px;
+
+            h5 {
+                color: #9d9fa8;
+                font-size: 13px;
+                font-weight: 500;
+                padding: 0 30px 30px 30px;
+                border-bottom: 1px solid #e5e5ee;
+            }
+
+            li {
+                padding: 15px 30px 15px 30px;
+                border-bottom: 1px solid #e5e5ee;
+
+                span {
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: #3e445a;
+                    font-family: "Dosis", sans-serif;
+                }
+
+                i {
+                    font-size: 18px;
+                    color: #3e445a;
+                    width: 30px;
+                }
+            }
+
+            .homeShopmLi {
+                a {
+                    display: flex;
+                    justify-content: space-between;
+
+                    i {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            p {
+                padding: 30px 30px 30px 30px;
+                border-bottom: 1px solid #e5e5ee;
+                font-size: 12px;
+                font-family: "Inter", sans-serif;
+                font-weight: 400;
+                color: #9b9bb4;
+            }
+        }
+
+        /* width */
+        &::-webkit-scrollbar {
+            width: 5px;
+            
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: rgb(111, 169, 235);
+            border-radius: 10px;
+            height: 5px ;
+        }
+
+    }
+}

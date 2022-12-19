@@ -80,14 +80,19 @@ body {
                 width: 402px;
 
                 &__top {
+                    cursor: pointer;
+                    display: flex;
+                    overflow: hidden;
                     img {
                         width: 402px;
+                        height: 361px;
+                        transition: .4s;
+                        &:hover{
+                            transform: translateX(-100%);
+                            transition: .4s;
+                        }
                     }
-
-                    cursor: pointer;
-
                 }
-
                 &__bottom {
                     display: flex;
                     justify-content: center;
@@ -171,7 +176,7 @@ body {
                             font-size: 16px;
                         }
 
-                        .addToCartBtn {
+                        .addToCartModalBtn {
                             @include button(#233a95, 0, transparent, white);
                             padding: 12px 60px !important;
                             border-radius: 30px;
@@ -185,7 +190,8 @@ body {
                     }
 
                     div {
-                        display: flex ;
+                        display: flex;
+
                         .addToWishlist {
                             @include button(transparent, 1px, #71778E, #71778E);
 
@@ -205,34 +211,39 @@ body {
 
                     }
 
-                    ul{
-                        li{
+                    ul {
+                        li {
 
-                            i{
+                            i {
                                 color: #00B853;
                                 width: 15px;
                                 margin-right: 10px;
                             }
+
                             color: #3e445a;
                             font-size: 12px;
-                            font-family: "Inter", sans-serif;
+                            font-family: "Inter",
+                            sans-serif;
                             margin-top: 6px;
                         }
 
                     }
                 }
 
-                &__bottom{
+                &__bottom {
                     margin-top: 20px;
                     padding-top: 20px;
                     border-top: 1px solid #b2b3b8;
-                    span{
+
+                    span {
                         color: #9b9bb4;
                         font-size: 12px;
-                        a{
+
+                        a {
                             font-weight: 600;
                             color: #3e445a;
-                            &:hover{
+
+                            &:hover {
                                 text-decoration: underline;
 
                             }

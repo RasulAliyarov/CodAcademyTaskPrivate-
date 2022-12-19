@@ -3,10 +3,25 @@ const newProducts = document.getElementsByClassName("bestSellers__right__newPror
 const cart_count = document.getElementsByClassName("header__bottom__right__cart__count")[0]
 const cartContent = document.getElementsByClassName("cartContent__scroll")[0]
 const cartContentGeneral = document.getElementsByClassName("cartContent")[0]
+const cardModalContent = document.getElementsByClassName("cardModalContent")[0]
+
+let price = document.getElementById("price")
+let totalPrice = document.getElementById("totalPrice")
+
+const addToCartBtn = document.getElementsByClassName("addToCartBtn")
+const addToCartInModal = document.getElementsByClassName("addToCartModalBtn")[0]
+const modalCardDecrement = document.getElementById("modalCardDecrement")
+const modalCardIncrement = document.getElementById("modalCardIncrement")
+
+const cartsa = document.getElementsByClassName("cart")[0]
+
 let countCart = parseInt(cart_count.innerText)
 if (countCart < 0) {
     countCart = 0
 }
+
+
+
 let cartId = 1
 
 let PRODUCTS = [
@@ -95,13 +110,22 @@ let PRODUCTS = [
         img: "	https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-50-346x310.jpg",
         count: 0
     }
-
 ]
 
-let CART = [
+let CART = []
+if (!localStorage.getItem("Cart")) {
+    localStorage.setItem("Cart", JSON.stringify(CART))
+}
+else {
+    CART = JSON.parse(localStorage.getItem("Cart"))
 
-]
-
+    if (CART.length >= 1) {
+        cartId = CART.length + 1
+    } else {
+        cartId = 1
+    }
+}
+let total = 0
 class Cart {
     constructor(title, price, img, count) {
         this.id = cartId,
@@ -112,8 +136,6 @@ class Cart {
     }
 }
 
-
-// Cart
 function RenderCardInPage() {
     for (let i = 4; i < PRODUCTS.length; i++) {
         let card = PRODUCTS[i]
@@ -141,7 +163,7 @@ function RenderCardInPage() {
                         </div>
                         <span class="discponunt">19%</span>
                         <span class="productFeature">ORGANIC</span>
-                        <span class="fullScreen"><i class="fa-solid fa-compress"></i></span>
+                        <span class="fullScreen" onclick=CardModal(${card.id})><i class="fa-solid fa-compress"></i></span>
                         <span class="likeMe"><i class="fa-regular fa-heart"></i></span>
                     </div> ` )
 
@@ -178,40 +200,79 @@ function RenderCardInPage() {
     `)
     }
 }
-
 RenderCardInPage(PRODUCTS)
 
-const addToCartBtn = document.getElementsByClassName("addToCartBtn")
+// CARD
+function CardModal(id) {
+    let product = PRODUCTS.find((item) => item.id == id)
+    let cardModalimg = document.getElementById("cardModalContent__bottom__left__top__img")
+    let cardModaltitle = document.getElementById("cardModalContent__top__title")
+    let cardModalPrice = document.getElementById("cardModalPrice")
+    let cardModalCount = document.getElementById("cardModalCount")
 
+    cardModalimg.src = product.img
+    cardModaltitle.textContent = product.title
+    cardModalPrice.textContent = product.price
+    cardModalCount.textContent = product.count
+
+    let rezerv = product.count
+
+    // Add Button
+    modalCardIncrement.addEventListener("click", () => {
+        AddToCart(id)
+        cardModalCount.textContent = ++rezerv
+    })
+    // Dellete Button
+    modalCardDecrement.addEventListener("click", () => {
+        DeleteFromCart(id)
+        cardModalCount.textContent = --rezerv
+    })
+    // Add Blue Button
+    addToCartInModal.addEventListener("click", () => {
+        AddToCart(id)
+        cardModalCount.textContent = ++rezerv
+    })
+}
+// CART
 function AddToCart(id) {
     let index = PRODUCTS.find((item) => item.id == id)
-
     let cartItem = CART.find((item) => item.id == id)
 
     index.count++
     let productCart = new Cart(index.title, index.price, index.img, index.count)
     CART.push(productCart)
 
+    localStorage.setItem("Cart", JSON.stringify(CART))
+
+
     cartId++
-    countCart++
     cartContent.style.overflowY = "scroll"
 
-    cart_count.textContent = countCart
+    cart_count.textContent = ++countCart
     RenderModalCart(CART)
+    RenderCartPage(CART)
+
 }
 
 function DeleteFromCart(id) {
     let product = CART.find((item) => item.id == id)
     let indexOfProduct = CART.indexOf(product)
-    console.log(indexOfProduct)
 
     CART.splice(indexOfProduct, 1);
+    localStorage.setItem("Cart", JSON.stringify(CART))
 
-    countCart--
-    cart_count.textContent = countCart
+    cart_count.textContent = --countCart
 
     RenderModalCart(CART)
 }
+
+// function RenderCartPage(array) {
+//     let innerHTML = ``    
+//     innerHTML = (` salamadsadssad `)
+//     console.log(innerHTML)
+//     // cartsa.innerHTML += innerHTML
+
+// }
 
 function RenderModalCart(array) {
 
@@ -227,6 +288,11 @@ function RenderModalCart(array) {
 
     let innerHTML = ``
     for (let i = 0; i < array.length; i++) {
+        total += parseInt(array[i].price)
+
+        price.textContent = total
+        totalPrice.textContent = `$ ${total }`
+        console.log(total)
         innerHTML += (
             `
             <div class="cartContent__top">
@@ -252,21 +318,52 @@ function RenderModalCart(array) {
     cartContent.innerHTML = innerHTML
 }
 
-// Location modal and categories button
-$(".header__bottom__middle__location").click(() => {
-    $("#locationModal").show(500, () => { })
-    $(".locationBackground").addClass("changeStyle")
-    $(".locationBackground").css("display", "block")
-    
-    $(".locationBackground").click(() => {
-        $(".locationBackground").removeClass("changeStyle")
-        $("#locationModal").hide(500)
-        $(".locationBackground").css("display", "none")
-        
+// WISHLIST  
+// Window Bottom burger
+$(".windowsBottom__categories").click(() => {
+    $(".wishList").toggle(400, () => {
+        $(".wishList").css({
+            transform: 'translateX(0)'
+        })
+    })
+})
+// Nab burger
+$(".respBurger").click(() => {
+    $(".wishList").show(400, () => {
+        $(".wishList").css({
+            transform: 'translateX(0)'
+        })
     })
 })
 
-// Card modal 
+// Wishlist Exit Btn
+$(".wishList__top__exitBtn").click(() => {
+    $(".wishList").hide(400)
+})
+
+// Location modal and categories button
+$(".header__bottom__middle__location").click(() => {
+    $(".header__bottom__middle__location__modal").show(500, () => { })
+    ChangeBacgrond()
+
+    $(".locationBackground").click(() => {
+        $(".header__bottom__middle__location__modal").hide(500)
+
+    })
+})
+
+function ChangeBacgrond() {
+    $(".locationBackground").addClass("changeStyle")
+    $(".locationBackground").css("display", "block")
+
+    $(".locationBackground").click(() => {
+        $(".locationBackground").removeClass("changeStyle")
+        $(".locationBackground").css("display", "none")
+
+    })
+}
+
+// Show and Hide Card modal 
 $(".fullScreen").click(() => {
     $(".cardModalContent").show(10, () => { })
     $(".cardModalBackground").addClass("changeStyle")
@@ -280,12 +377,11 @@ $(".fullScreen").click(() => {
     })
 })
 
-
-$("#categoriesBtn").click(() => {
+// Dropdoen for Categories button
+$(".categoriesBtn").click(() => {
     $(".map__wrapper__left__list").slideToggle(300)
     $(".map__wrapper__left__bottom").slideToggle(300)
 })
-
 
 // OWL CAROUSEL
 $('.map_carousel').owlCarousel({
@@ -329,4 +425,6 @@ $('.product_carousel').owlCarousel({
 })
 
 
-RenderModalCart()
+RenderModalCart(CART)
+CardModal()
+RenderCartPage()

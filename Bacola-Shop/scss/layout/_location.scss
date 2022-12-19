@@ -1,0 +1,102 @@
+.header__bottom__middle__location {
+    padding: 0 18px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e4;
+    border-radius: 6px;
+    margin-left: 60px;
+    justify-content: space-between;
+    box-shadow: 0 0 3px #dadada;
+    cursor: pointer;
+
+    .header__bottom__middle__location__text {
+
+        h5 {
+            font-size: 0.65rem;
+            margin-bottom: 8px;
+            color: #bebec2;
+        }
+
+        h6 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: "Inter";
+            color: #233a95;
+        }
+    }
+
+    i {
+        font-size: 10px;
+    }
+
+
+    .header__bottom__middle__location__modal {
+        padding: 25px;
+        width: 400px;
+        height: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        background-color: white;
+        z-index: 11600;
+        border-radius: 5px;
+        display: none;
+
+        h1 {
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        h6 {
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: #525666;
+        }
+
+        .modalInput {
+            border-radius: 3px !important;
+            border: none;
+            padding: 0 15px !important;
+            width: 100% !important;
+            padding: 15px !important;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        [placeholder~="Search"] {
+            background: url(../../img/searchIcon.png);
+            padding: 15px 15px 15px 50px !important;
+            background-position: 5% !important;
+            background-repeat: no-repeat;
+            background-color: #f1f2f7;
+            background-size: 22px;
+        }
+
+        .selectLocationModal {
+            margin-top: 20px;
+            height: 300px;
+            overflow-y: scroll;
+
+            button {
+                float: right;
+                @include button(transparent, 1px, #a3a3a3, #a3a3a3, 0.7rem);
+                padding: 5px 10px;
+            }
+
+            &__line {
+                padding: 15px;
+                border-bottom: 1px solid #a3a3a3;
+
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #3e445a;
+                }
+            }
+        }
+    }
+}
