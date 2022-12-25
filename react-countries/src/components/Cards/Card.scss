@@ -59,8 +59,6 @@
 }
 
 .card {
-    background-color: white;
-    width: fit-content;
     width: 284px;
     border-radius: 10px;
     cursor: pointer;
@@ -123,8 +121,6 @@
             &__top {
                 width: auto;
                 height: auto;
-
-                img {}
             }
         }
     }

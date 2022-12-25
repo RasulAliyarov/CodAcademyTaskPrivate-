@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./Navbar.scss"
 import logo from "../../assets/img/compass_logo.png"
@@ -56,10 +56,10 @@ function Navbar() {
 
   function change() {
     let theme = document.body;
-    let nav = document.getElementsByClassName("header")[0]  
     let cards = document.getElementsByClassName("card")
+    let nav = document.getElementsByClassName("header")[0]
     let footerTheme = document.getElementsByClassName("footer")[0]
-    
+
     footerTheme.classList.toggle("dark_mode")
     theme.classList.toggle("dark_mode")
     nav.classList.toggle("nav_dark_mode")
@@ -67,7 +67,7 @@ function Navbar() {
       cards[i].classList.toggle("nav_dark_mode")
     }
   }
-  
+
   return (
     <header className='header'>
       <div className="header__wrapper container">

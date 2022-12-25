@@ -21,7 +21,7 @@ function Cards() {
         <input type="text" onChange={(e) => setSearchitem(e.target.value)} placeholder='Search for country' />
 
         <select name="continents" onChange={(e) => setContinents(e.target.value)} id="continents">
-          <option value="africa">Choose continets</option>
+          <option value="def">Choose continets</option>
           <option value="africa">Africa</option>
           <option value="america">America</option>
           <option value="asia">Asia</option>
@@ -34,14 +34,13 @@ function Cards() {
         {loading && <span> Loading...</span>}
         {
           countries.filter((value) => {
-            if (value === "") {
-              console.log("def")
+            if (value === "" || continents === "def") {
               return value
             }
             else if (value.name.common.toLowerCase().includes(searchItem.toLowerCase()) && value.region.toLowerCase().includes(continents.toLowerCase())) {
-              console.log("inp")
               return value
             }
+
           }).map((country) => {
 
             return <Card key={country?.flag} country={country} />
