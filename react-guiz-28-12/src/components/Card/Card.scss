@@ -1,0 +1,29 @@
+.card {
+    width: fit-content;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 5px #bcbcd3;
+    transition: .4s;
+    &__top {
+        img {
+            width: 300px;
+        }
+    }
+
+    &__bottom {
+        border-top: 0;
+        border-radius: 10px;
+        padding: 20px 10px;
+        h4 {
+            font-size: 16px;
+            font-family: 'Josefin Sans', sans-serif;
+            padding: 10px;
+            color: #28289d;
+        }
+    }
+    &:hover{
+        transform: scale(1.045);
+        transition: .4s;
+    }
+}
