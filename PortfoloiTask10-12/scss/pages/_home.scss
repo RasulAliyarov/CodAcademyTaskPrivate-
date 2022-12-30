@@ -1,0 +1,194 @@
+.homeBody {
+    position: relative;
+    background: url("../img/leftimage-bg.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+
+    // height: ; //////////////////        background-size: cover;
+    &::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        opacity: 0.9;
+    }
+
+    .pg__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-39%, 66%);
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            &__left {
+                width: 320px;
+
+                &__imgBox {
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: 10px solid rgba(255, 255, 255, .1);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 300px;
+                    }
+                }
+            }
+
+            &__right {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-family: "Open Sans", sans-serif;
+                width: 553px;
+                margin-left: 45px;
+
+                h5 {
+                    font-weight: 400;
+                    font-size: 1.2rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    line-height: 32px;
+                    font-weight: 400;
+                    margin: 11px 0 23px;
+                }
+
+                span {
+                    font-size: 42px;
+                    font-weight: 600;
+                    margin: 19px 0 10px;
+                    font-size: 2.6rem;
+                    font-family: 'Poppins', sans-serif;
+
+                    h1 {
+                        display: inline;
+                        transition: .5s;
+                        font-size: 2.6rem;
+                        line-height: 42px;
+                        font-weight: 800;
+                        font-family: "Open Sans";
+                        color: #2196F3;
+
+                        &::after {
+                            content: "A FREELANCER";
+                            animation: anim 10s infinite;
+                            transition: .5s;
+
+                        }
+
+                        @keyframes anim {
+                            30% {
+                                content: "A BLOGGER";
+                                transition: .5s;
+                            }
+
+                            60% {
+                                content: "A WEB DESIGNER";
+                                transition: .5s;
+                            }
+
+                            100% {
+                                content: "DARIA TAYLOR";
+                                transition: .5s;
+                            }
+                        }
+                    }
+                }
+
+                div {
+                    display: flex;
+
+                    .aboutBtn {
+
+                        @include buttons(#2196F3, 0, transparent, white);
+
+                    }
+
+                    .portfolioBtn {
+                        @include buttons(transparent, 1p, #2196F3, #2196F3);
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            height: 100%;
+                            width: 0;
+                            background: #2196F3;
+                            z-index: -1;
+                            transition: .3s ease-in all;
+                            border-radius: 26px;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                            color: white;
+
+                            &:before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.preloader {
+    position: fixed !important;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 100000;
+    transition: .7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .6s;
+
+    position: relative;
+
+    .preloader__content {
+        text-align: center;
+        transition: 6s;
+
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 600;
+        }
+
+        transition: 6s;
+
+        div {
+            transition: 6s !important;
+            background-color: white;
+            width: 100% !important;
+            height: 4px;
+            margin: 5px 0;
+        }
+    }
+}
+
+
+.unpreloader {
+    display: none;
+}

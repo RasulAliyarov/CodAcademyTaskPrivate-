@@ -1,0 +1,13 @@
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.footer{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 15px gray;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    z-index: 160;
+}

@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  },
+  "name": "bacola-shop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass scss/main.scss -o css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

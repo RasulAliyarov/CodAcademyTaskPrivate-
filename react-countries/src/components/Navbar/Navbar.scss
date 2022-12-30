@@ -1,0 +1,48 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.dark_mode {
+    background-color: #202C36 !important;
+    color: white !important;
+}
+
+.nav_dark_mode {
+    background-color: #2B3844 !important;
+    color: white !important;
+}
+.header {
+    background: #ffffff;
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0 0 5px #bebebe;
+    z-index: 500;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        &__left {
+            transition: .5s;
+            img {
+                width: 60px;
+                z-index: 2000;
+            }
+            &:hover{
+                img{
+                    transform: rotate(360deg);
+                    transition: .5s;
+                }
+            }
+        }
+
+        &__right {}
+    }
+}

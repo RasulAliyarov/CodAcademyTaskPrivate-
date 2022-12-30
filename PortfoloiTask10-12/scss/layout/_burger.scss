@@ -1,0 +1,82 @@
+header {
+    width: 63px;
+    height: 63px;
+    background-color: rgb(50, 50, 50);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .4s;
+    border-radius: 50%;
+    z-index: 40;
+    
+    button {
+        color: white;
+        background: transparent;
+        border: none;
+        margin-bottom: 5px;
+        i {
+            margin-top: 20px;
+            z-index: 1;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+
+    .burger__buttons {
+        height: 200px;
+        display: none;
+        transition: .4s;
+
+        &__block {
+            margin-left: 103px;
+            margin-right: 20px;
+
+            &__button {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                margin-left: 16px;
+                text-decoration: none !important;
+
+                i {
+                    width: 30px;
+                    font-size: 14px;
+                    color: #eee;
+                    opacity: .8;
+                    padding: 10px;
+                    margin-right: 40px;
+
+                }
+
+                &:hover {
+                    i {
+                        color: #2196F3;
+                    }
+
+                    span {
+                        color: #2196F3;
+                    }
+                }
+
+                span {
+                    font-size: 1rem;
+                    font-family: "Poppins", sans-serif;
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .active {
+        display: block;
+        border-radius: 30px;
+        transition: .4s;
+    }
+
+}

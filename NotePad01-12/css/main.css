@@ -1,0 +1,250 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap";
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none; }
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0; }
+
+.container {
+  width: 545px;
+  margin: 0 auto; }
+
+body {
+  background-color: #ede7f6;
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto Mono"; }
+
+.app .app__header {
+  text-align: center; }
+  .app .app__header h1 {
+    margin: 30px 0;
+    font-size: 1.7rem;
+    font-weight: 700; }
+    .app .app__header h1 span {
+      color: #7e57c2; }
+
+.app .app__content__title input {
+  border: 1px solid #7e57c2;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 25px; }
+
+.app .app__content__title textarea {
+  width: 100%;
+  border: 1px solid #7e57c2;
+  padding: 10px;
+  height: 228px;
+  border-radius: 8px; }
+
+.app .app__content__decor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 10px; }
+  .app .app__content__decor__colors {
+    display: flex;
+    margin: 10px 0; }
+    .app .app__content__decor__colors__color {
+      width: 42px !important;
+      height: 42px !important;
+      border-radius: 50% !important;
+      margin-right: 15px;
+      transition: .4s;
+      cursor: pointer; }
+      .app .app__content__decor__colors__color:nth-child(1) {
+        background-color: #f06292; }
+      .app .app__content__decor__colors__color:nth-child(2) {
+        background-color: #ba68c8; }
+      .app .app__content__decor__colors__color:nth-child(3) {
+        background-color: #4fc3f7; }
+      .app .app__content__decor__colors__color:nth-child(4) {
+        background-color: #ffd54f; }
+      .app .app__content__decor__colors__color:nth-child(5) {
+        background-color: #aed581;
+        margin: 0; }
+      .app .app__content__decor__colors__color:hover {
+        opacity: .7;
+        transform: translateY(-4px);
+        transition: .4s; }
+  .app .app__content__decor #savebtn {
+    background-image: url(/img/succsess.png);
+    background-repeat: no-repeat;
+    background-position: 52px;
+    background-size: 15px;
+    background-position: 90%; }
+    .app .app__content__decor #savebtn:hover {
+      box-shadow: 0 0 15px #808080;
+      transition: .2s; }
+  .app .app__content__decor button {
+    padding: 10px 30px 10px 15px;
+    height: fit-content;
+    border: none;
+    background-color: #7e57c2;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: .5s; }
+
+.app .app__content__search input {
+  border: 1px solid #7e57c2;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url(/img/seach.png);
+  background-repeat: no-repeat;
+  background-position: 97%; }
+
+.app .app__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .app .app__cards__card {
+    width: 264px;
+    height: 304px;
+    border: 2px dashed #f06292;
+    border-radius: 8px;
+    margin: 4px; }
+    .app .app__cards__card__title {
+      width: 100%;
+      background-color: rgba(240, 98, 146, 0.4);
+      color: black;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .app .app__cards__card__title .deletebtn {
+        align-items: center;
+        background-image: url(/img/garbage.png);
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        width: 25px;
+        height: 25px;
+        border: none;
+        background-color: transparent; }
+    .app .app__cards__card__text {
+      padding: 10px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 19px;
+      color: #474747; }
+
+@media (max-width: 650px) {
+  .app .app__content__decor {
+    flex-direction: column;
+    margin: auto 0 !important; }
+  .app .deletebtn {
+    margin: auto; }
+  .app .container {
+    width: 90%; }
+  .app button {
+    width: 100%;
+    margin-bottom: 20px; }
+  .app .app__content__decor__colors__color {
+    width: 30px;
+    height: 30px; } }
+
+@media (max-width: 350px) {
+  .app .app__content__decor__colors__color {
+    width: 15px;
+    height: 15px; } }

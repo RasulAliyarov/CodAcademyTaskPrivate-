@@ -1,0 +1,127 @@
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.content {
+
+    .inputs {
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+            height: fit-content;
+            padding: 20px 30px;
+            border-radius: 8px;
+            border: 1px solid rgb(204, 203, 203);
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        #continents {
+            padding: 20px 30px;
+            border-radius: 10px;
+            border: 1px solid rgb(204, 203, 203);
+            &:focus {
+                outline: none;
+            }
+        }
+
+        [placeholder~="country"] {}
+    }
+
+    @media (max-width: 630px) {
+        .inputs {
+            &__wrapper {
+                flex-wrap: wrap;
+
+                input,
+                .dropdown {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+
+    .cards {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        justify-content: space-between;
+        z-index: 160;
+    }
+}
+
+.card {
+    width: 284px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+    color: black;
+    background-color: rgb(233, 233, 233);
+
+    &__top {
+        width: 284px;
+        height: 160px;
+        overflow: hidden;
+
+        img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            width: -webkit-fill-available;
+            height: inherit;
+            position: relative;
+        }
+    }
+
+    &__body {
+        padding: 20px 30px;
+        font-family: sans-serif;
+        height: 150px;
+        overflow: hidden;
+        border-top: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        span {
+            font-weight: 400;
+            text-decoration: none !important;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.03);
+        transition: .4s;
+        position: relative;
+        z-index: 160;
+    }
+}
+
+@media (max-width: 630px) {
+    .cards {
+        justify-content: center;
+        .card {
+            width: 100%;
+
+            &__top {
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+}

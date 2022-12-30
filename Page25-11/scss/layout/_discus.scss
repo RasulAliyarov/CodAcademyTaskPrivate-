@@ -1,0 +1,42 @@
+.app_discus {
+  background-color: $color-blue100;
+  width: 100%;
+  margin: 120px 0 80px 0;
+
+  .app_discus_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      font-weight: 600;
+      font-size: 2.2rem;
+      color: white;
+      width: 613px;
+      line-height: 61px;
+    }
+
+    .app_discus_content_right {
+      padding: 38px 0;
+      p {
+        font-weight: 400;
+        color: #d9d9d9;
+        font-size: 1.2rem;
+        width: 432px;
+        line-height: 29px;
+      }
+      button {
+        // @include button($blue100, none, white, none);
+        margin-top: 17px;
+        background-color: white;
+        color: #333333;
+        border: none;
+        padding: 14px 32px;
+        cursor: pointer;
+        font-weight: 600;
+        &:hover {
+          background-color: #dddde0;
+        }
+      }
+    }
+  }
+}

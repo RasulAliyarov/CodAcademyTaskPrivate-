@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://www.pixelstalk.net/wp-content/uploads/images6/Dark-Wallpaper-Aesthetic-Wallpaper-Black.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.timer {
+    width: 570px;
+    border-radius: 10px;
+
+    &__time {
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 30px;
+
+        .dods {
+            padding: 0 20px;
+        }
+
+        span {
+            font-size: 122px;
+            font-family: 'Anton', sans-serif;
+
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-around;
+
+        div {
+            font-size: 20px;
+            
+            :first-child {
+                width: 100px;
+                border-radius: 50%;
+                height: 100px;
+                box-shadow: 0 0 15px red;
+                color: red;
+                border: 1px solid red;
+
+            }
+
+            .timer__buttons__start {
+                border: 1px solid rgb(63, 252, 63);
+                color: rgb(63, 252, 63);
+                box-shadow: 0 0 15px rgb(63, 252, 63);
+
+            }
+
+            .timer__buttons__reset {
+                border: 1px solid rgb(175, 175, 175);
+                color: rgb(175, 175, 175);
+                box-shadow: 0 0 15px rgb(175, 175, 175);
+            }
+        }
+
+        button {
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            background-color: transparent;
+            border-radius: 50%;
+            font-size: 16px;
+            transition: .4s;
+
+            &:hover {
+                box-shadow: 0 0 30px;
+                transform: scale(1.055);
+                transition: .4s;
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #dfe6e9;
+  position: relative;
+  height: 300vh; }
+
+.container {
+  width: 60%;
+  margin: 0 auto; }
+
+.app__header__nav {
+  background-color: white; }
+  .app__header__nav__logo {
+    padding: 25px 0;
+    width: 60%;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 1.3em; }
+
+.app__header__profile {
+  width: 60%;
+  height: 250px;
+  background-color: white;
+  padding: 10px 15px;
+  margin: 15px auto; }
+  .app__header__profile__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .app__header__profile__content div {
+      width: 150px;
+      border: 5px solid #a29bfe;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .app__header__profile__content div img {
+        border-radius: 50%;
+        width: 150px; }
+    .app__header__profile__content h3 {
+      font-size: 2em;
+      color: #a29bfe;
+      margin: 21px 0; }
+
+.app__products__sum {
+  position: sticky;
+  top: 5px;
+  width: 60%;
+  margin: 0 auto;
+  background-color: #6c5ce7;
+  padding: 15px 15px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 10px -5px #6c5ce7;
+  margin-bottom: 10px; }
+
+.app__products .products {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+  width: 60%;
+  margin: 15px auto; }
+  .app__products .products__card {
+    text-align: center;
+    width: 280px;
+    height: fit-content;
+    background-color: white;
+    transition: .4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 5px #b9b9b9; }
+    .app__products .products__card__top {
+      width: 153px;
+      height: 150px; }
+      .app__products .products__card__top img {
+        height: inherit;
+        width: 153px; }
+    .app__products .products__card__bottom {
+      margin-top: 19px; }
+      .app__products .products__card__bottom h5 {
+        font-size: 1.7rem; }
+      .app__products .products__card__bottom h6 {
+        margin: 20px 0;
+        font-size: 1.3rem;
+        color: #949494; }
+      .app__products .products__card__bottom input {
+        width: 30px;
+        padding: 8px 20px;
+        margin: 0 5px;
+        border-radius: 6px;
+        border: 1px solid #a29bfe; }
+      .app__products .products__card__bottom input::-webkit-outer-spin-button,
+      .app__products .products__card__bottom input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0; }
+      .app__products .products__card__bottom input[type=number] {
+        -moz-appearance: textfield;
+        text-align: center; }
+      .app__products .products__card__bottom button {
+        padding: 7px 30px;
+        font-size: 1rem;
+        border: none;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: .4s; }
+        .app__products .products__card__bottom button:last-child {
+          background-color: #a29bfe; }
+        .app__products .products__card__bottom button:hover {
+          opacity: .8;
+          transform: translateY(-3px);
+          transition: .4s; }
+    .app__products .products__card:hover {
+      box-shadow: 0 0 15px #949494;
+      transition: .4s; }
+
+.receipt {
+  margin-top: 30px; }
+  .receipt__block {
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px 20px 20px;
+    background-color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 14px; }
+    .receipt__block__content {
+      margin-top: 15px;
+      background-color: #a29bfe;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: sans-serif;
+      font-weight: 600; }
+      .receipt__block__content__product {
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        padding: 10px;
+        font-size: 20px; }
+      .receipt__block__content__total {
+        width: 80%;
+        border-top: 1px dashed white;
+        display: flex;
+        justify-content: space-around;
+        margin: 19px auto;
+        padding: 10px; }
+        .receipt__block__content__total .span {
+          font-size: 20px;
+          color: white; }

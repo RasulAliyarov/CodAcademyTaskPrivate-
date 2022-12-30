@@ -1,0 +1,254 @@
+.bestSellers {
+
+    &__right {
+        width: 100%;
+        padding: 0 28px;
+
+        &__bottom {
+            margin-top: 30px;
+            display: flex;
+            position: relative;
+
+            .sliderbtn {
+                border: none;
+                background-color: white;
+                padding: 10px;
+                height: fit-content;
+                box-shadow: 0 0 5px #9c9c9c;
+                border-radius: 50%;
+                position: absolute;
+                z-index: 10;
+
+                i {
+                    transition: .4s;
+                    color: #9b9bb4;
+                }
+            }
+
+            .sliderLeft {
+                transform: translate(-20px, 150px);
+
+                &:hover {
+                    i {
+                        transform: translateX(-3px);
+                        transition: .4s;
+                        color: #2bbef9;
+
+                    }
+                }
+            }
+
+            .sliderRight {
+                right: 0;
+                transform: translate(20px, 150px);
+
+                &:hover {
+                    i {
+                        transform: translateX(3px);
+                        transition: .4s;
+                        color: #2bbef9;
+                    }
+                }
+            }
+
+            .product_carousel {
+
+                .owl-nav,
+                .owl-dots {
+                    display: none;
+                }
+
+                .owl-stage-outer {}
+
+                .owl-item {
+                    background-color: transparent;
+                }
+            }
+
+            &__card {
+                width: 217px;
+                padding: 20px;
+                border: 1px solid rgb(224, 224, 224);
+                overflow: hidden;
+                position: relative;
+                transition: .4s;
+
+                // &:first-child {
+                //     border-top-left-radius: 10px;
+                //     border-bottom-left-radius: 10px;
+
+                // }
+
+                // &:last-child {
+                //     border-top-right-radius: 10px;
+                //     border-bottom-right-radius: 10px;
+                // }
+
+                &__top {
+                    padding: 5px;
+                    cursor: pointer;
+
+                    img {
+                        width: 177px;
+                    }
+                }
+
+                &__middle {
+                    font-family: "Dosis", sans-serif;
+
+                    h5 {
+                        cursor: pointer;
+                        overflow: hidden;
+                        color: #3e445a;
+
+                        &:hover {
+                            color: #233a95;
+                        }
+                    }
+
+                    .star_list {
+                        display: flex;
+                        margin-bottom: 12px;
+                        margin-top: 10px;
+
+                        i {
+                            color: gold !important;
+                            font-size: 10px;
+                        }
+
+                        span {
+                            margin-left: 5px;
+                            color: black !important;
+                        }
+                    }
+
+                    h5 {
+                        font-size: 14px;
+                        font-weight: 500;
+                        font-family: "Inter", sans-serif;
+                        margin-bottom: 10px;
+
+                    }
+
+                    span {
+                        font-size: 11px;
+                        font-weight: 600;
+                        color: #00b853;
+                    }
+
+                    .past_price {
+                        text-decoration: line-through;
+                        color: #c2c2d3;
+                    }
+
+                    .new_price {
+                        color: #d51243;
+                        font-size: 18px;
+                        padding-left: 5px;
+                    }
+                }
+
+                &__bottom {
+                    padding-top: 20px;
+
+                    button {
+                        padding: 8px 0 !important;
+                        width: 100%;
+                        @include button(transparent, 1px, #2bbef9, #2bbef9);
+
+                        &:hover {
+                            background-color: #2bbef9;
+                            color: white;
+                            transition: .4s;
+                        }
+                    }
+                }
+
+                .discponunt {
+                    position: absolute;
+                    top: 20px;
+                    padding: 5px 10px;
+                    color: white;
+                    font-size: 11px;
+                    border-radius: 4px;
+                    background-color: #2bbef9;
+                }
+
+                .productFeature {
+                    position: absolute;
+                    top: 45px;
+                    padding: 5px 10px;
+                    color: #078841;
+                    font-size: 12px;
+                    font-family: 'Dosis', sans-serif;
+                    border-radius: 8px;
+                    background-color: #d3f1e1;
+                }
+
+                .fullScreen {
+                    position: absolute;
+                    padding: 10px;
+                    background-color: white;
+                    border-radius: 50%;
+                    box-shadow: 0 0 5px #b1b1b1;
+                    top: 20px;
+                    right: 20px;
+                    display: none;
+                    transform: translate(10px, 0);
+                    transition: .5s;
+                    cursor: pointer;
+
+                    i {
+                        color: #3e445a !important;
+                    }
+
+                    &:hover {
+                        background-color: #233a95;
+
+                        i {
+                            color: white !important;
+                        }
+                    }
+                }
+
+                .likeMe {
+                    position: absolute;
+                    padding: 10px;
+                    background-color: white;
+                    box-shadow: 0 0 5px #b1b1b1;
+                    border-radius: 50%;
+                    top: 65px;
+                    right: 20px;
+                    display: none;
+                    transform: translate(10px, 0);
+                    transition: .6s;
+                    cursor: pointer;
+
+                    i {
+                        color: #3e445a !important;
+                    }
+
+                    &:hover {
+                        background-color: #233a95;
+
+                        i {
+                            color: white !important;
+                        }
+                    }
+                }
+
+                &:hover {
+
+                    .fullScreen,
+                    .likeMe {
+                        display: block;
+                        transition: .5s;
+                        transform: translate(0, 0);
+                    }
+
+                    transition: .4s;
+                }
+            }
+        }
+    }
+}

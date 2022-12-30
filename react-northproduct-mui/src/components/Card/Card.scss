@@ -1,0 +1,30 @@
+.container{
+    width: 1100px;
+    margin: 0 auto;
+}
+.card{
+    border: 1px solid black;
+    padding: 30px;
+    width: 100px;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 0 10px rgb(189, 189, 189);
+    }
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    &__top{
+        border-bottom: 1px solid gray;
+        margin-bottom: 10px;
+    }
+    &__middle{
+        border-bottom: 1px solid gray;
+        margin-bottom: 10px;
+    }
+}
+.cards{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
