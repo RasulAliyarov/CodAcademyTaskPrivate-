@@ -1,0 +1,49 @@
+.favourite {
+    padding: 20px 0 50px;
+
+    button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: .4s;
+
+        &:hover {
+            transform: scale(1.075);
+            transition: .4s;
+        }
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
+
+        .card {
+            width: fit-content;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+
+            h3,
+            h4 {
+                margin: 0;
+                margin-bottom: 10px;
+            }
+
+            &__top {
+                height: 200px;
+
+                img {
+                    width: 200px;
+                }
+            }
+
+            &__content {
+                padding: 30px 10px 0 10px;
+            }
+        }
+    }
+}

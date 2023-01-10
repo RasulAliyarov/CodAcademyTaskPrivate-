@@ -1,0 +1,66 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    padding: 20px 0;
+    font-family: sans-serif;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__left {
+            a {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 3px;
+            }
+        }
+        &__middle{
+            input{
+                border: none;
+                padding: 10px 50px 10px 20px;
+                border-radius: 6px;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        &__right {
+            .link {
+                margin-left: 15px;
+                transition: .4s;
+                position: relative;
+
+                &:hover {
+                    color: rgb(228, 37, 171);
+                    transition: .4s;
+                }
+
+                .favCount {
+                    position: absolute;
+                    top: -13px;
+                    right: -20px;
+                    color: black;
+                    padding: 3px 6px;
+                    background-color: white;
+                    border-radius: 50%;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.activeLink {
+    border-top: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
